@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,10 @@
 		40E4BC14267B00D000880A62 /* MC2_KisahKata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC12267B00D000880A62 /* MC2_KisahKata.xcdatamodeld */; };
 		40E4BC16267B00D700880A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC15267B00D700880A62 /* Assets.xcassets */; };
 		40E4BC19267B00D700880A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC17267B00D700880A62 /* LaunchScreen.storyboard */; };
+		E31773F0268093950013EB3D /* Baloo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E31773EC268093950013EB3D /* Baloo2-SemiBold.ttf */; };
+		E31773F1268093950013EB3D /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E31773ED268093950013EB3D /* Baloo2-Regular.ttf */; };
+		E31773F2268093950013EB3D /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E31773EE268093950013EB3D /* Baloo2-Medium.ttf */; };
+		E31773F3268093950013EB3D /* Baloo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E31773EF268093950013EB3D /* Baloo2-ExtraBold.ttf */; };
 		F995D7947EFDD35BFD6DC434 /* Pods_MC2_KisahKata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +34,10 @@
 		6CD898E0D2D4EF52F0CB290F /* Pods-MC2-KisahKata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC2-KisahKata.release.xcconfig"; path = "Target Support Files/Pods-MC2-KisahKata/Pods-MC2-KisahKata.release.xcconfig"; sourceTree = "<group>"; };
 		6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MC2_KisahKata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC1C319238B248BA1A3FDC4 /* Pods-MC2-KisahKata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC2-KisahKata.debug.xcconfig"; path = "Target Support Files/Pods-MC2-KisahKata/Pods-MC2-KisahKata.debug.xcconfig"; sourceTree = "<group>"; };
+		E31773EC268093950013EB3D /* Baloo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-SemiBold.ttf"; sourceTree = "<group>"; };
+		E31773ED268093950013EB3D /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
+		E31773EE268093950013EB3D /* Baloo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Medium.ttf"; sourceTree = "<group>"; };
+		E31773EF268093950013EB3D /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,7 @@
 				40E4BC0B267B00D000880A62 /* SceneDelegate.swift */,
 				40E4BC0D267B00D000880A62 /* ViewController.swift */,
 				40E4BC0F267B00D000880A62 /* Main.storyboard */,
+				E31773EB268093950013EB3D /* Font */,
 				40E4BC15267B00D700880A62 /* Assets.xcassets */,
 				40E4BC17267B00D700880A62 /* LaunchScreen.storyboard */,
 				40E4BC1A267B00D700880A62 /* Info.plist */,
@@ -83,7 +92,6 @@
 				BAC1C319238B248BA1A3FDC4 /* Pods-MC2-KisahKata.debug.xcconfig */,
 				6CD898E0D2D4EF52F0CB290F /* Pods-MC2-KisahKata.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -93,6 +101,17 @@
 				6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E31773EB268093950013EB3D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				E31773EC268093950013EB3D /* Baloo2-SemiBold.ttf */,
+				E31773ED268093950013EB3D /* Baloo2-Regular.ttf */,
+				E31773EE268093950013EB3D /* Baloo2-Medium.ttf */,
+				E31773EF268093950013EB3D /* Baloo2-ExtraBold.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +175,11 @@
 			files = (
 				40E4BC19267B00D700880A62 /* LaunchScreen.storyboard in Resources */,
 				40E4BC16267B00D700880A62 /* Assets.xcassets in Resources */,
+				E31773F2268093950013EB3D /* Baloo2-Medium.ttf in Resources */,
+				E31773F0268093950013EB3D /* Baloo2-SemiBold.ttf in Resources */,
+				E31773F1268093950013EB3D /* Baloo2-Regular.ttf in Resources */,
 				40E4BC11267B00D000880A62 /* Main.storyboard in Resources */,
+				E31773F3268093950013EB3D /* Baloo2-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
