@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		408C014526817BC400C59A24 /* Baloo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014026817BC400C59A24 /* Baloo2-SemiBold.ttf */; };
+		408C014626817BC400C59A24 /* Baloo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014126817BC400C59A24 /* Baloo2-ExtraBold.ttf */; };
+		408C014726817BC400C59A24 /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014226817BC400C59A24 /* Baloo2-Regular.ttf */; };
+		408C014826817BC400C59A24 /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014326817BC400C59A24 /* Baloo2-Medium.ttf */; };
+		408C014926817BC400C59A24 /* Baloo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014426817BC400C59A24 /* Baloo2-Bold.ttf */; };
 		40E4BC0A267B00D000880A62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC09267B00D000880A62 /* AppDelegate.swift */; };
 		40E4BC0C267B00D000880A62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC0B267B00D000880A62 /* SceneDelegate.swift */; };
 		40E4BC0E267B00D000880A62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC0D267B00D000880A62 /* ViewController.swift */; };
@@ -14,14 +19,15 @@
 		40E4BC14267B00D000880A62 /* MC2_KisahKata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC12267B00D000880A62 /* MC2_KisahKata.xcdatamodeld */; };
 		40E4BC16267B00D700880A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC15267B00D700880A62 /* Assets.xcassets */; };
 		40E4BC19267B00D700880A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC17267B00D700880A62 /* LaunchScreen.storyboard */; };
-		E31773F0268093950013EB3D /* Baloo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E31773EC268093950013EB3D /* Baloo2-SemiBold.ttf */; };
-		E31773F1268093950013EB3D /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E31773ED268093950013EB3D /* Baloo2-Regular.ttf */; };
-		E31773F2268093950013EB3D /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E31773EE268093950013EB3D /* Baloo2-Medium.ttf */; };
-		E31773F3268093950013EB3D /* Baloo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E31773EF268093950013EB3D /* Baloo2-ExtraBold.ttf */; };
 		F995D7947EFDD35BFD6DC434 /* Pods_MC2_KisahKata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		408C014026817BC400C59A24 /* Baloo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-SemiBold.ttf"; sourceTree = "<group>"; };
+		408C014126817BC400C59A24 /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
+		408C014226817BC400C59A24 /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
+		408C014326817BC400C59A24 /* Baloo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Medium.ttf"; sourceTree = "<group>"; };
+		408C014426817BC400C59A24 /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
 		40E4BC06267B00D000880A62 /* MC2-KisahKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC2-KisahKata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E4BC09267B00D000880A62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40E4BC0B267B00D000880A62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,10 +40,6 @@
 		6CD898E0D2D4EF52F0CB290F /* Pods-MC2-KisahKata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC2-KisahKata.release.xcconfig"; path = "Target Support Files/Pods-MC2-KisahKata/Pods-MC2-KisahKata.release.xcconfig"; sourceTree = "<group>"; };
 		6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MC2_KisahKata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC1C319238B248BA1A3FDC4 /* Pods-MC2-KisahKata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC2-KisahKata.debug.xcconfig"; path = "Target Support Files/Pods-MC2-KisahKata/Pods-MC2-KisahKata.debug.xcconfig"; sourceTree = "<group>"; };
-		E31773EC268093950013EB3D /* Baloo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-SemiBold.ttf"; sourceTree = "<group>"; };
-		E31773ED268093950013EB3D /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
-		E31773EE268093950013EB3D /* Baloo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Medium.ttf"; sourceTree = "<group>"; };
-		E31773EF268093950013EB3D /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40844363268096AE001BAC12 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				408C014426817BC400C59A24 /* Baloo2-Bold.ttf */,
+				408C014126817BC400C59A24 /* Baloo2-ExtraBold.ttf */,
+				408C014326817BC400C59A24 /* Baloo2-Medium.ttf */,
+				408C014226817BC400C59A24 /* Baloo2-Regular.ttf */,
+				408C014026817BC400C59A24 /* Baloo2-SemiBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		40E4BBFD267B00D000880A62 = {
 			isa = PBXGroup;
 			children = (
@@ -73,11 +87,11 @@
 		40E4BC08267B00D000880A62 /* MC2-KisahKata */ = {
 			isa = PBXGroup;
 			children = (
+				40844363268096AE001BAC12 /* Font */,
 				40E4BC09267B00D000880A62 /* AppDelegate.swift */,
 				40E4BC0B267B00D000880A62 /* SceneDelegate.swift */,
 				40E4BC0D267B00D000880A62 /* ViewController.swift */,
 				40E4BC0F267B00D000880A62 /* Main.storyboard */,
-				E31773EB268093950013EB3D /* Font */,
 				40E4BC15267B00D700880A62 /* Assets.xcassets */,
 				40E4BC17267B00D700880A62 /* LaunchScreen.storyboard */,
 				40E4BC1A267B00D700880A62 /* Info.plist */,
@@ -101,17 +115,6 @@
 				6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E31773EB268093950013EB3D /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				E31773EC268093950013EB3D /* Baloo2-SemiBold.ttf */,
-				E31773ED268093950013EB3D /* Baloo2-Regular.ttf */,
-				E31773EE268093950013EB3D /* Baloo2-Medium.ttf */,
-				E31773EF268093950013EB3D /* Baloo2-ExtraBold.ttf */,
-			);
-			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,13 +176,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408C014926817BC400C59A24 /* Baloo2-Bold.ttf in Resources */,
+				408C014726817BC400C59A24 /* Baloo2-Regular.ttf in Resources */,
 				40E4BC19267B00D700880A62 /* LaunchScreen.storyboard in Resources */,
+				408C014826817BC400C59A24 /* Baloo2-Medium.ttf in Resources */,
 				40E4BC16267B00D700880A62 /* Assets.xcassets in Resources */,
-				E31773F2268093950013EB3D /* Baloo2-Medium.ttf in Resources */,
-				E31773F0268093950013EB3D /* Baloo2-SemiBold.ttf in Resources */,
-				E31773F1268093950013EB3D /* Baloo2-Regular.ttf in Resources */,
+				408C014526817BC400C59A24 /* Baloo2-SemiBold.ttf in Resources */,
 				40E4BC11267B00D000880A62 /* Main.storyboard in Resources */,
-				E31773F3268093950013EB3D /* Baloo2-ExtraBold.ttf in Resources */,
+				408C014626817BC400C59A24 /* Baloo2-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
