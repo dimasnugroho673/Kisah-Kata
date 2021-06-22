@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kTG-dL-oof">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--KisahKata-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MC2_KisahKata" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,22 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9TC-UD-WoI">
-                                <rect key="frame" x="0.0" y="91.333333333333329" width="397.33333333333331" height="2"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="2" id="Pyf-Y3-OC8"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="👋Halo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54s-Az-w7b">
                                 <rect key="frame" x="166" y="136.33333333333334" width="63.333333333333343" height="23.666666666666657"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Xp Terkumpul : 1200  🔥" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOc-ps-esa">
-                                <rect key="frame" x="98" y="227.66666666666666" width="194" height="18.333333333333343"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -42,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fi-xp-1ky">
-                                <rect key="frame" x="1" y="254" width="389" height="235"/>
+                                <rect key="frame" x="0.0" y="254" width="389" height="235"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle " translatesAutoresizingMaskIntoConstraints="NO" id="Mja-PH-W4M">
                                         <rect key="frame" x="22" y="30.666666666666686" width="345" height="174"/>
@@ -78,7 +65,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xhn-8a-65u">
-                                <rect key="frame" x="0.0" y="515" width="397.33333333333331" height="235"/>
+                                <rect key="frame" x="0.0" y="515" width="395.33333333333331" height="235"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="gTv-3P-UlY">
                                         <rect key="frame" x="22" y="30.666666666666629" width="345" height="173.66666666666666"/>
@@ -113,14 +100,14 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Arif Firmansyah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-li-Vwi">
-                                <rect key="frame" x="87" y="158" width="215" height="73.333333333333314"/>
+                                <rect key="frame" x="88" y="157" width="215" height="74.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✨KisahKata" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHd-BS-Urd">
-                                <rect key="frame" x="122" y="53" width="153" height="30"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Xp Terkumpul : 1200  🔥" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOc-ps-esa">
+                                <rect key="frame" x="119.00000000000001" y="227.66666666666666" width="157.33333333333337" height="18.333333333333343"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -129,47 +116,58 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="box-U3-Xzy" secondAttribute="trailing" symbolic="YES" id="1HG-ED-m1Z"/>
-                            <constraint firstItem="aHd-BS-Urd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="8NQ-eD-Kv5"/>
-                            <constraint firstItem="EKO-li-Vwi" firstAttribute="top" secondItem="54s-Az-w7b" secondAttribute="bottom" constant="-2" id="9Hv-xg-6Xb"/>
-                            <constraint firstItem="4fi-xp-1ky" firstAttribute="centerX" secondItem="FOc-ps-esa" secondAttribute="centerX" constant="0.5" id="CPx-61-uw3"/>
-                            <constraint firstItem="FOc-ps-esa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="DoC-6U-8Tc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9TC-UD-WoI" secondAttribute="trailing" constant="-7.3333333333333144" id="FU6-XM-x0y"/>
+                            <constraint firstItem="Xhn-8a-65u" firstAttribute="centerX" secondItem="54s-Az-w7b" secondAttribute="centerX" id="1pw-4o-2tf"/>
+                            <constraint firstItem="EKO-li-Vwi" firstAttribute="top" secondItem="54s-Az-w7b" secondAttribute="bottom" constant="-3" id="9Hv-xg-6Xb"/>
+                            <constraint firstItem="4fi-xp-1ky" firstAttribute="centerX" secondItem="FOc-ps-esa" secondAttribute="centerX" constant="-3.1666666666666856" id="CPx-61-uw3"/>
+                            <constraint firstItem="FOc-ps-esa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="DoC-6U-8Tc"/>
                             <constraint firstItem="4fi-xp-1ky" firstAttribute="top" secondItem="FOc-ps-esa" secondAttribute="bottom" constant="8" id="GtH-Cw-nXI"/>
-                            <constraint firstItem="aHd-BS-Urd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="L9v-8f-A1n"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="54s-Az-w7b" secondAttribute="trailing" constant="160.66999999999999" id="T2D-R3-YdO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="box-U3-Xzy" secondAttribute="bottom" constant="377" id="VwY-I9-fub"/>
-                            <constraint firstItem="9TC-UD-WoI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XPt-Fr-FGD"/>
-                            <constraint firstItem="9TC-UD-WoI" firstAttribute="top" secondItem="aHd-BS-Urd" secondAttribute="bottom" constant="8.3333333333333286" id="afe-sg-25W"/>
-                            <constraint firstItem="54s-Az-w7b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="dN4-S0-yff"/>
-                            <constraint firstItem="4fi-xp-1ky" firstAttribute="leading" secondItem="9TC-UD-WoI" secondAttribute="leading" constant="1" id="ePy-r3-SUN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="54s-Az-w7b" secondAttribute="trailing" constant="160.66999999999999" id="YvY-PV-31k"/>
+                            <constraint firstItem="54s-Az-w7b" firstAttribute="centerX" secondItem="FOc-ps-esa" secondAttribute="centerX" id="ZHy-v8-7ph"/>
                             <constraint firstItem="box-U3-Xzy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eo4-nN-o8m"/>
                             <constraint firstItem="box-U3-Xzy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="f47-2f-Dg5"/>
-                            <constraint firstItem="Xhn-8a-65u" firstAttribute="leading" secondItem="9TC-UD-WoI" secondAttribute="leading" id="h74-KU-8kO"/>
-                            <constraint firstItem="Xhn-8a-65u" firstAttribute="centerX" secondItem="9TC-UD-WoI" secondAttribute="centerX" id="hlK-gP-WQy"/>
+                            <constraint firstItem="54s-Az-w7b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="h13-QJ-Heq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FOc-ps-esa" secondAttribute="bottom" constant="564" id="iSQ-8c-Qgx"/>
                             <constraint firstItem="EKO-li-Vwi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jUg-Tj-hbH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xhn-8a-65u" secondAttribute="bottom" constant="60" id="jib-Jx-mtr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4fi-xp-1ky" secondAttribute="bottom" constant="321" id="joP-Zc-pxa"/>
-                            <constraint firstItem="54s-Az-w7b" firstAttribute="top" secondItem="9TC-UD-WoI" secondAttribute="bottom" constant="43" id="m2t-M7-mwo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="54s-Az-w7b" secondAttribute="bottom" constant="650" id="nr5-Bd-rRe"/>
+                            <constraint firstItem="Xhn-8a-65u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pAe-l5-lcu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EKO-li-Vwi" secondAttribute="trailing" id="qSm-ZX-U86"/>
                             <constraint firstItem="Xhn-8a-65u" firstAttribute="top" secondItem="4fi-xp-1ky" secondAttribute="bottom" constant="26" id="uwm-VO-89h"/>
                             <constraint firstItem="FOc-ps-esa" firstAttribute="top" secondItem="EKO-li-Vwi" secondAttribute="bottom" constant="-3.6666666666666572" id="vaD-yR-ggN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aHd-BS-Urd" secondAttribute="trailing" constant="115" id="wjx-Dd-d1f"/>
-                            <constraint firstItem="FOc-ps-esa" firstAttribute="centerX" secondItem="EKO-li-Vwi" secondAttribute="centerX" constant="0.5" id="wu8-gT-SUd"/>
+                            <constraint firstItem="FOc-ps-esa" firstAttribute="centerX" secondItem="EKO-li-Vwi" secondAttribute="centerX" constant="2.1666666666666856" id="wu8-gT-SUd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="KisahKata" id="BbZ-go-O7K"/>
                     <connections>
                         <outlet property="ceritaButton" destination="eTC-n3-JTD" id="7NZ-5X-tHF"/>
                         <outlet property="haloLabel" destination="54s-Az-w7b" id="PuP-4Z-acr"/>
-                        <outlet property="judulLabel" destination="aHd-BS-Urd" id="ssE-lG-gcs"/>
                         <outlet property="nameLabel" destination="EKO-li-Vwi" id="aHa-fK-W7m"/>
                         <outlet property="poinLabel" destination="FOc-ps-esa" id="OKv-ic-883"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.38461538461539" y="124.40758293838861"/>
+            <point key="canvasLocation" x="2303.0769230769229" y="145.73459715639811"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TEd-eO-Hil">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kTG-dL-oof" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pLv-CL-LaK">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9iX-XN-u3O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JKq-aS-s5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1373.8461538461538" y="145.73459715639811"/>
         </scene>
     </scenes>
     <resources>
@@ -179,9 +177,6 @@
         <image name="Rectangle 2" width="345" height="174"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
