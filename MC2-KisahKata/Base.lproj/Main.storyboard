@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kTG-dL-oof">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5ke-Gn-ZK6">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -150,6 +150,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2303.0769230769229" y="145.73459715639811"/>
+        </scene>
+        <!--List Cerita View Controller-->
+        <scene sceneID="Zsm-hy-qyu">
+            <objects>
+                <viewController id="5ke-Gn-ZK6" customClass="ListCeritaViewController" customModule="MC2_KisahKata" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2R1-qt-POO">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="goh-fs-1No">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ceritaCell" rowHeight="150" id="jlH-KO-cXm" customClass="CeritaTableViewCell" customModule="MC2_KisahKata" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jlH-KO-cXm" id="I7B-HG-WFu">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKI-rG-RSQ">
+                                                    <rect key="frame" x="20" y="11" width="350" height="128"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5AQ-fT-aIU">
+                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="80"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="80" id="7mI-pl-eSP"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qq3-8d-Ou1">
+                                                            <rect key="frame" x="15" y="90" width="330" height="28"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Qq3-8d-Ou1" secondAttribute="trailing" constant="5" id="2vm-IM-S4C"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Qq3-8d-Ou1" secondAttribute="bottom" constant="10" id="A7H-MZ-8e6"/>
+                                                        <constraint firstItem="Qq3-8d-Ou1" firstAttribute="top" secondItem="5AQ-fT-aIU" secondAttribute="bottom" constant="10" id="BE5-8r-9Ct"/>
+                                                        <constraint firstItem="5AQ-fT-aIU" firstAttribute="leading" secondItem="kKI-rG-RSQ" secondAttribute="leading" id="NoQ-Gb-OIM"/>
+                                                        <constraint firstItem="Qq3-8d-Ou1" firstAttribute="leading" secondItem="kKI-rG-RSQ" secondAttribute="leading" constant="15" id="Reb-U3-2c4"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5AQ-fT-aIU" secondAttribute="trailing" id="iSP-ad-918"/>
+                                                        <constraint firstItem="5AQ-fT-aIU" firstAttribute="top" secondItem="kKI-rG-RSQ" secondAttribute="top" id="jj6-iP-wh9"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kKI-rG-RSQ" firstAttribute="top" secondItem="I7B-HG-WFu" secondAttribute="topMargin" id="gPn-ow-mqE"/>
+                                                <constraint firstItem="kKI-rG-RSQ" firstAttribute="leading" secondItem="I7B-HG-WFu" secondAttribute="leadingMargin" id="i0G-V9-Vyt"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kKI-rG-RSQ" secondAttribute="trailing" id="m5h-53-rmn"/>
+                                                <constraint firstItem="kKI-rG-RSQ" firstAttribute="bottom" secondItem="I7B-HG-WFu" secondAttribute="bottomMargin" id="sZx-r1-J8B"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ceritaImage" destination="5AQ-fT-aIU" id="eLP-Eb-abS"/>
+                                            <outlet property="ceritaLabel" destination="Qq3-8d-Ou1" id="QUG-FY-vnr"/>
+                                            <outlet property="ceritaView" destination="kKI-rG-RSQ" id="I7r-Oh-cEY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mMu-vn-plI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mMu-vn-plI" firstAttribute="bottom" secondItem="goh-fs-1No" secondAttribute="bottom" id="3A8-fA-6xu"/>
+                            <constraint firstItem="goh-fs-1No" firstAttribute="leading" secondItem="mMu-vn-plI" secondAttribute="leading" id="CGK-vL-xM4"/>
+                            <constraint firstItem="goh-fs-1No" firstAttribute="top" secondItem="mMu-vn-plI" secondAttribute="top" id="Nc4-X6-dKp"/>
+                            <constraint firstItem="mMu-vn-plI" firstAttribute="trailing" secondItem="goh-fs-1No" secondAttribute="trailing" id="Y4R-pH-qMu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RP3-oY-Rze"/>
+                    <connections>
+                        <outlet property="ceritaTableView" destination="goh-fs-1No" id="wNO-Da-8MH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ac-Et-OSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3226" y="146"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TEd-eO-Hil">

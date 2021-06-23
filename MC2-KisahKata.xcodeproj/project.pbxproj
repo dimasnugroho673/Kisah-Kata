@@ -19,6 +19,8 @@
 		40E4BC14267B00D000880A62 /* MC2_KisahKata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC12267B00D000880A62 /* MC2_KisahKata.xcdatamodeld */; };
 		40E4BC16267B00D700880A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC15267B00D700880A62 /* Assets.xcassets */; };
 		40E4BC19267B00D700880A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC17267B00D700880A62 /* LaunchScreen.storyboard */; };
+		510EE6042682B35B0052B35B /* ListCeritaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EE6022682B35B0052B35B /* ListCeritaViewController.swift */; };
+		510EE6072682B9750052B35B /* CeritaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EE6062682B9740052B35B /* CeritaTableViewCell.swift */; };
 		F995D7947EFDD35BFD6DC434 /* Pods_MC2_KisahKata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		40E4BC15267B00D700880A62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40E4BC18267B00D700880A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40E4BC1A267B00D700880A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		510EE6022682B35B0052B35B /* ListCeritaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCeritaViewController.swift; sourceTree = "<group>"; };
+		510EE6062682B9740052B35B /* CeritaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeritaTableViewCell.swift; sourceTree = "<group>"; };
 		6CD898E0D2D4EF52F0CB290F /* Pods-MC2-KisahKata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC2-KisahKata.release.xcconfig"; path = "Target Support Files/Pods-MC2-KisahKata/Pods-MC2-KisahKata.release.xcconfig"; sourceTree = "<group>"; };
 		6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MC2_KisahKata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC1C319238B248BA1A3FDC4 /* Pods-MC2-KisahKata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC2-KisahKata.debug.xcconfig"; path = "Target Support Files/Pods-MC2-KisahKata/Pods-MC2-KisahKata.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				40E4BC17267B00D700880A62 /* LaunchScreen.storyboard */,
 				40E4BC1A267B00D700880A62 /* Info.plist */,
 				40E4BC12267B00D000880A62 /* MC2_KisahKata.xcdatamodeld */,
+				510EE6022682B35B0052B35B /* ListCeritaViewController.swift */,
+				510EE6062682B9740052B35B /* CeritaTableViewCell.swift */,
 			);
 			path = "MC2-KisahKata";
 			sourceTree = "<group>";
@@ -238,8 +244,10 @@
 			files = (
 				40E4BC14267B00D000880A62 /* MC2_KisahKata.xcdatamodeld in Sources */,
 				40E4BC0E267B00D000880A62 /* ViewController.swift in Sources */,
+				510EE6042682B35B0052B35B /* ListCeritaViewController.swift in Sources */,
 				40E4BC0A267B00D000880A62 /* AppDelegate.swift in Sources */,
 				40E4BC0C267B00D000880A62 /* SceneDelegate.swift in Sources */,
+				510EE6072682B9750052B35B /* CeritaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
