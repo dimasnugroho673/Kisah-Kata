@@ -10,7 +10,7 @@ import UIKit
 class ListCeritaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var cerita = ["Legenda Danau Toba", "Lanj. Legenda Danau Toba", "Petani dan Angsa Bertelur Emas", "Lanj. Petani dan Angsa Bertelur Emas", "Legenda Sangkuriang", "Legenda Loro Jonggrang"]
-    var thumbnail = ["Candi Prambanan.img", "Danau Toba.img", "Danau Toba.img", "Danau Toba.img", "Danau Toba.img", "Danau Toba.img"]
+    var thumbnail = ["Danau Toba.img", "Danau Toba.img", "duck egg.img", "duck egg.img", "Tangkuban Perahu.img", "Candi Prambanan.img"]
 
     @IBOutlet weak var ceritaTableView: UITableView!
     
@@ -23,7 +23,7 @@ class ListCeritaViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 168
     }
 
 
