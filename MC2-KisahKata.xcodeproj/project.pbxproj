@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		405E60F226842E23008B8499 /* StorytellingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E60F126842E23008B8499 /* StorytellingViewController.swift */; };
+		405E60F5268434E3008B8499 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E60F4268434E3008B8499 /* Extension.swift */; };
+		405E60F826843576008B8499 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E60F726843576008B8499 /* GifImage.swift */; };
 		408C014526817BC400C59A24 /* Baloo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014026817BC400C59A24 /* Baloo2-SemiBold.ttf */; };
 		408C014626817BC400C59A24 /* Baloo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014126817BC400C59A24 /* Baloo2-ExtraBold.ttf */; };
 		408C014726817BC400C59A24 /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014226817BC400C59A24 /* Baloo2-Regular.ttf */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		405E60F126842E23008B8499 /* StorytellingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytellingViewController.swift; sourceTree = "<group>"; };
+		405E60F4268434E3008B8499 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		405E60F726843576008B8499 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
 		408C014026817BC400C59A24 /* Baloo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-SemiBold.ttf"; sourceTree = "<group>"; };
 		408C014126817BC400C59A24 /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
 		408C014226817BC400C59A24 /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
@@ -60,6 +64,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		405E60F326843482008B8499 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				405E60F4268434E3008B8499 /* Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		405E60F62684351A008B8499 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				405E60F726843576008B8499 /* GifImage.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		40844363268096AE001BAC12 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +113,8 @@
 		40E4BC08267B00D000880A62 /* MC2-KisahKata */ = {
 			isa = PBXGroup;
 			children = (
+				405E60F62684351A008B8499 /* Utils */,
+				405E60F326843482008B8499 /* Extensions */,
 				40844363268096AE001BAC12 /* Font */,
 				40E4BC09267B00D000880A62 /* AppDelegate.swift */,
 				40E4BC0B267B00D000880A62 /* SceneDelegate.swift */,
@@ -245,7 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				405E60F5268434E3008B8499 /* Extension.swift in Sources */,
 				40E4BC14267B00D000880A62 /* MC2_KisahKata.xcdatamodeld in Sources */,
+				405E60F826843576008B8499 /* GifImage.swift in Sources */,
 				405E60F226842E23008B8499 /* StorytellingViewController.swift in Sources */,
 				40E4BC0E267B00D000880A62 /* ViewController.swift in Sources */,
 				510EE6042682B35B0052B35B /* ListCeritaViewController.swift in Sources */,
