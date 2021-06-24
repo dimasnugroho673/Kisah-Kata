@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5ke-Gn-ZK6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kTG-dL-oof">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="👋Halo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54s-Az-w7b">
-                                <rect key="frame" x="166" y="136.33333333333334" width="63.333333333333343" height="23.666666666666657"/>
+                                <rect key="frame" x="166" y="136.66666666666666" width="63.333333333333343" height="23.333333333333343"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,6 +44,9 @@
                                         <state key="normal" backgroundImage="ButtonCerita">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="5ke-Gn-ZK6" kind="show" id="esM-jp-Yhn"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🕍 Cerita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBi-9v-u9r">
                                         <rect key="frame" x="60" y="172" width="119" height="40"/>
@@ -81,7 +84,7 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔠 KosaKata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXZ-3s-ePp">
-                                        <rect key="frame" x="60.000000000000014" y="172" width="156.33333333333337" height="40"/>
+                                        <rect key="frame" x="59.999999999999986" y="172" width="156.66666666666663" height="40"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -160,7 +163,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="goh-fs-1No">
-                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ceritaCell" rowHeight="150" id="jlH-KO-cXm" customClass="CeritaTableViewCell" customModule="MC2_KisahKata" customModuleProvider="target">
@@ -228,11 +231,50 @@
                     <navigationItem key="navigationItem" id="RP3-oY-Rze"/>
                     <connections>
                         <outlet property="ceritaTableView" destination="goh-fs-1No" id="wNO-Da-8MH"/>
+                        <segue destination="mtm-ID-3L6" kind="show" identifier="storyTellingSegue" id="l1d-rS-qga"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ac-Et-OSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3226" y="146"/>
+        </scene>
+        <!--Storytelling View Controller-->
+        <scene sceneID="tju-wY-QNJ">
+            <objects>
+                <viewController id="mtm-ID-3L6" customClass="StorytellingViewController" customModule="MC2_KisahKata" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BZJ-f0-jjw">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="its-oK-mzo">
+                                <rect key="frame" x="20" y="108" width="350" height="27"/>
+                                <color key="pageIndicatorTintColor" systemColor="systemGray6Color"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemBlueColor"/>
+                            </pageControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mil-LS-c2U">
+                                <rect key="frame" x="20" y="155" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="0I7-4i-zbZ"/>
+                                    <constraint firstAttribute="height" constant="350" id="CBc-Th-moU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="syL-ov-DWS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mil-LS-c2U" firstAttribute="top" secondItem="its-oK-mzo" secondAttribute="bottom" constant="20" id="6cC-e8-hwu"/>
+                            <constraint firstItem="its-oK-mzo" firstAttribute="top" secondItem="syL-ov-DWS" secondAttribute="top" constant="20" id="FgT-Fi-Qb6"/>
+                            <constraint firstItem="mil-LS-c2U" firstAttribute="leading" secondItem="syL-ov-DWS" secondAttribute="leading" constant="20" id="L8M-4b-ykC"/>
+                            <constraint firstItem="syL-ov-DWS" firstAttribute="trailing" secondItem="mil-LS-c2U" secondAttribute="trailing" constant="20" id="RJ6-jq-h3J"/>
+                            <constraint firstItem="syL-ov-DWS" firstAttribute="trailing" secondItem="its-oK-mzo" secondAttribute="trailing" constant="20" id="UmD-z1-LB9"/>
+                            <constraint firstItem="its-oK-mzo" firstAttribute="leading" secondItem="syL-ov-DWS" secondAttribute="leading" constant="20" id="wb7-wu-58V"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="j2O-70-6vy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0I-2s-gob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4107.6923076923076" y="145.73459715639811"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TEd-eO-Hil">
@@ -260,6 +302,12 @@
         <image name="Rectangle 2" width="345" height="174"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

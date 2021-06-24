@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		405E60F226842E23008B8499 /* StorytellingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E60F126842E23008B8499 /* StorytellingViewController.swift */; };
 		408C014526817BC400C59A24 /* Baloo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014026817BC400C59A24 /* Baloo2-SemiBold.ttf */; };
 		408C014626817BC400C59A24 /* Baloo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014126817BC400C59A24 /* Baloo2-ExtraBold.ttf */; };
 		408C014726817BC400C59A24 /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014226817BC400C59A24 /* Baloo2-Regular.ttf */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		405E60F126842E23008B8499 /* StorytellingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytellingViewController.swift; sourceTree = "<group>"; };
 		408C014026817BC400C59A24 /* Baloo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-SemiBold.ttf"; sourceTree = "<group>"; };
 		408C014126817BC400C59A24 /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
 		408C014226817BC400C59A24 /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				40E4BC12267B00D000880A62 /* MC2_KisahKata.xcdatamodeld */,
 				510EE6022682B35B0052B35B /* ListCeritaViewController.swift */,
 				510EE6062682B9740052B35B /* CeritaTableViewCell.swift */,
+				405E60F126842E23008B8499 /* StorytellingViewController.swift */,
 			);
 			path = "MC2-KisahKata";
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40E4BC14267B00D000880A62 /* MC2_KisahKata.xcdatamodeld in Sources */,
+				405E60F226842E23008B8499 /* StorytellingViewController.swift in Sources */,
 				40E4BC0E267B00D000880A62 /* ViewController.swift in Sources */,
 				510EE6042682B35B0052B35B /* ListCeritaViewController.swift in Sources */,
 				40E4BC0A267B00D000880A62 /* AppDelegate.swift in Sources */,

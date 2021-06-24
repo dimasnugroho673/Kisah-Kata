@@ -46,5 +46,9 @@ class ListCeritaViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "storyTellingSegue", sender: nil)
+    }
+    
 
 }
