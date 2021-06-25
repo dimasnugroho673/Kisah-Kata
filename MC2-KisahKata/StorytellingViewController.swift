@@ -50,8 +50,15 @@ class StorytellingViewController: UIViewController {
 //        fatalError("init(coder:) has not been implemented")
 //    }
 //
+    
+    var kosakatas = [Kosakata]()
+    var manageObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        manageObjectContext = appDelegate?.persistentContainer.viewContext as! NSManagedObjectContext
         
         self.title = story!.title
         
@@ -218,12 +225,29 @@ class StorytellingViewController: UIViewController {
         
         titleDetailPopUpLabel.text = word.capitalized
         _fetchVideo()
+        _fetchDescription(word: word)
     }
 
     private func _fetchPageControl(page: Int) {
         storyPageControl.frame(forAlignmentRect: CGRect(x: 0, y: 0, width: 16, height: 4))
         storyPageControl.numberOfPages = story!.stories.count
         storyPageControl?.currentPage = Int(page)
+    }
+    
+    private func _fetchDescription(word: String) {
+        
+        let kosakataRequest: NSFetchRequest<Kosakata> = Kosakata.fetchRequest()
+//        kosakataRequest.predicate = NSPredicate(format: "kata = %@", word)
+//        kosakataRequest.returnsObjectsAsFaults = false
+        
+        do {
+            try kosakatas = manageObjectContext.fetch(kosakataRequest)
+//            return kosakatas[
+            print("kosakata result", kosakatas.count)
+        } catch {
+            print("Gagal load data deskrpsi!")
+        }
+        
     }
     
     private func _fetchVideo() {
