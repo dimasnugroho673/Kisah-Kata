@@ -237,13 +237,13 @@ class StorytellingViewController: UIViewController {
     private func _fetchDescription(word: String) {
         
         let kosakataRequest: NSFetchRequest<Kosakata> = Kosakata.fetchRequest()
-//        kosakataRequest.predicate = NSPredicate(format: "kata = %@", word)
+        kosakataRequest.predicate = NSPredicate(format: "kata = %@", word)
 //        kosakataRequest.returnsObjectsAsFaults = false
         
         do {
             try kosakatas = manageObjectContext.fetch(kosakataRequest)
 //            return kosakatas[
-            print("kosakata result", kosakatas.count)
+            print("kosakata result", kosakatas)
         } catch {
             print("Gagal load data deskrpsi!")
         }

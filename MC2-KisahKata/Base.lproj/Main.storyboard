@@ -331,7 +331,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moZ-0h-s5i">
-                            <rect key="frame" x="15" y="15" width="321" height="320"/>
+                            <rect key="frame" x="15" y="15" width="320" height="320"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="320" id="BPX-dg-6FD"/>
@@ -339,7 +339,7 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4u-mR-zVa">
-                            <rect key="frame" x="15" y="345" width="321" height="40"/>
+                            <rect key="frame" x="15" y="345" width="320" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="7LY-Jj-Cz6"/>
                                 <constraint firstAttribute="width" constant="320" id="cnh-LX-Vfd"/>
@@ -349,7 +349,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHz-0A-9Nd">
-                            <rect key="frame" x="15" y="398" width="321" height="108"/>
+                            <rect key="frame" x="15" y="398" width="320" height="108"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CR-HW-PsF">
                                     <rect key="frame" x="0.0" y="-25" width="320" height="136"/>
@@ -366,7 +366,7 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTr-tj-Pir">
-                            <rect key="frame" x="15" y="541" width="321" height="38"/>
+                            <rect key="frame" x="15" y="541" width="320" height="38"/>
                             <color key="backgroundColor" systemColor="systemBlueColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="38" id="0ua-C6-FtJ"/>
