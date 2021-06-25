@@ -5,8 +5,8 @@
         <attribute name="deskripsiVideo" optional="YES" attributeType="String"/>
         <attribute name="kata" optional="YES" attributeType="String"/>
         <attribute name="kategori" optional="YES" attributeType="String"/>
-        <attribute name="pathVideo" optional="YES" attributeType="String"/>
         <attribute name="sudahDipelajari" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="urlVideo" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Kosakata" positionX="-63" positionY="-18" width="128" height="119"/>

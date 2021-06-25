@@ -18,6 +18,7 @@
 		408C014726817BC400C59A24 /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014226817BC400C59A24 /* Baloo2-Regular.ttf */; };
 		408C014826817BC400C59A24 /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014326817BC400C59A24 /* Baloo2-Medium.ttf */; };
 		408C014926817BC400C59A24 /* Baloo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014426817BC400C59A24 /* Baloo2-Bold.ttf */; };
+		40DD145326857A9C00A271EF /* MC2_KisahKata.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC12267B00D000880A62 /* MC2_KisahKata.xcdatamodeld */; };
 		40E4BC0A267B00D000880A62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC09267B00D000880A62 /* AppDelegate.swift */; };
 		40E4BC0C267B00D000880A62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC0B267B00D000880A62 /* SceneDelegate.swift */; };
 		40E4BC0E267B00D000880A62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC0D267B00D000880A62 /* ViewController.swift */; };
@@ -223,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40DD145326857A9C00A271EF /* MC2_KisahKata.xcdatamodeld in Resources */,
 				408C014926817BC400C59A24 /* Baloo2-Bold.ttf in Resources */,
 				408C014726817BC400C59A24 /* Baloo2-Regular.ttf in Resources */,
 				40E4BC19267B00D700880A62 /* LaunchScreen.storyboard in Resources */,

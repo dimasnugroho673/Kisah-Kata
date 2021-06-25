@@ -20,7 +20,7 @@ extension Kosakata {
     @NSManaged public var deskripsiVideo: String?
     @NSManaged public var kata: String?
     @NSManaged public var kategori: String?
-    @NSManaged public var pathVideo: String?
+    @NSManaged public var urlVideo: String?
     @NSManaged public var sudahDipelajari: Int16
 
 }
