@@ -19,6 +19,13 @@
 		408C014826817BC400C59A24 /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014326817BC400C59A24 /* Baloo2-Medium.ttf */; };
 		408C014926817BC400C59A24 /* Baloo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014426817BC400C59A24 /* Baloo2-Bold.ttf */; };
 		40DD145326857A9C00A271EF /* MC2_KisahKata.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC12267B00D000880A62 /* MC2_KisahKata.xcdatamodeld */; };
+		40DD14682685F1AF00A271EF /* story_1_4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 40DD14622685F1AE00A271EF /* story_1_4.gif */; };
+		40DD14692685F1AF00A271EF /* story_1_6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 40DD14632685F1AF00A271EF /* story_1_6.gif */; };
+		40DD146A2685F1AF00A271EF /* story_1_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 40DD14642685F1AF00A271EF /* story_1_1.gif */; };
+		40DD146B2685F1AF00A271EF /* story_1_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 40DD14652685F1AF00A271EF /* story_1_3.gif */; };
+		40DD146C2685F1AF00A271EF /* story_1_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 40DD14662685F1AF00A271EF /* story_1_2.gif */; };
+		40DD146D2685F1AF00A271EF /* story_1_5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 40DD14672685F1AF00A271EF /* story_1_5.gif */; };
+		40DD146F268609AB00A271EF /* StoriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DD146E268609AB00A271EF /* StoriesData.swift */; };
 		40E4BC0A267B00D000880A62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC09267B00D000880A62 /* AppDelegate.swift */; };
 		40E4BC0C267B00D000880A62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC0B267B00D000880A62 /* SceneDelegate.swift */; };
 		40E4BC0E267B00D000880A62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC0D267B00D000880A62 /* ViewController.swift */; };
@@ -43,6 +50,13 @@
 		408C014226817BC400C59A24 /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
 		408C014326817BC400C59A24 /* Baloo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Medium.ttf"; sourceTree = "<group>"; };
 		408C014426817BC400C59A24 /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
+		40DD14622685F1AE00A271EF /* story_1_4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = story_1_4.gif; sourceTree = "<group>"; };
+		40DD14632685F1AF00A271EF /* story_1_6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = story_1_6.gif; sourceTree = "<group>"; };
+		40DD14642685F1AF00A271EF /* story_1_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = story_1_1.gif; sourceTree = "<group>"; };
+		40DD14652685F1AF00A271EF /* story_1_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = story_1_3.gif; sourceTree = "<group>"; };
+		40DD14662685F1AF00A271EF /* story_1_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = story_1_2.gif; sourceTree = "<group>"; };
+		40DD14672685F1AF00A271EF /* story_1_5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = story_1_5.gif; sourceTree = "<group>"; };
+		40DD146E268609AB00A271EF /* StoriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesData.swift; sourceTree = "<group>"; };
 		40E4BC06267B00D000880A62 /* MC2-KisahKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC2-KisahKata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E4BC09267B00D000880A62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40E4BC0B267B00D000880A62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				405E60FA26843909008B8499 /* Stories.swift */,
+				40DD146E268609AB00A271EF /* StoriesData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -106,6 +121,19 @@
 				408C014026817BC400C59A24 /* Baloo2-SemiBold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		40DD14542685903400A271EF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				40DD14642685F1AF00A271EF /* story_1_1.gif */,
+				40DD14662685F1AF00A271EF /* story_1_2.gif */,
+				40DD14652685F1AF00A271EF /* story_1_3.gif */,
+				40DD14622685F1AE00A271EF /* story_1_4.gif */,
+				40DD14672685F1AF00A271EF /* story_1_5.gif */,
+				40DD14632685F1AF00A271EF /* story_1_6.gif */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		40E4BBFD267B00D000880A62 = {
@@ -131,6 +159,7 @@
 		40E4BC08267B00D000880A62 /* MC2-KisahKata */ = {
 			isa = PBXGroup;
 			children = (
+				40DD14542685903400A271EF /* Images */,
 				405E60F9268438C3008B8499 /* Models */,
 				405E60F62684351A008B8499 /* Utils */,
 				405E60F326843482008B8499 /* Extensions */,
@@ -228,9 +257,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				40DD145326857A9C00A271EF /* MC2_KisahKata.xcdatamodeld in Resources */,
+				40DD146C2685F1AF00A271EF /* story_1_2.gif in Resources */,
+				40DD14692685F1AF00A271EF /* story_1_6.gif in Resources */,
+				40DD14682685F1AF00A271EF /* story_1_4.gif in Resources */,
 				408C014926817BC400C59A24 /* Baloo2-Bold.ttf in Resources */,
 				408C014726817BC400C59A24 /* Baloo2-Regular.ttf in Resources */,
 				40E4BC19267B00D700880A62 /* LaunchScreen.storyboard in Resources */,
+				40DD146A2685F1AF00A271EF /* story_1_1.gif in Resources */,
+				40DD146B2685F1AF00A271EF /* story_1_3.gif in Resources */,
+				40DD146D2685F1AF00A271EF /* story_1_5.gif in Resources */,
 				408C014826817BC400C59A24 /* Baloo2-Medium.ttf in Resources */,
 				40E4BC16267B00D700880A62 /* Assets.xcassets in Resources */,
 				408C014526817BC400C59A24 /* Baloo2-SemiBold.ttf in Resources */,
@@ -295,6 +330,7 @@
 				400409702684F774007B3A94 /* Kosakata+CoreDataClass.swift in Sources */,
 				405E60FB26843909008B8499 /* Stories.swift in Sources */,
 				405E60F226842E23008B8499 /* StorytellingViewController.swift in Sources */,
+				40DD146F268609AB00A271EF /* StoriesData.swift in Sources */,
 				40E4BC0E267B00D000880A62 /* ViewController.swift in Sources */,
 				510EE6042682B35B0052B35B /* ListCeritaViewController.swift in Sources */,
 				40E4BC0A267B00D000880A62 /* AppDelegate.swift in Sources */,

@@ -7,6 +7,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Baloo2-Bold.ttf">
+            <string>Baloo2-Bold</string>
+        </array>
+        <array key="Baloo2-Regular.ttf">
+            <string>Baloo2-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--KisahKata-->
         <scene sceneID="tne-QT-ifu">
@@ -258,6 +266,29 @@
                                     <constraint firstAttribute="height" constant="350" id="CBc-Th-moU"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWd-fG-hcj">
+                                <rect key="frame" x="20" y="772" width="65" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="prevPart:" destination="mtm-ID-3L6" eventType="touchUpInside" id="QQG-Zh-9QX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xia-kp-zUv">
+                                <rect key="frame" x="99" y="772" width="271" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="nextPart:" destination="mtm-ID-3L6" eventType="touchUpInside" id="bdR-WD-ze8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="syL-ov-DWS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -271,8 +302,101 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j2O-70-6vy"/>
+                    <connections>
+                        <outlet property="blurDetailPopUpView" destination="HuV-Uc-tkn" id="AQK-NZ-uhc"/>
+                        <outlet property="closeDetailPopUpButton" destination="DTr-tj-Pir" id="gxC-uf-lGA"/>
+                        <outlet property="descriptionDetailContainerView" destination="NHz-0A-9Nd" id="qkn-Yl-pdv"/>
+                        <outlet property="descriptionDetailPopUpLabel" destination="5CR-HW-PsF" id="Rqt-LM-LnU"/>
+                        <outlet property="detailPopUpView" destination="SaY-fq-trS" id="AYk-Sd-HGr"/>
+                        <outlet property="ilustrationStoryImage" destination="mil-LS-c2U" id="ycv-qd-epn"/>
+                        <outlet property="nextButton" destination="Xia-kp-zUv" id="tHX-mU-7k1"/>
+                        <outlet property="prevButton" destination="GWd-fG-hcj" id="fWB-ff-g4T"/>
+                        <outlet property="storyPageControl" destination="its-oK-mzo" id="Nmh-Sx-PFh"/>
+                        <outlet property="titleDetailPopUpLabel" destination="h4u-mR-zVa" id="gky-sh-Vfh"/>
+                        <outlet property="videoContainerView" destination="moZ-0h-s5i" id="Sca-3B-4Wf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z0I-2s-gob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="HuV-Uc-tkn">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="598"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dgZ-Ib-mrV">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="598"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+                <view contentMode="scaleToFill" id="SaY-fq-trS">
+                    <rect key="frame" x="0.0" y="0.0" width="351" height="594"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moZ-0h-s5i">
+                            <rect key="frame" x="15" y="15" width="321" height="320"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="320" id="BPX-dg-6FD"/>
+                                <constraint firstAttribute="height" constant="320" id="MZ5-FN-WUo"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4u-mR-zVa">
+                            <rect key="frame" x="15" y="345" width="321" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="7LY-Jj-Cz6"/>
+                                <constraint firstAttribute="width" constant="320" id="cnh-LX-Vfd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHz-0A-9Nd">
+                            <rect key="frame" x="15" y="398" width="321" height="108"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CR-HW-PsF">
+                                    <rect key="frame" x="0.0" y="-25" width="320" height="136"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <string key="text">pemuda/pe·mu·da/ n orang muda laki-laki; remaja; teruna: para -- ini akan menjadi pemimpin bangsa;~ tawon ki pemuda yang selalu bergantung pada induk semangnya</string>
+                                    <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="320" id="mLS-at-4Ll"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTr-tj-Pir">
+                            <rect key="frame" x="15" y="541" width="321" height="38"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="38" id="0ua-C6-FtJ"/>
+                                <constraint firstAttribute="width" constant="320" id="eVi-ME-4Ls"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Saya mengerti"/>
+                            <connections>
+                                <action selector="closeDetailPopUpView:" destination="mtm-ID-3L6" eventType="touchUpInside" id="y25-Ja-njL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="5W6-YJ-fOJ"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="5W6-YJ-fOJ" firstAttribute="bottom" secondItem="DTr-tj-Pir" secondAttribute="bottom" constant="15" id="0dF-2e-q4W"/>
+                        <constraint firstItem="NHz-0A-9Nd" firstAttribute="leading" secondItem="5W6-YJ-fOJ" secondAttribute="leading" constant="15" id="7F3-cD-JE2"/>
+                        <constraint firstItem="5W6-YJ-fOJ" firstAttribute="trailing" secondItem="DTr-tj-Pir" secondAttribute="trailing" constant="15" id="KQW-IR-F4r"/>
+                        <constraint firstItem="NHz-0A-9Nd" firstAttribute="top" secondItem="h4u-mR-zVa" secondAttribute="bottom" constant="13" id="LHl-gR-Uod"/>
+                        <constraint firstItem="DTr-tj-Pir" firstAttribute="leading" secondItem="5W6-YJ-fOJ" secondAttribute="leading" constant="15" id="MGP-BB-igy"/>
+                        <constraint firstItem="h4u-mR-zVa" firstAttribute="top" secondItem="moZ-0h-s5i" secondAttribute="bottom" constant="10" id="Oye-0J-JNW"/>
+                        <constraint firstItem="h4u-mR-zVa" firstAttribute="leading" secondItem="5W6-YJ-fOJ" secondAttribute="leading" constant="15" id="TIp-fM-S1x"/>
+                        <constraint firstItem="moZ-0h-s5i" firstAttribute="top" secondItem="SaY-fq-trS" secondAttribute="top" constant="15" id="VTd-kG-z7K"/>
+                        <constraint firstItem="moZ-0h-s5i" firstAttribute="leading" secondItem="5W6-YJ-fOJ" secondAttribute="leading" constant="15" id="Wz7-OO-j7J"/>
+                        <constraint firstItem="DTr-tj-Pir" firstAttribute="top" secondItem="NHz-0A-9Nd" secondAttribute="bottom" constant="35" id="X5w-u7-YTd"/>
+                        <constraint firstItem="5W6-YJ-fOJ" firstAttribute="trailing" secondItem="h4u-mR-zVa" secondAttribute="trailing" constant="15" id="nZ6-ap-DKF"/>
+                        <constraint firstItem="5W6-YJ-fOJ" firstAttribute="trailing" secondItem="moZ-0h-s5i" secondAttribute="trailing" constant="15" id="odO-68-dgp"/>
+                        <constraint firstItem="5W6-YJ-fOJ" firstAttribute="trailing" secondItem="NHz-0A-9Nd" secondAttribute="trailing" constant="15" id="qc4-lK-0Pk"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="4107.6923076923076" y="145.73459715639811"/>
         </scene>
@@ -427,6 +551,9 @@
         <image name="Rectangle " width="345" height="174"/>
         <image name="Rectangle 2" width="345" height="174"/>
         <image name="img_S_1_1" width="1560" height="1560"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
