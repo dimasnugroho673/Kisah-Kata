@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400409702684F774007B3A94 /* Kosakata+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4004096E2684F774007B3A94 /* Kosakata+CoreDataClass.swift */; };
+		400409712684F774007B3A94 /* Kosakata+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4004096F2684F774007B3A94 /* Kosakata+CoreDataProperties.swift */; };
 		405E60F226842E23008B8499 /* StorytellingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E60F126842E23008B8499 /* StorytellingViewController.swift */; };
 		405E60F5268434E3008B8499 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E60F4268434E3008B8499 /* Extension.swift */; };
 		405E60F826843576008B8499 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E60F726843576008B8499 /* GifImage.swift */; };
@@ -20,7 +22,6 @@
 		40E4BC0C267B00D000880A62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC0B267B00D000880A62 /* SceneDelegate.swift */; };
 		40E4BC0E267B00D000880A62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC0D267B00D000880A62 /* ViewController.swift */; };
 		40E4BC11267B00D000880A62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC0F267B00D000880A62 /* Main.storyboard */; };
-		40E4BC14267B00D000880A62 /* MC2_KisahKata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40E4BC12267B00D000880A62 /* MC2_KisahKata.xcdatamodeld */; };
 		40E4BC16267B00D700880A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC15267B00D700880A62 /* Assets.xcassets */; };
 		40E4BC19267B00D700880A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC17267B00D700880A62 /* LaunchScreen.storyboard */; };
 		510EE6042682B35B0052B35B /* ListCeritaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EE6022682B35B0052B35B /* ListCeritaViewController.swift */; };
@@ -29,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4004096E2684F774007B3A94 /* Kosakata+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kosakata+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4004096F2684F774007B3A94 /* Kosakata+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kosakata+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		405E60F126842E23008B8499 /* StorytellingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytellingViewController.swift; sourceTree = "<group>"; };
 		405E60F4268434E3008B8499 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		405E60F726843576008B8499 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 		40E4BBFD267B00D000880A62 = {
 			isa = PBXGroup;
 			children = (
+				4004096E2684F774007B3A94 /* Kosakata+CoreDataClass.swift */,
+				4004096F2684F774007B3A94 /* Kosakata+CoreDataProperties.swift */,
 				40E4BC08267B00D000880A62 /* MC2-KisahKata */,
 				40E4BC07267B00D000880A62 /* Products */,
 				8503D0030795AC24B0818B0B /* Pods */,
@@ -278,9 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				400409712684F774007B3A94 /* Kosakata+CoreDataProperties.swift in Sources */,
 				405E60F5268434E3008B8499 /* Extension.swift in Sources */,
-				40E4BC14267B00D000880A62 /* MC2_KisahKata.xcdatamodeld in Sources */,
 				405E60F826843576008B8499 /* GifImage.swift in Sources */,
+				400409702684F774007B3A94 /* Kosakata+CoreDataClass.swift in Sources */,
 				405E60FB26843909008B8499 /* Stories.swift in Sources */,
 				405E60F226842E23008B8499 /* StorytellingViewController.swift in Sources */,
 				40E4BC0E267B00D000880A62 /* ViewController.swift in Sources */,

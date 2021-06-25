@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Stories: Identifiable {
     // Properties
@@ -18,42 +19,47 @@ class Stories: Identifiable {
     let videoDetail: String
     let descriptionDetail: String
     
-    init(id: Int, title: String, coverImage: String, stories: [String], storyIlustrations: [String], highlightedWords: [String], videoDetail: [String], descriptionDetail: [String]) {
-//        self.id = id
-//        self.title = title
-//        self.coverImage = coverImage
-//        self.stories = stories
-//        self.storyIlustrations = storyIlustrations
-//        self.highlightedWords = highlightedWords
-//        self.videoDetail = videoDetail
-//        self.descriptionDetail = descriptionDetail
-        
-        let stories: [[String]] = [
-            [
-                "Pada zaman dahulu",
-                "hiduplah seorang pemuda tani yatim piatu yang tampan bernama Toba",
-                "di bagian utara pulau Sumatra.",
-                "Daerah tersebut sangatlah kering",
-                "Pemuda itu hidup dari bertani",
-                "dan memancing ikan."
-            ],
-        ]
-        
-        let highlightedWords: [[String]] = [
-            [
-                "",
-                "yatim",
-                "tampan",
-                "",
-                "kering",
-                "bertani",
-                "memancing"
-            ]
-        ]
+    
+    
+    init(id: Int, title: String, coverImage: String, stories: [String], storyIlustrations: [String], highlightedWords: [String], videoDetail: String, descriptionDetail: String) {
+        self.id = id
+        self.title = title
+        self.coverImage = coverImage
+        self.stories = stories
+        self.storyIlustrations = storyIlustrations
+        self.highlightedWords = highlightedWords
+        self.videoDetail = videoDetail
+        self.descriptionDetail = descriptionDetail
         
         
         
-        Stories(id: 1, title: "Legenda Danau Toba", coverImage: "", stories: stories[0], storyIlustrations: [], highlightedWords: highlightedWords[0], videoDetail: [], descriptionDetail: <#T##[String]#>)
+        
+//        let stories: [[String]] = [
+//            [
+//                "Pada zaman dahulu",
+//                "hiduplah seorang pemuda tani yatim piatu yang tampan bernama Toba",
+//                "di bagian utara pulau Sumatra.",
+//                "Daerah tersebut sangatlah kering",
+//                "Pemuda itu hidup dari bertani",
+//                "dan memancing ikan."
+//            ],
+//        ]
+//
+//        let highlightedWords: [[String]] = [
+//            [
+//                "",
+//                "yatim",
+//                "tampan",
+//                "",
+//                "kering",
+//                "bertani",
+//                "memancing"
+//            ]
+//        ]
+//
+//
+//
+//        Stories(id: 1, title: "Legenda Danau Toba", coverImage: "", stories: stories[0], storyIlustrations: [], highlightedWords: highlightedWords[0], videoDetail: [], descriptionDetail: "")
     }
     
     

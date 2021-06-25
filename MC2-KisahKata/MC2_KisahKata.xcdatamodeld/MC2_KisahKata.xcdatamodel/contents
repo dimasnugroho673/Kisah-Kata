@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Kosakata" representedClassName="Kosakata" syncable="YES" codeGenerationType="class">
+        <attribute name="deskripsi" optional="YES" attributeType="String"/>
+        <attribute name="deskripsiVideo" optional="YES" attributeType="String"/>
+        <attribute name="kata" optional="YES" attributeType="String"/>
+        <attribute name="kategori" optional="YES" attributeType="String"/>
+        <attribute name="pathVideo" optional="YES" attributeType="String"/>
+        <attribute name="sudahDipelajari" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Kosakata" positionX="-63" positionY="-18" width="128" height="119"/>
+    </elements>
 </model>
