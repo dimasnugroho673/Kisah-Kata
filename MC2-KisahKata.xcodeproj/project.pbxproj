@@ -26,6 +26,7 @@
 		40E4BC19267B00D700880A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC17267B00D700880A62 /* LaunchScreen.storyboard */; };
 		510EE6042682B35B0052B35B /* ListCeritaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EE6022682B35B0052B35B /* ListCeritaViewController.swift */; };
 		510EE6072682B9750052B35B /* CeritaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EE6062682B9740052B35B /* CeritaTableViewCell.swift */; };
+		E3E23E86268585AB008C3CD0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E23E85268585AB008C3CD0 /* IntroViewController.swift */; };
 		F995D7947EFDD35BFD6DC434 /* Pods_MC2_KisahKata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		6CD898E0D2D4EF52F0CB290F /* Pods-MC2-KisahKata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC2-KisahKata.release.xcconfig"; path = "Target Support Files/Pods-MC2-KisahKata/Pods-MC2-KisahKata.release.xcconfig"; sourceTree = "<group>"; };
 		6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MC2_KisahKata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC1C319238B248BA1A3FDC4 /* Pods-MC2-KisahKata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC2-KisahKata.debug.xcconfig"; path = "Target Support Files/Pods-MC2-KisahKata/Pods-MC2-KisahKata.debug.xcconfig"; sourceTree = "<group>"; };
+		E3E23E85268585AB008C3CD0 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				40E4BC15267B00D700880A62 /* Assets.xcassets */,
 				40E4BC17267B00D700880A62 /* LaunchScreen.storyboard */,
 				40E4BC1A267B00D700880A62 /* Info.plist */,
+				E3E23E85268585AB008C3CD0 /* IntroViewController.swift */,
 				40E4BC12267B00D000880A62 /* MC2_KisahKata.xcdatamodeld */,
 				510EE6022682B35B0052B35B /* ListCeritaViewController.swift */,
 				510EE6062682B9740052B35B /* CeritaTableViewCell.swift */,
@@ -286,6 +289,7 @@
 				400409712684F774007B3A94 /* Kosakata+CoreDataProperties.swift in Sources */,
 				405E60F5268434E3008B8499 /* Extension.swift in Sources */,
 				405E60F826843576008B8499 /* GifImage.swift in Sources */,
+				E3E23E86268585AB008C3CD0 /* IntroViewController.swift in Sources */,
 				400409702684F774007B3A94 /* Kosakata+CoreDataClass.swift in Sources */,
 				405E60FB26843909008B8499 /* Stories.swift in Sources */,
 				405E60F226842E23008B8499 /* StorytellingViewController.swift in Sources */,
