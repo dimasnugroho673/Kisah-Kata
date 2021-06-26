@@ -53,12 +53,14 @@ extension KosaKataMenuViewController: UICollectionViewDelegate, UICollectionView
         let kosakata = dataKosaKata[indexPath.row]
         cell.KosaKataImage.image = UIImage (named: kosakata.imageName!)
         cell.KosaKataLabel.text = kosakata.title
+        cell.layer.cornerRadius = 15
+        cell.layer.borderWidth = 1
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 120)
+        return CGSize(width: collectionView.frame.width/2-10, height: collectionView.frame.width/2-10)
     }
     
     
