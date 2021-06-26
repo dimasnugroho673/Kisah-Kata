@@ -39,6 +39,10 @@
 		515C2776268739930010C136 /* KosaKataMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C2775268739930010C136 /* KosaKataMenuCollectionViewCell.swift */; };
 		515C2778268739B20010C136 /* Kosakata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C2777268739B20010C136 /* Kosakata.swift */; };
 		E3E23E86268585AB008C3CD0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E23E85268585AB008C3CD0 /* IntroViewController.swift */; };
+		E3F7FA4A2686DC1900AE784A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7FA492686DC1900AE784A /* QuizViewController.swift */; };
+		E3F7FA4C2687331300AE784A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7FA4B2687331300AE784A /* Question.swift */; };
+		E3F7FA4E2687333500AE784A /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7FA4D2687333500AE784A /* QuestionBank.swift */; };
+		E3F7FA502687384500AE784A /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7FA4F2687384500AE784A /* ScoreViewController.swift */; };
 		F995D7947EFDD35BFD6DC434 /* Pods_MC2_KisahKata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +84,10 @@
 		6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MC2_KisahKata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC1C319238B248BA1A3FDC4 /* Pods-MC2-KisahKata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC2-KisahKata.debug.xcconfig"; path = "Target Support Files/Pods-MC2-KisahKata/Pods-MC2-KisahKata.debug.xcconfig"; sourceTree = "<group>"; };
 		E3E23E85268585AB008C3CD0 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		E3F7FA492686DC1900AE784A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		E3F7FA4B2687331300AE784A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		E3F7FA4D2687333500AE784A /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
+		E3F7FA4F2687384500AE784A /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,8 @@
 			children = (
 				405E60FA26843909008B8499 /* Stories.swift */,
 				40DD146E268609AB00A271EF /* StoriesData.swift */,
+				E3F7FA4B2687331300AE784A /* Question.swift */,
+				E3F7FA4D2687333500AE784A /* QuestionBank.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +198,8 @@
 				515C2775268739930010C136 /* KosaKataMenuCollectionViewCell.swift */,
 				515C2777268739B20010C136 /* Kosakata.swift */,
 				40CAC7DB2687847800D229B3 /* StoryEndViewController.swift */,
+				E3F7FA492686DC1900AE784A /* QuizViewController.swift */,
+				E3F7FA4F2687384500AE784A /* ScoreViewController.swift */,
 			);
 			path = "MC2-KisahKata";
 			sourceTree = "<group>";
@@ -336,7 +348,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				40CAC7DC2687847800D229B3 /* StoryEndViewController.swift in Sources */,
+				E3F7FA4C2687331300AE784A /* Question.swift in Sources */,
+				E3F7FA4E2687333500AE784A /* QuestionBank.swift in Sources */,
 				400409712684F774007B3A94 /* Kosakata+CoreDataProperties.swift in Sources */,
+				E3F7FA4A2686DC1900AE784A /* QuizViewController.swift in Sources */,
 				405E60F5268434E3008B8499 /* Extension.swift in Sources */,
 				405E60F826843576008B8499 /* GifImage.swift in Sources */,
 				E3E23E86268585AB008C3CD0 /* IntroViewController.swift in Sources */,
@@ -348,6 +363,7 @@
 				40E4BC0E267B00D000880A62 /* ViewController.swift in Sources */,
 				510EE6042682B35B0052B35B /* ListCeritaViewController.swift in Sources */,
 				515C2774268739250010C136 /* KosaKataMenuViewController.swift in Sources */,
+				E3F7FA502687384500AE784A /* ScoreViewController.swift in Sources */,
 				40E4BC0A267B00D000880A62 /* AppDelegate.swift in Sources */,
 				515C2776268739930010C136 /* KosaKataMenuCollectionViewCell.swift in Sources */,
 				40E4BC0C267B00D000880A62 /* SceneDelegate.swift in Sources */,
