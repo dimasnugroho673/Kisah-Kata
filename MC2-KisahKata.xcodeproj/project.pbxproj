@@ -18,6 +18,7 @@
 		408C014726817BC400C59A24 /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014226817BC400C59A24 /* Baloo2-Regular.ttf */; };
 		408C014826817BC400C59A24 /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014326817BC400C59A24 /* Baloo2-Medium.ttf */; };
 		408C014926817BC400C59A24 /* Baloo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014426817BC400C59A24 /* Baloo2-Bold.ttf */; };
+		40CAC7DC2687847800D229B3 /* StoryEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CAC7DB2687847800D229B3 /* StoryEndViewController.swift */; };
 		40DD145326857A9C00A271EF /* MC2_KisahKata.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC12267B00D000880A62 /* MC2_KisahKata.xcdatamodeld */; };
 		40DD14682685F1AF00A271EF /* story_1_4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 40DD14622685F1AE00A271EF /* story_1_4.gif */; };
 		40DD14692685F1AF00A271EF /* story_1_6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 40DD14632685F1AF00A271EF /* story_1_6.gif */; };
@@ -53,6 +54,7 @@
 		408C014226817BC400C59A24 /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
 		408C014326817BC400C59A24 /* Baloo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Medium.ttf"; sourceTree = "<group>"; };
 		408C014426817BC400C59A24 /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
+		40CAC7DB2687847800D229B3 /* StoryEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryEndViewController.swift; sourceTree = "<group>"; };
 		40DD14622685F1AE00A271EF /* story_1_4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = story_1_4.gif; sourceTree = "<group>"; };
 		40DD14632685F1AF00A271EF /* story_1_6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = story_1_6.gif; sourceTree = "<group>"; };
 		40DD14642685F1AF00A271EF /* story_1_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = story_1_1.gif; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				515C2773268739250010C136 /* KosaKataMenuViewController.swift */,
 				515C2775268739930010C136 /* KosaKataMenuCollectionViewCell.swift */,
 				515C2777268739B20010C136 /* Kosakata.swift */,
+				40CAC7DB2687847800D229B3 /* StoryEndViewController.swift */,
 			);
 			path = "MC2-KisahKata";
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40CAC7DC2687847800D229B3 /* StoryEndViewController.swift in Sources */,
 				400409712684F774007B3A94 /* Kosakata+CoreDataProperties.swift in Sources */,
 				405E60F5268434E3008B8499 /* Extension.swift in Sources */,
 				405E60F826843576008B8499 /* GifImage.swift in Sources */,

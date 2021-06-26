@@ -318,6 +318,7 @@
                         <outlet property="storyPageControl" destination="its-oK-mzo" id="Nmh-Sx-PFh"/>
                         <outlet property="titleDetailPopUpLabel" destination="h4u-mR-zVa" id="gky-sh-Vfh"/>
                         <outlet property="videoContainerView" destination="moZ-0h-s5i" id="Sca-3B-4Wf"/>
+                        <segue destination="b0o-ZL-MV9" kind="show" identifier="scoreStorySegue" id="ESb-VY-Xqo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z0I-2s-gob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -403,6 +404,22 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="4107.6923076923076" y="145.73459715639811"/>
+        </scene>
+        <!--Story End View Controller-->
+        <scene sceneID="Npv-7O-Cy1">
+            <objects>
+                <viewController id="b0o-ZL-MV9" customClass="StoryEndViewController" customModule="MC2_KisahKata" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6uP-ZL-TgX">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qwm-hD-cAD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ekC-80-DQF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NQb-dX-6hy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5020" y="146"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TEd-eO-Hil">

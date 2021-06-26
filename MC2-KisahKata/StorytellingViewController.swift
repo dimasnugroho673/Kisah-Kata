@@ -71,6 +71,7 @@ class StorytellingViewController: UIViewController {
         prevButton.roundedBorder(cornerRadius: 12)
         prevButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
         prevButton.tintColor = UIColor.darkGray
+        prevButton.backgroundColor = UIColor(named: "LowInterferenceColor")
         
         if self.activePart == 0 {
             prevButton.isHidden = true
@@ -78,6 +79,8 @@ class StorytellingViewController: UIViewController {
         
         nextButton.roundedBorder(cornerRadius: 12)
         nextButton.setTitle("Selanjutnya", for: .normal)
+        nextButton.backgroundColor = UIColor(named: "PrimaryColor")
+        
         
         _generateContent()
         
@@ -379,7 +382,12 @@ class StorytellingViewController: UIViewController {
             _fetchPageControl(page: self.activePart)
             
             self._animateSpringView(sender)
+        } else if self.activePart == story!.stories.count - 1 {
+            self._animateSpringView(sender)
+            performSegue(withIdentifier: "scoreStorySegue", sender: nil)
         }
+        
+
     }
     
     @IBAction func closeDetailPopUpView(_ sender: UIButton) {
