@@ -95,9 +95,16 @@ class ViewController: UIViewController {
         newKosakata4.setValue("bertani", forKey: "kata")
         newKosakata4.setValue("kerja", forKey: "kategori")
         newKosakata4.setValue("https://r4---sn-q4fl6ne7.googlevideo.com/videoplayback?expire=1624664102&ei=xhPWYJCoL_Kaj-8Pht2ZiA4&ip=102.129.153.142&id=o-AG9chOCnfk9B1k5yRZt_l2DUDAM14-DqeVuKsmIAyT7F&itag=22&source=youtube&requiressl=yes&mh=am&mm=31%2C29&mn=sn-q4fl6ne7%2Csn-q4flrner&ms=au%2Crdu&mv=m&mvi=4&pl=25&initcwndbps=726250&vprv=1&mime=video%2Fmp4&ns=VKEBwsLhj1xC5FACJX-gNZ8G&cnr=14&ratebypass=yes&dur=5.131&lmt=1572102153131113&mt=1624642127&fvip=4&fexp=24001373%2C24007246&beids=9466585&c=WEB&txp=2211222&n=etk1qKLEryQf072O88yIX&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAJqOLyTU1e0FYglQQHG4Cay3fgWsWDt2OQoE-9RgjWE7AiBfoyPMD3TBo6ktSCeaqi_0yhaMMjpO7THSuHK1MUGaug%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJqpOZcpwZ-f7ACf-uQ4DmaUXtq5iR8RGwcppzX3l1YlAiEA9ORpIMzERz6wQbeFPz6tG-3rHVBcI_cBV3EOnXock84%3D&title=square%20aspect%20ratio%201%3A1%20test%20on%20Youtube%20(in%202018%2F2019)", forKey: "urlVideo")
-        newKosakata4.setValue("Bercocok tanam", forKey: "deskripsi")
+        newKosakata4.setValue("Bercocok tanam; mengusahakan tanah dengan tanam-menanam;", forKey: "deskripsi")
         newKosakata4.setValue(0, forKey: "sudahDipelajari")
         newKosakata4.setValue("", forKey: "deskripsiVideo")
+        
+        newKosakata5.setValue("tampan", forKey: "kata")
+        newKosakata5.setValue("sifat", forKey: "kategori")
+        newKosakata5.setValue("https://r1---sn-b8u-bpbl.googlevideo.com/videoplayback?expire=1624671813&ei=5THWYOaOIfOW3LUPg--LuAo&ip=189.59.218.242&id=o-AGwtD80OE3b6_ZPZf1huv3ON03QkMYOblM3ONeWSVtxR&itag=22&source=youtube&requiressl=yes&mh=Ic&mm=31%2C26&mn=sn-b8u-bpbl%2Csn-bg07dn6l&ms=au%2Conr&mv=m&mvi=1&pl=23&initcwndbps=846250&vprv=1&mime=video%2Fmp4&ns=iBZDdT-Kj4aLA3sTd-Z9dPUG&cnr=14&ratebypass=yes&dur=20.758&lmt=1571896094544700&mt=1624650043&fvip=1&fexp=24001373%2C24007246&c=WEB&txp=1311222&n=JHWY1XBoKJGfnekCLK8gC&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRAIgEYmOvDCukE7GN6ghJmAbkzu403CXkQT9JWLC-Mq9AK4CIAEbuOaLTefytA37GKq7L26FQ3cfJtbCNpGo2nGfNp1X&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIhAOkoIKEI6zE6I5iTLfjgKFKH3oOLms2MzDpna_Cg2iurAiAS6Q2v1WbL5Z4Dg9V4gWqryFUns49vw8ioXmh6ljEjxw%3D%3D&title=1%3A1%20aspect%20ratio%20test", forKey: "urlVideo")
+        newKosakata5.setValue("Elok (rupanya, sikapnya, bentuknya, letaknya); gagah", forKey: "deskripsi")
+        newKosakata5.setValue(0, forKey: "sudahDipelajari")
+        newKosakata5.setValue("", forKey: "deskripsiVideo")
         
         do {
             try manageObjectContext.save()

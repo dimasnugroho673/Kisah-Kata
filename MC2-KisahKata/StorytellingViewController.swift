@@ -13,6 +13,7 @@ import AVFoundation
 class StorytellingViewController: UIViewController {
     
     var activePart: Int = 0
+    var wordTemp: String = ""
     
     let scriptStory = ActiveLabel()
 
@@ -223,8 +224,9 @@ class StorytellingViewController: UIViewController {
         _animateIn(desiredView: blurDetailPopUpView)
         _animateIn(desiredView: detailPopUpView)
         
+        wordTemp = word
         titleDetailPopUpLabel.text = word.capitalized
-        _fetchVideo()
+        _fetchVideo(word: word)
         _fetchDescription(word: word)
     }
 
@@ -238,21 +240,60 @@ class StorytellingViewController: UIViewController {
         
         let kosakataRequest: NSFetchRequest<Kosakata> = Kosakata.fetchRequest()
         kosakataRequest.predicate = NSPredicate(format: "kata = %@", word)
-//        kosakataRequest.returnsObjectsAsFaults = false
+        kosakataRequest.returnsObjectsAsFaults = false
         
         do {
             try kosakatas = manageObjectContext.fetch(kosakataRequest)
-//            return kosakatas[
-            print("kosakata result", kosakatas)
+        
+            descriptionDetailPopUpLabel.text = kosakatas[0].deskripsi!
         } catch {
             print("Gagal load data deskrpsi!")
         }
-        
+       
     }
     
-    private func _fetchVideo() {
+    private func _fetchVideo(word: String) {
         
         playVideoButton.isHidden = true
+        
+        let kosakataRequest: NSFetchRequest<Kosakata> = Kosakata.fetchRequest()
+        kosakataRequest.predicate = NSPredicate(format: "kata = %@", word)
+        kosakataRequest.returnsObjectsAsFaults = false
+        
+        do {
+            try kosakatas = manageObjectContext.fetch(kosakataRequest)
+            
+            let videoURL = URL(string: kosakatas[0].urlVideo!)!
+            
+            let player = AVPlayer(url: videoURL)
+            playerLayer = AVPlayerLayer(player: player)
+            playerLayer.backgroundColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+            playerLayer.frame.size.width = videoContainerView.bounds.width
+            playerLayer.frame.size.height = videoContainerView.bounds.height
+            playerLayer.videoGravity = .resizeAspectFill
+            
+            playVideoButton.setImage(UIImage(named: "button_play_dark"), for: .normal)
+            playVideoButton.tintColor = UIColor.white
+            playVideoButton.layer.frame = CGRect(x: videoContainerView.frame.width / 2 - 30, y: videoContainerView.frame.height / 2 - 30, width: 60, height: 60)
+            playVideoButton.addTarget(self,
+                                action: #selector(buttonAction),
+                                for: .touchUpInside)
+            playVideoButton.contentHorizontalAlignment = .fill
+            playVideoButton.contentVerticalAlignment = .fill
+            
+            videoContainerView.roundedBorder(cornerRadius: 12)
+            videoContainerView.layer.addSublayer(playerLayer)
+            videoContainerView.addSubview(playVideoButton)
+
+            NotificationCenter.default.addObserver(self, selector: #selector(videoDidEnd), name:
+            NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+            
+            player.isMuted = true
+            player.play()
+            
+        } catch {
+            print("Gagal load data video!")
+        }
         
         /// kalo videonya offline
 //        let file = "video_sibi_tampan.mov".components(separatedBy: ".")
@@ -266,32 +307,8 @@ class StorytellingViewController: UIViewController {
 //        let videoURL = URL(fileURLWithPath: filePath)
         
         // video online
-        let videoURL = URL(string: "https://r4---sn-q4fl6ne7.googlevideo.com/videoplayback?expire=1624664102&ei=xhPWYJCoL_Kaj-8Pht2ZiA4&ip=102.129.153.142&id=o-AG9chOCnfk9B1k5yRZt_l2DUDAM14-DqeVuKsmIAyT7F&itag=22&source=youtube&requiressl=yes&mh=am&mm=31%2C29&mn=sn-q4fl6ne7%2Csn-q4flrner&ms=au%2Crdu&mv=m&mvi=4&pl=25&initcwndbps=726250&vprv=1&mime=video%2Fmp4&ns=VKEBwsLhj1xC5FACJX-gNZ8G&cnr=14&ratebypass=yes&dur=5.131&lmt=1572102153131113&mt=1624642127&fvip=4&fexp=24001373%2C24007246&beids=9466585&c=WEB&txp=2211222&n=etk1qKLEryQf072O88yIX&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAJqOLyTU1e0FYglQQHG4Cay3fgWsWDt2OQoE-9RgjWE7AiBfoyPMD3TBo6ktSCeaqi_0yhaMMjpO7THSuHK1MUGaug%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJqpOZcpwZ-f7ACf-uQ4DmaUXtq5iR8RGwcppzX3l1YlAiEA9ORpIMzERz6wQbeFPz6tG-3rHVBcI_cBV3EOnXock84%3D&title=square%20aspect%20ratio%201%3A1%20test%20on%20Youtube%20(in%202018%2F2019)")!
-        let player = AVPlayer(url: videoURL)
-        playerLayer = AVPlayerLayer(player: player)
-        playerLayer.backgroundColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        playerLayer.frame.size.width = videoContainerView.bounds.width
-        playerLayer.frame.size.height = videoContainerView.bounds.height
-        playerLayer.videoGravity = .resizeAspectFill
         
-        playVideoButton.setImage(UIImage(named: "button_play_dark"), for: .normal)
-        playVideoButton.tintColor = UIColor.white
-        playVideoButton.layer.frame = CGRect(x: videoContainerView.frame.width / 2 - 30, y: videoContainerView.frame.height / 2 - 30, width: 60, height: 60)
-        playVideoButton.addTarget(self,
-                            action: #selector(buttonAction),
-                            for: .touchUpInside)
-        playVideoButton.contentHorizontalAlignment = .fill
-        playVideoButton.contentVerticalAlignment = .fill
-        
-        videoContainerView.roundedBorder(cornerRadius: 12)
-        videoContainerView.layer.addSublayer(playerLayer)
-        videoContainerView.addSubview(playVideoButton)
-
-        NotificationCenter.default.addObserver(self, selector: #selector(videoDidEnd), name:
-        NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
-        
-        player.isMuted = true
-        player.play()
+       
         
     }
     
@@ -371,11 +388,25 @@ class StorytellingViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
      
         playVideoButton.isHidden = true
+        
+        let kosakataRequest: NSFetchRequest<Kosakata> = Kosakata.fetchRequest()
+        kosakataRequest.predicate = NSPredicate(format: "kata = %@", wordTemp)
+        kosakataRequest.returnsObjectsAsFaults = false
+        
+        do {
+            try kosakatas = manageObjectContext.fetch(kosakataRequest)
+            
+            kosakatas[0].sudahDipelajari = 1
+            print("\(wordTemp) berhasil dipelajari")
+        } catch {
+            print("\(wordTemp) belum berhasil dipelajari")
+        }
+        
     }
     
     @objc
     func buttonAction() {
-        _fetchVideo()
+        _fetchVideo(word: wordTemp)
     }
     
     
