@@ -510,6 +510,7 @@
                         <outlet property="expWordLearned" destination="qug-V4-sUc" id="etL-SM-699"/>
                         <outlet property="startQuizButton" destination="MPA-QY-sWt" id="nnb-Ax-c2C"/>
                         <outlet property="wordLearnedLabel" destination="fzn-Y8-grQ" id="6uK-bV-dkb"/>
+                        <segue destination="HUH-zE-wfY" kind="show" identifier="quizSegue" id="Iol-Vx-qqu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQb-dX-6hy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -673,6 +674,7 @@
                             <constraint firstItem="5mA-5h-XSP" firstAttribute="leading" secondItem="VsA-XP-teq" secondAttribute="leading" id="vbw-Lm-XzN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gAV-JM-O3H"/>
                     <connections>
                         <outlet property="blurVIew" destination="FQ7-u6-sle" id="aak-9R-Wln"/>
                         <outlet property="jawabanLabel" destination="7b6-IY-SC7" id="HLi-Zy-wbz"/>

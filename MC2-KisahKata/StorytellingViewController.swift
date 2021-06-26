@@ -433,7 +433,6 @@ class StorytellingViewController: UIViewController {
     // PREPARE SEGUE
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let endStoryVC = segue.destination as? StoryEndViewController {
-//            print("prepare segue", self.wordClicked.count * 10)
                 endStoryVC.expWordResult = self.wordClicked.count * 10
                 endStoryVC.wordLearned = self.wordClicked.count
         }

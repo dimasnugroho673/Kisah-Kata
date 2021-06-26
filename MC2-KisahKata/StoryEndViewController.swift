@@ -24,15 +24,24 @@ class StoryEndViewController: UIViewController {
         
         startQuizButton.roundedBorder(cornerRadius: 12)
         
-        print("exp", expWordResult)
-        print("word learn", wordLearned)
+        wordLearnedLabel.text = "\(wordLearned) Kosakata baru dipelajari"
+        expWordLearned.text = "+\(expWordResult) exp"
     }
     
     @IBAction func startQuizAction(_ sender: UIButton) {
         self._animateSpringView(sender)
+        
+        performSegue(withIdentifier: "quizSegue", sender: nil)
     }
     
     
+    // PREPARE SEGUE
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let quizVC = segue.destination as? QuizViewController {
+            quizVC.expWordResult = self.expWordResult
+        }
+
+    }
     
     
     // file private function
