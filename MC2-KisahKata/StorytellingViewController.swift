@@ -41,6 +41,11 @@ class StorytellingViewController: UIViewController {
     
     let playVideoButton = UIButton(frame: CGRect(x: 100, y: 400, width: 200, height: 60))
     
+//    var tempPoint: Int
+//    var wordClickedCounter: Int
+    
+    var wordClicked: Set<String> = []
+    
     
 //    init(indexStory: Int) {
 //        self.indexStory = indexStory
@@ -63,8 +68,6 @@ class StorytellingViewController: UIViewController {
         
         self.title = story!.title
         
-//        print(story!.stories)
-        
         prevButton.roundedBorder(cornerRadius: 12)
         prevButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
         prevButton.tintColor = UIColor.darkGray
@@ -75,8 +78,6 @@ class StorytellingViewController: UIViewController {
         
         nextButton.roundedBorder(cornerRadius: 12)
         nextButton.setTitle("Selanjutnya", for: .normal)
-        
-
         
         _generateContent()
         
@@ -92,6 +93,8 @@ class StorytellingViewController: UIViewController {
         descriptionDetailContainerView.backgroundColor = UIColor.white
         
         closeDetailPopUpButton.roundedBorder(cornerRadius: 12)
+        
+        
         
 //        nextButton.setImage(UIImage(systemName: "chevron.forward"), for: .normal)
 //        nextButton.contentHorizontalAlignment = .left
@@ -124,23 +127,9 @@ class StorytellingViewController: UIViewController {
             
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
 
-//    private func _loadData() {
-//        let kosakataRequest: NSFetchRequest<Kosakata> = Kosakata.fetchRequest()
-//
-////        let sort = [NSSortDescriptor(key: "kata", ascending: true)]
-////        kosakataRequest.sortDescriptors = sort
-//        let filter = "products"
-//        let predicate = NSPredicate(format: "type = %@", filter)
-//
-//        do {
-//            try kosakatas = manageObjectContext.fetch(kosakataRequest)
-//
-//        } catch {
-//            print("Gagal load data!")
-//        }
-//    }
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
@@ -213,6 +202,14 @@ class StorytellingViewController: UIViewController {
             prevButton.isHidden = true
         } else {
             prevButton.isHidden = false
+            
+            if self.activePart == story!.stories.count - 1 {
+//                print("cerita mentok!!")
+                nextButton.setTitle("Kerjakan kuis", for: .normal)
+            } else {
+                nextButton.setTitle("Selanjutnya", for: .normal)
+            }
+            
         }
     }
     
@@ -354,13 +351,14 @@ class StorytellingViewController: UIViewController {
     
     
     // IBACTION
-    @IBAction func prevPart(_ sender: Any) {
+    @IBAction func prevPart(_ sender: UIButton) {
         if self.activePart == 0 {
             
             self.activePart = 0
             _generateContent()
             _fetchPageControl(page: self.activePart)
          
+            self._animateSpringView(sender)
             
         } else if self.activePart <= story!.stories.count - 1 {
             
@@ -368,20 +366,23 @@ class StorytellingViewController: UIViewController {
             _generateContent()
             _fetchPageControl(page: self.activePart)
             
+            self._animateSpringView(sender)
+            
         }
     }
 
     
-    @IBAction func nextPart(_ sender: Any) {
+    @IBAction func nextPart(_ sender: UIButton) {
         if self.activePart < story!.stories.count - 1 {
             self.activePart += 1
             _generateContent()
             _fetchPageControl(page: self.activePart)
             
+            self._animateSpringView(sender)
         }
     }
     
-    @IBAction func closeDetailPopUpView(_ sender: Any) {
+    @IBAction func closeDetailPopUpView(_ sender: UIButton) {
         _animateOut(desiredView: detailPopUpView)
         _animateOut(desiredView: blurDetailPopUpView)
         
@@ -397,16 +398,41 @@ class StorytellingViewController: UIViewController {
             try kosakatas = manageObjectContext.fetch(kosakataRequest)
             
             kosakatas[0].sudahDipelajari = 1
-            print("\(wordTemp) berhasil dipelajari")
+//            print("\(wordTemp) berhasil dipelajari")
+            self.wordClicked.insert(wordTemp)
+            print("word click count", wordClicked.count)
+            
+            self._animateSpringView(sender)
         } catch {
             print("\(wordTemp) belum berhasil dipelajari")
         }
+        
         
     }
     
     @objc
     func buttonAction() {
         _fetchVideo(word: wordTemp)
+    }
+    
+    
+    
+    // file private function
+    fileprivate func _animateSpringView(_ viewToAnimate: UIView) {
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+    
+            viewToAnimate.transform = CGAffineTransform(scaleX: 0.97, y: 0.97)
+
+        }) { (_) in
+            
+            UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+                
+                viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
+                
+            }, completion: nil)
+            
+        }
+        
     }
     
     
