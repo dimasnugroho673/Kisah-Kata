@@ -80,6 +80,9 @@ class StorytellingViewController: UIViewController {
         nextButton.roundedBorder(cornerRadius: 12)
         nextButton.setTitle("Selanjutnya", for: .normal)
         nextButton.backgroundColor = UIColor(named: "PrimaryColor")
+        nextButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        nextButton.semanticContentAttribute = .forceRightToLeft
+        nextButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
         
         
         _generateContent()
@@ -422,6 +425,21 @@ class StorytellingViewController: UIViewController {
     func buttonAction() {
         _fetchVideo(word: wordTemp)
     }
+    
+    
+    
+    
+    
+    // PREPARE SEGUE
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let endStoryVC = segue.destination as? StoryEndViewController {
+//            print("prepare segue", self.wordClicked.count * 10)
+                endStoryVC.expWordResult = self.wordClicked.count * 10
+                endStoryVC.wordLearned = self.wordClicked.count
+        }
+
+    }
+    
     
     
     

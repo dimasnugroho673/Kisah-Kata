@@ -9,22 +9,47 @@ import UIKit
 
 class StoryEndViewController: UIViewController {
 
+    @IBOutlet weak var wordLearnedLabel: UILabel!
+    @IBOutlet weak var expWordLearned: UILabel!
+    @IBOutlet weak var startQuizButton: UIButton!
+    
+    var expWordResult: Int = 0
+    var wordLearned: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+        
+        startQuizButton.roundedBorder(cornerRadius: 12)
+        
+        print("exp", expWordResult)
+        print("word learn", wordLearned)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func startQuizAction(_ sender: UIButton) {
+        self._animateSpringView(sender)
     }
-    */
+    
+    
+    
+    
+    // file private function
+    fileprivate func _animateSpringView(_ viewToAnimate: UIView) {
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+    
+            viewToAnimate.transform = CGAffineTransform(scaleX: 0.97, y: 0.97)
 
+        }) { (_) in
+            
+            UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+                
+                viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
+                
+            }, completion: nil)
+            
+        }
+        
+    }
 }

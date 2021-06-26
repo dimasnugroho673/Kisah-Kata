@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HUH-zE-wfY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kTG-dL-oof">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -12,8 +13,14 @@
         <array key="Baloo2-Bold.ttf">
             <string>Baloo2-Bold</string>
         </array>
+        <array key="Baloo2-Medium.ttf">
+            <string>Baloo2-Medium</string>
+        </array>
         <array key="Baloo2-Regular.ttf">
             <string>Baloo2-Regular</string>
+        </array>
+        <array key="Baloo2-SemiBold.ttf">
+            <string>Baloo2-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -270,38 +277,52 @@
                                     <constraint firstAttribute="height" constant="350" id="CBc-Th-moU"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWd-fG-hcj">
-                                <rect key="frame" x="20" y="772" width="65" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xia-kp-zUv">
+                                <rect key="frame" x="99" y="765" width="271" height="45"/>
+                                <color key="backgroundColor" name="PrimaryColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="271" id="VtS-82-PHf"/>
+                                    <constraint firstAttribute="height" constant="45" id="hMt-LZ-ZkU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Selanjutnya">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPart:" destination="mtm-ID-3L6" eventType="touchUpInside" id="bdR-WD-ze8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWd-fG-hcj">
+                                <rect key="frame" x="20" y="765" width="65" height="45"/>
+                                <color key="backgroundColor" name="LowInterferenceColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="FQN-KD-IkE"/>
+                                    <constraint firstAttribute="width" constant="65" id="kG9-I8-9wm"/>
+                                </constraints>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                                 </state>
                                 <connections>
                                     <action selector="prevPart:" destination="mtm-ID-3L6" eventType="touchUpInside" id="QQG-Zh-9QX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xia-kp-zUv">
-                                <rect key="frame" x="99" y="772" width="271" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="nextPart:" destination="mtm-ID-3L6" eventType="touchUpInside" id="bdR-WD-ze8"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="syL-ov-DWS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" name="TextPrimaryColor"/>
                         <constraints>
+                            <constraint firstItem="GWd-fG-hcj" firstAttribute="leading" secondItem="syL-ov-DWS" secondAttribute="leading" constant="20" id="1yh-BK-hBZ"/>
                             <constraint firstItem="mil-LS-c2U" firstAttribute="top" secondItem="its-oK-mzo" secondAttribute="bottom" constant="10" id="6cC-e8-hwu"/>
                             <constraint firstItem="its-oK-mzo" firstAttribute="top" secondItem="syL-ov-DWS" secondAttribute="top" constant="10" id="FgT-Fi-Qb6"/>
                             <constraint firstItem="mil-LS-c2U" firstAttribute="leading" secondItem="syL-ov-DWS" secondAttribute="leading" constant="20" id="L8M-4b-ykC"/>
+                            <constraint firstItem="Xia-kp-zUv" firstAttribute="bottom" secondItem="syL-ov-DWS" secondAttribute="bottom" id="PDa-mD-lGS"/>
                             <constraint firstItem="syL-ov-DWS" firstAttribute="trailing" secondItem="mil-LS-c2U" secondAttribute="trailing" constant="20" id="RJ6-jq-h3J"/>
                             <constraint firstItem="syL-ov-DWS" firstAttribute="trailing" secondItem="its-oK-mzo" secondAttribute="trailing" constant="20" id="UmD-z1-LB9"/>
+                            <constraint firstItem="GWd-fG-hcj" firstAttribute="bottom" secondItem="syL-ov-DWS" secondAttribute="bottom" id="dP0-e2-vTT"/>
+                            <constraint firstItem="syL-ov-DWS" firstAttribute="trailing" secondItem="Xia-kp-zUv" secondAttribute="trailing" constant="20" id="tmw-J5-gf1"/>
                             <constraint firstItem="its-oK-mzo" firstAttribute="leading" secondItem="syL-ov-DWS" secondAttribute="leading" constant="20" id="wb7-wu-58V"/>
                         </constraints>
                     </view>
@@ -350,10 +371,10 @@
                                 <constraint firstAttribute="width" constant="320" id="cnh-LX-Vfd"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="25"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" name="TextSecondaryColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHz-0A-9Nd">
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NHz-0A-9Nd">
                             <rect key="frame" x="15" y="398" width="321" height="108"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CR-HW-PsF">
@@ -361,7 +382,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <string key="text">pemuda/pe·mu·da/ n orang muda laki-laki; remaja; teruna: para -- ini akan menjadi pemimpin bangsa;~ tawon ki pemuda yang selalu bergantung pada induk semangnya</string>
                                     <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="16"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" name="TextSecondaryColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -371,12 +392,13 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTr-tj-Pir">
-                            <rect key="frame" x="15" y="541" width="321" height="38"/>
-                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <rect key="frame" x="15" y="534" width="321" height="45"/>
+                            <color key="backgroundColor" name="PrimaryColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="38" id="0ua-C6-FtJ"/>
-                                <constraint firstAttribute="width" constant="320" id="eVi-ME-4Ls"/>
+                                <constraint firstAttribute="width" constant="321" id="c5C-2f-4LV"/>
+                                <constraint firstAttribute="height" constant="45" id="kN7-fM-yum"/>
                             </constraints>
+                            <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="17"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Saya mengerti"/>
                             <connections>
@@ -387,16 +409,15 @@
                     <viewLayoutGuide key="safeArea" id="5W6-YJ-fOJ"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="5W6-YJ-fOJ" firstAttribute="bottom" secondItem="DTr-tj-Pir" secondAttribute="bottom" constant="15" id="0dF-2e-q4W"/>
                         <constraint firstItem="NHz-0A-9Nd" firstAttribute="leading" secondItem="5W6-YJ-fOJ" secondAttribute="leading" constant="15" id="7F3-cD-JE2"/>
-                        <constraint firstItem="5W6-YJ-fOJ" firstAttribute="trailing" secondItem="DTr-tj-Pir" secondAttribute="trailing" constant="15" id="KQW-IR-F4r"/>
+                        <constraint firstItem="5W6-YJ-fOJ" firstAttribute="trailing" secondItem="DTr-tj-Pir" secondAttribute="trailing" constant="15" id="F1W-Dy-eZI"/>
                         <constraint firstItem="NHz-0A-9Nd" firstAttribute="top" secondItem="h4u-mR-zVa" secondAttribute="bottom" constant="13" id="LHl-gR-Uod"/>
-                        <constraint firstItem="DTr-tj-Pir" firstAttribute="leading" secondItem="5W6-YJ-fOJ" secondAttribute="leading" constant="15" id="MGP-BB-igy"/>
+                        <constraint firstItem="5W6-YJ-fOJ" firstAttribute="bottom" secondItem="DTr-tj-Pir" secondAttribute="bottom" constant="15" id="LQm-ii-JkV"/>
                         <constraint firstItem="h4u-mR-zVa" firstAttribute="top" secondItem="moZ-0h-s5i" secondAttribute="bottom" constant="10" id="Oye-0J-JNW"/>
                         <constraint firstItem="h4u-mR-zVa" firstAttribute="leading" secondItem="5W6-YJ-fOJ" secondAttribute="leading" constant="15" id="TIp-fM-S1x"/>
+                        <constraint firstItem="DTr-tj-Pir" firstAttribute="leading" secondItem="5W6-YJ-fOJ" secondAttribute="leading" constant="15" id="Tt0-zH-LyC"/>
                         <constraint firstItem="moZ-0h-s5i" firstAttribute="top" secondItem="SaY-fq-trS" secondAttribute="top" constant="15" id="VTd-kG-z7K"/>
                         <constraint firstItem="moZ-0h-s5i" firstAttribute="leading" secondItem="5W6-YJ-fOJ" secondAttribute="leading" constant="15" id="Wz7-OO-j7J"/>
-                        <constraint firstItem="DTr-tj-Pir" firstAttribute="top" secondItem="NHz-0A-9Nd" secondAttribute="bottom" constant="35" id="X5w-u7-YTd"/>
                         <constraint firstItem="5W6-YJ-fOJ" firstAttribute="trailing" secondItem="h4u-mR-zVa" secondAttribute="trailing" constant="15" id="nZ6-ap-DKF"/>
                         <constraint firstItem="5W6-YJ-fOJ" firstAttribute="trailing" secondItem="moZ-0h-s5i" secondAttribute="trailing" constant="15" id="odO-68-dgp"/>
                         <constraint firstItem="5W6-YJ-fOJ" firstAttribute="trailing" secondItem="NHz-0A-9Nd" secondAttribute="trailing" constant="15" id="qc4-lK-0Pk"/>
@@ -412,23 +433,103 @@
                     <view key="view" contentMode="scaleToFill" id="6uP-ZL-TgX">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Eggy-Senang" translatesAutoresizingMaskIntoConstraints="NO" id="I8I-4M-XT6">
+                                <rect key="frame" x="63" y="160" width="264" height="269"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="Pes-cl-uFh"/>
+                                    <constraint firstAttribute="height" constant="269" id="tfh-OA-aXF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kisah Selesai" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kS6-Ej-QOw">
+                                <rect key="frame" x="63" y="449" width="264" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Awj-j6-U4z"/>
+                                    <constraint firstAttribute="width" constant="264" id="jRa-eW-PTN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="36"/>
+                                <color key="textColor" name="TextPrimaryColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nj-M4-aV1">
+                                <rect key="frame" x="63" y="504" width="264" height="2"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="9SZ-Jd-n1D"/>
+                                    <constraint firstAttribute="height" constant="2" id="A1E-i1-VXw"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Kosakata baru dipelajari" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzn-Y8-grQ">
+                                <rect key="frame" x="90" y="519" width="210" height="27"/>
+                                <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="17"/>
+                                <color key="textColor" name="TextSecondaryColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+50 xp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qug-V4-sUc">
+                                <rect key="frame" x="90" y="543" width="210" height="27"/>
+                                <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="17"/>
+                                <color key="textColor" name="TextDangerColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPA-QY-sWt">
+                                <rect key="frame" x="16" y="765" width="358" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="LowInterferenceColor"/>
+                                <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="18"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Mulai kuis">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startQuizAction:" destination="b0o-ZL-MV9" eventType="touchUpInside" id="iDf-ej-P2X"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qwm-hD-cAD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fzn-Y8-grQ" firstAttribute="top" secondItem="0nj-M4-aV1" secondAttribute="bottom" constant="13" id="4q6-pM-sIv"/>
+                            <constraint firstItem="0nj-M4-aV1" firstAttribute="leading" secondItem="6uP-ZL-TgX" secondAttribute="leadingMargin" constant="47" id="5Y0-lm-TBP"/>
+                            <constraint firstItem="qug-V4-sUc" firstAttribute="leading" secondItem="qwm-hD-cAD" secondAttribute="leading" constant="90" id="5iF-ec-FCI"/>
+                            <constraint firstItem="kS6-Ej-QOw" firstAttribute="top" secondItem="I8I-4M-XT6" secondAttribute="bottom" constant="20" id="Enw-H4-6Ml"/>
+                            <constraint firstItem="0nj-M4-aV1" firstAttribute="top" secondItem="kS6-Ej-QOw" secondAttribute="bottom" constant="8" id="EyX-H5-2rZ"/>
+                            <constraint firstItem="qwm-hD-cAD" firstAttribute="trailing" secondItem="fzn-Y8-grQ" secondAttribute="trailing" constant="90" id="IUl-c4-cl4"/>
+                            <constraint firstItem="qwm-hD-cAD" firstAttribute="trailing" secondItem="kS6-Ej-QOw" secondAttribute="trailing" constant="63" id="NpZ-aP-Sw5"/>
+                            <constraint firstItem="qwm-hD-cAD" firstAttribute="trailing" secondItem="I8I-4M-XT6" secondAttribute="trailing" constant="63" id="R4j-ue-FQp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0nj-M4-aV1" secondAttribute="trailing" constant="47" id="T1C-oo-eYK"/>
+                            <constraint firstItem="fzn-Y8-grQ" firstAttribute="leading" secondItem="qwm-hD-cAD" secondAttribute="leading" constant="90" id="TNz-sV-96a"/>
+                            <constraint firstItem="I8I-4M-XT6" firstAttribute="leading" secondItem="qwm-hD-cAD" secondAttribute="leading" constant="63" id="hqL-bQ-be3"/>
+                            <constraint firstItem="kS6-Ej-QOw" firstAttribute="leading" secondItem="qwm-hD-cAD" secondAttribute="leading" constant="63" id="i8k-8I-yzr"/>
+                            <constraint firstItem="qug-V4-sUc" firstAttribute="top" secondItem="0nj-M4-aV1" secondAttribute="bottom" constant="37" id="spd-U4-7xV"/>
+                            <constraint firstItem="qwm-hD-cAD" firstAttribute="trailing" secondItem="qug-V4-sUc" secondAttribute="trailing" constant="90" id="wyb-bo-2TP"/>
+                            <constraint firstItem="I8I-4M-XT6" firstAttribute="top" secondItem="qwm-hD-cAD" secondAttribute="top" constant="72" id="zrz-o3-pba"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ekC-80-DQF"/>
+                    <connections>
+                        <outlet property="expWordLearned" destination="qug-V4-sUc" id="etL-SM-699"/>
+                        <outlet property="startQuizButton" destination="MPA-QY-sWt" id="nnb-Ax-c2C"/>
+                        <outlet property="wordLearnedLabel" destination="fzn-Y8-grQ" id="6uK-bV-dkb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQb-dX-6hy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5020" y="146"/>
+            <point key="canvasLocation" x="5020" y="145.73459715639811"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TEd-eO-Hil">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kTG-dL-oof" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pLv-CL-LaK">
+                    <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" id="pLv-CL-LaK">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="TextPrimaryColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="20"/>
+                            <color key="textColor" name="TextPrimaryColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -894,21 +995,37 @@
     <resources>
         <image name="ButtonCerita" width="321" height="221"/>
         <image name="KosaKataImage" width="321" height="221"/>
+        <image name="M-Eggy-Senang" width="1101" height="1311"/>
         <image name="M-Eggy-Senang " width="230" height="235"/>
         <image name="Rectangle " width="345" height="174"/>
         <image name="Rectangle 2" width="345" height="174"/>
         <image name="img_S_1_1" width="1560" height="1560"/>
+        <namedColor name="LowInterferenceColor">
+            <color red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryColor">
+            <color red="0.29019607843137257" green="0.57647058823529407" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextDangerColor">
+            <color red="0.74901960784313726" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextPrimaryColor">
+            <color red="0.29019607843137257" green="0.57647058823529407" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextSecondaryColor">
+            <color red="0.36078431372549019" green="0.36078431372549019" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
