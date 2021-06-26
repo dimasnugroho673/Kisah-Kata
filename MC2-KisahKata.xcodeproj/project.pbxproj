@@ -177,6 +177,7 @@
 		40E4BC08267B00D000880A62 /* MC2-KisahKata */ = {
 			isa = PBXGroup;
 			children = (
+				E3A8EF3E2687A4650027349B /* Controller */,
 				40DD14542685903400A271EF /* Images */,
 				405E60F9268438C3008B8499 /* Models */,
 				405E60F62684351A008B8499 /* Utils */,
@@ -184,22 +185,14 @@
 				40844363268096AE001BAC12 /* Font */,
 				40E4BC09267B00D000880A62 /* AppDelegate.swift */,
 				40E4BC0B267B00D000880A62 /* SceneDelegate.swift */,
-				40E4BC0D267B00D000880A62 /* ViewController.swift */,
 				40E4BC0F267B00D000880A62 /* Main.storyboard */,
 				40E4BC15267B00D700880A62 /* Assets.xcassets */,
 				40E4BC17267B00D700880A62 /* LaunchScreen.storyboard */,
 				40E4BC1A267B00D700880A62 /* Info.plist */,
-				E3E23E85268585AB008C3CD0 /* IntroViewController.swift */,
 				40E4BC12267B00D000880A62 /* MC2_KisahKata.xcdatamodeld */,
-				510EE6022682B35B0052B35B /* ListCeritaViewController.swift */,
 				510EE6062682B9740052B35B /* CeritaTableViewCell.swift */,
-				405E60F126842E23008B8499 /* StorytellingViewController.swift */,
-				515C2773268739250010C136 /* KosaKataMenuViewController.swift */,
 				515C2775268739930010C136 /* KosaKataMenuCollectionViewCell.swift */,
 				515C2777268739B20010C136 /* Kosakata.swift */,
-				40CAC7DB2687847800D229B3 /* StoryEndViewController.swift */,
-				E3F7FA492686DC1900AE784A /* QuizViewController.swift */,
-				E3F7FA4F2687384500AE784A /* ScoreViewController.swift */,
 			);
 			path = "MC2-KisahKata";
 			sourceTree = "<group>";
@@ -219,6 +212,21 @@
 				6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3A8EF3E2687A4650027349B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E3E23E85268585AB008C3CD0 /* IntroViewController.swift */,
+				510EE6022682B35B0052B35B /* ListCeritaViewController.swift */,
+				405E60F126842E23008B8499 /* StorytellingViewController.swift */,
+				515C2773268739250010C136 /* KosaKataMenuViewController.swift */,
+				40CAC7DB2687847800D229B3 /* StoryEndViewController.swift */,
+				E3F7FA492686DC1900AE784A /* QuizViewController.swift */,
+				E3F7FA4F2687384500AE784A /* ScoreViewController.swift */,
+				40E4BC0D267B00D000880A62 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
