@@ -18,6 +18,7 @@
 		408C014726817BC400C59A24 /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014226817BC400C59A24 /* Baloo2-Regular.ttf */; };
 		408C014826817BC400C59A24 /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014326817BC400C59A24 /* Baloo2-Medium.ttf */; };
 		408C014926817BC400C59A24 /* Baloo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014426817BC400C59A24 /* Baloo2-Bold.ttf */; };
+		40CAC7DC2687847800D229B3 /* StoryEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CAC7DB2687847800D229B3 /* StoryEndViewController.swift */; };
 		40DD145326857A9C00A271EF /* MC2_KisahKata.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC12267B00D000880A62 /* MC2_KisahKata.xcdatamodeld */; };
 		40DD14682685F1AF00A271EF /* story_1_4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 40DD14622685F1AE00A271EF /* story_1_4.gif */; };
 		40DD14692685F1AF00A271EF /* story_1_6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 40DD14632685F1AF00A271EF /* story_1_6.gif */; };
@@ -34,6 +35,9 @@
 		40E4BC19267B00D700880A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC17267B00D700880A62 /* LaunchScreen.storyboard */; };
 		510EE6042682B35B0052B35B /* ListCeritaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EE6022682B35B0052B35B /* ListCeritaViewController.swift */; };
 		510EE6072682B9750052B35B /* CeritaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EE6062682B9740052B35B /* CeritaTableViewCell.swift */; };
+		515C2774268739250010C136 /* KosaKataMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C2773268739250010C136 /* KosaKataMenuViewController.swift */; };
+		515C2776268739930010C136 /* KosaKataMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C2775268739930010C136 /* KosaKataMenuCollectionViewCell.swift */; };
+		515C2778268739B20010C136 /* Kosakata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C2777268739B20010C136 /* Kosakata.swift */; };
 		E3E23E86268585AB008C3CD0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E23E85268585AB008C3CD0 /* IntroViewController.swift */; };
 		E3F7FA4A2686DC1900AE784A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7FA492686DC1900AE784A /* QuizViewController.swift */; };
 		E3F7FA4C2687331300AE784A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7FA4B2687331300AE784A /* Question.swift */; };
@@ -54,6 +58,7 @@
 		408C014226817BC400C59A24 /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
 		408C014326817BC400C59A24 /* Baloo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Medium.ttf"; sourceTree = "<group>"; };
 		408C014426817BC400C59A24 /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
+		40CAC7DB2687847800D229B3 /* StoryEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryEndViewController.swift; sourceTree = "<group>"; };
 		40DD14622685F1AE00A271EF /* story_1_4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = story_1_4.gif; sourceTree = "<group>"; };
 		40DD14632685F1AF00A271EF /* story_1_6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = story_1_6.gif; sourceTree = "<group>"; };
 		40DD14642685F1AF00A271EF /* story_1_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = story_1_1.gif; sourceTree = "<group>"; };
@@ -72,6 +77,9 @@
 		40E4BC1A267B00D700880A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		510EE6022682B35B0052B35B /* ListCeritaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCeritaViewController.swift; sourceTree = "<group>"; };
 		510EE6062682B9740052B35B /* CeritaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeritaTableViewCell.swift; sourceTree = "<group>"; };
+		515C2773268739250010C136 /* KosaKataMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KosaKataMenuViewController.swift; sourceTree = "<group>"; };
+		515C2775268739930010C136 /* KosaKataMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KosaKataMenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		515C2777268739B20010C136 /* Kosakata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kosakata.swift; sourceTree = "<group>"; };
 		6CD898E0D2D4EF52F0CB290F /* Pods-MC2-KisahKata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC2-KisahKata.release.xcconfig"; path = "Target Support Files/Pods-MC2-KisahKata/Pods-MC2-KisahKata.release.xcconfig"; sourceTree = "<group>"; };
 		6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MC2_KisahKata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC1C319238B248BA1A3FDC4 /* Pods-MC2-KisahKata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC2-KisahKata.debug.xcconfig"; path = "Target Support Files/Pods-MC2-KisahKata/Pods-MC2-KisahKata.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +194,10 @@
 				510EE6022682B35B0052B35B /* ListCeritaViewController.swift */,
 				510EE6062682B9740052B35B /* CeritaTableViewCell.swift */,
 				405E60F126842E23008B8499 /* StorytellingViewController.swift */,
+				515C2773268739250010C136 /* KosaKataMenuViewController.swift */,
+				515C2775268739930010C136 /* KosaKataMenuCollectionViewCell.swift */,
+				515C2777268739B20010C136 /* Kosakata.swift */,
+				40CAC7DB2687847800D229B3 /* StoryEndViewController.swift */,
 				E3F7FA492686DC1900AE784A /* QuizViewController.swift */,
 				E3F7FA4F2687384500AE784A /* ScoreViewController.swift */,
 			);
@@ -335,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40CAC7DC2687847800D229B3 /* StoryEndViewController.swift in Sources */,
 				E3F7FA4C2687331300AE784A /* Question.swift in Sources */,
 				E3F7FA4E2687333500AE784A /* QuestionBank.swift in Sources */,
 				400409712684F774007B3A94 /* Kosakata+CoreDataProperties.swift in Sources */,
@@ -346,10 +359,13 @@
 				405E60FB26843909008B8499 /* Stories.swift in Sources */,
 				405E60F226842E23008B8499 /* StorytellingViewController.swift in Sources */,
 				40DD146F268609AB00A271EF /* StoriesData.swift in Sources */,
+				515C2778268739B20010C136 /* Kosakata.swift in Sources */,
 				40E4BC0E267B00D000880A62 /* ViewController.swift in Sources */,
 				510EE6042682B35B0052B35B /* ListCeritaViewController.swift in Sources */,
+				515C2774268739250010C136 /* KosaKataMenuViewController.swift in Sources */,
 				E3F7FA502687384500AE784A /* ScoreViewController.swift in Sources */,
 				40E4BC0A267B00D000880A62 /* AppDelegate.swift in Sources */,
+				515C2776268739930010C136 /* KosaKataMenuCollectionViewCell.swift in Sources */,
 				40E4BC0C267B00D000880A62 /* SceneDelegate.swift in Sources */,
 				510EE6072682B9750052B35B /* CeritaTableViewCell.swift in Sources */,
 			);

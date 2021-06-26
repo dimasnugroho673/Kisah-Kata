@@ -13,6 +13,7 @@ import AVFoundation
 class StorytellingViewController: UIViewController {
     
     var activePart: Int = 0
+    var wordTemp: String = ""
     
     let scriptStory = ActiveLabel()
 
@@ -40,6 +41,11 @@ class StorytellingViewController: UIViewController {
     
     let playVideoButton = UIButton(frame: CGRect(x: 100, y: 400, width: 200, height: 60))
     
+//    var tempPoint: Int
+//    var wordClickedCounter: Int
+    
+    var wordClicked: Set<String> = []
+    
     
 //    init(indexStory: Int) {
 //        self.indexStory = indexStory
@@ -50,16 +56,22 @@ class StorytellingViewController: UIViewController {
 //        fatalError("init(coder:) has not been implemented")
 //    }
 //
+    
+    var kosakatas = [Kosakata]()
+    var manageObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = story!.title
+        manageObjectContext = appDelegate?.persistentContainer.viewContext as! NSManagedObjectContext
         
-//        print(story!.stories)
+        self.title = story!.title
         
         prevButton.roundedBorder(cornerRadius: 12)
         prevButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
         prevButton.tintColor = UIColor.darkGray
+        prevButton.backgroundColor = UIColor(named: "LowInterferenceColor")
         
         if self.activePart == 0 {
             prevButton.isHidden = true
@@ -67,8 +79,8 @@ class StorytellingViewController: UIViewController {
         
         nextButton.roundedBorder(cornerRadius: 12)
         nextButton.setTitle("Selanjutnya", for: .normal)
+        nextButton.backgroundColor = UIColor(named: "PrimaryColor")
         
-
         
         _generateContent()
         
@@ -84,6 +96,8 @@ class StorytellingViewController: UIViewController {
         descriptionDetailContainerView.backgroundColor = UIColor.white
         
         closeDetailPopUpButton.roundedBorder(cornerRadius: 12)
+        
+        
         
 //        nextButton.setImage(UIImage(systemName: "chevron.forward"), for: .normal)
 //        nextButton.contentHorizontalAlignment = .left
@@ -116,23 +130,9 @@ class StorytellingViewController: UIViewController {
             
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
 
-//    private func _loadData() {
-//        let kosakataRequest: NSFetchRequest<Kosakata> = Kosakata.fetchRequest()
-//
-////        let sort = [NSSortDescriptor(key: "kata", ascending: true)]
-////        kosakataRequest.sortDescriptors = sort
-//        let filter = "products"
-//        let predicate = NSPredicate(format: "type = %@", filter)
-//
-//        do {
-//            try kosakatas = manageObjectContext.fetch(kosakataRequest)
-//
-//        } catch {
-//            print("Gagal load data!")
-//        }
-//    }
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
@@ -205,6 +205,14 @@ class StorytellingViewController: UIViewController {
             prevButton.isHidden = true
         } else {
             prevButton.isHidden = false
+            
+            if self.activePart == story!.stories.count - 1 {
+//                print("cerita mentok!!")
+                nextButton.setTitle("Kerjakan kuis", for: .normal)
+            } else {
+                nextButton.setTitle("Selanjutnya", for: .normal)
+            }
+            
         }
     }
     
@@ -216,8 +224,10 @@ class StorytellingViewController: UIViewController {
         _animateIn(desiredView: blurDetailPopUpView)
         _animateIn(desiredView: detailPopUpView)
         
+        wordTemp = word
         titleDetailPopUpLabel.text = word.capitalized
-        _fetchVideo()
+        _fetchVideo(word: word)
+        _fetchDescription(word: word)
     }
 
     private func _fetchPageControl(page: Int) {
@@ -226,9 +236,64 @@ class StorytellingViewController: UIViewController {
         storyPageControl?.currentPage = Int(page)
     }
     
-    private func _fetchVideo() {
+    private func _fetchDescription(word: String) {
+        
+        let kosakataRequest: NSFetchRequest<Kosakata> = Kosakata.fetchRequest()
+        kosakataRequest.predicate = NSPredicate(format: "kata = %@", word)
+        kosakataRequest.returnsObjectsAsFaults = false
+        
+        do {
+            try kosakatas = manageObjectContext.fetch(kosakataRequest)
+        
+            descriptionDetailPopUpLabel.text = kosakatas[0].deskripsi!
+        } catch {
+            print("Gagal load data deskrpsi!")
+        }
+       
+    }
+    
+    private func _fetchVideo(word: String) {
         
         playVideoButton.isHidden = true
+        
+        let kosakataRequest: NSFetchRequest<Kosakata> = Kosakata.fetchRequest()
+        kosakataRequest.predicate = NSPredicate(format: "kata = %@", word)
+        kosakataRequest.returnsObjectsAsFaults = false
+        
+        do {
+            try kosakatas = manageObjectContext.fetch(kosakataRequest)
+            
+            let videoURL = URL(string: kosakatas[0].urlVideo!)!
+            
+            let player = AVPlayer(url: videoURL)
+            playerLayer = AVPlayerLayer(player: player)
+            playerLayer.backgroundColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+            playerLayer.frame.size.width = videoContainerView.bounds.width
+            playerLayer.frame.size.height = videoContainerView.bounds.height
+            playerLayer.videoGravity = .resizeAspectFill
+            
+            playVideoButton.setImage(UIImage(named: "button_play_dark"), for: .normal)
+            playVideoButton.tintColor = UIColor.white
+            playVideoButton.layer.frame = CGRect(x: videoContainerView.frame.width / 2 - 30, y: videoContainerView.frame.height / 2 - 30, width: 60, height: 60)
+            playVideoButton.addTarget(self,
+                                action: #selector(buttonAction),
+                                for: .touchUpInside)
+            playVideoButton.contentHorizontalAlignment = .fill
+            playVideoButton.contentVerticalAlignment = .fill
+            
+            videoContainerView.roundedBorder(cornerRadius: 12)
+            videoContainerView.layer.addSublayer(playerLayer)
+            videoContainerView.addSubview(playVideoButton)
+
+            NotificationCenter.default.addObserver(self, selector: #selector(videoDidEnd), name:
+            NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+            
+            player.isMuted = true
+            player.play()
+            
+        } catch {
+            print("Gagal load data video!")
+        }
         
         /// kalo videonya offline
 //        let file = "video_sibi_tampan.mov".components(separatedBy: ".")
@@ -242,32 +307,8 @@ class StorytellingViewController: UIViewController {
 //        let videoURL = URL(fileURLWithPath: filePath)
         
         // video online
-        let videoURL = URL(string: "https://r4---sn-q4fl6ne7.googlevideo.com/videoplayback?expire=1624664102&ei=xhPWYJCoL_Kaj-8Pht2ZiA4&ip=102.129.153.142&id=o-AG9chOCnfk9B1k5yRZt_l2DUDAM14-DqeVuKsmIAyT7F&itag=22&source=youtube&requiressl=yes&mh=am&mm=31%2C29&mn=sn-q4fl6ne7%2Csn-q4flrner&ms=au%2Crdu&mv=m&mvi=4&pl=25&initcwndbps=726250&vprv=1&mime=video%2Fmp4&ns=VKEBwsLhj1xC5FACJX-gNZ8G&cnr=14&ratebypass=yes&dur=5.131&lmt=1572102153131113&mt=1624642127&fvip=4&fexp=24001373%2C24007246&beids=9466585&c=WEB&txp=2211222&n=etk1qKLEryQf072O88yIX&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAJqOLyTU1e0FYglQQHG4Cay3fgWsWDt2OQoE-9RgjWE7AiBfoyPMD3TBo6ktSCeaqi_0yhaMMjpO7THSuHK1MUGaug%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJqpOZcpwZ-f7ACf-uQ4DmaUXtq5iR8RGwcppzX3l1YlAiEA9ORpIMzERz6wQbeFPz6tG-3rHVBcI_cBV3EOnXock84%3D&title=square%20aspect%20ratio%201%3A1%20test%20on%20Youtube%20(in%202018%2F2019)")!
-        let player = AVPlayer(url: videoURL)
-        playerLayer = AVPlayerLayer(player: player)
-        playerLayer.backgroundColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        playerLayer.frame.size.width = videoContainerView.bounds.width
-        playerLayer.frame.size.height = videoContainerView.bounds.height
-        playerLayer.videoGravity = .resizeAspectFill
         
-        playVideoButton.setImage(UIImage(named: "button_play_dark"), for: .normal)
-        playVideoButton.tintColor = UIColor.white
-        playVideoButton.layer.frame = CGRect(x: videoContainerView.frame.width / 2 - 30, y: videoContainerView.frame.height / 2 - 30, width: 60, height: 60)
-        playVideoButton.addTarget(self,
-                            action: #selector(buttonAction),
-                            for: .touchUpInside)
-        playVideoButton.contentHorizontalAlignment = .fill
-        playVideoButton.contentVerticalAlignment = .fill
-        
-        videoContainerView.roundedBorder(cornerRadius: 12)
-        videoContainerView.layer.addSublayer(playerLayer)
-        videoContainerView.addSubview(playVideoButton)
-
-        NotificationCenter.default.addObserver(self, selector: #selector(videoDidEnd), name:
-        NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
-        
-        player.isMuted = true
-        player.play()
+       
         
     }
     
@@ -313,13 +354,14 @@ class StorytellingViewController: UIViewController {
     
     
     // IBACTION
-    @IBAction func prevPart(_ sender: Any) {
+    @IBAction func prevPart(_ sender: UIButton) {
         if self.activePart == 0 {
             
             self.activePart = 0
             _generateContent()
             _fetchPageControl(page: self.activePart)
          
+            self._animateSpringView(sender)
             
         } else if self.activePart <= story!.stories.count - 1 {
             
@@ -327,31 +369,78 @@ class StorytellingViewController: UIViewController {
             _generateContent()
             _fetchPageControl(page: self.activePart)
             
+            self._animateSpringView(sender)
+            
         }
     }
 
     
-    @IBAction func nextPart(_ sender: Any) {
+    @IBAction func nextPart(_ sender: UIButton) {
         if self.activePart < story!.stories.count - 1 {
             self.activePart += 1
             _generateContent()
             _fetchPageControl(page: self.activePart)
             
+            self._animateSpringView(sender)
+        } else if self.activePart == story!.stories.count - 1 {
+            self._animateSpringView(sender)
+            performSegue(withIdentifier: "scoreStorySegue", sender: nil)
         }
+        
+
     }
     
-    @IBAction func closeDetailPopUpView(_ sender: Any) {
+    @IBAction func closeDetailPopUpView(_ sender: UIButton) {
         _animateOut(desiredView: detailPopUpView)
         _animateOut(desiredView: blurDetailPopUpView)
         
         NotificationCenter.default.removeObserver(self)
      
         playVideoButton.isHidden = true
+        
+        let kosakataRequest: NSFetchRequest<Kosakata> = Kosakata.fetchRequest()
+        kosakataRequest.predicate = NSPredicate(format: "kata = %@", wordTemp)
+        kosakataRequest.returnsObjectsAsFaults = false
+        
+        do {
+            try kosakatas = manageObjectContext.fetch(kosakataRequest)
+            
+            kosakatas[0].sudahDipelajari = 1
+//            print("\(wordTemp) berhasil dipelajari")
+            self.wordClicked.insert(wordTemp)
+            print("word click count", wordClicked.count)
+            
+            self._animateSpringView(sender)
+        } catch {
+            print("\(wordTemp) belum berhasil dipelajari")
+        }
+        
+        
     }
     
     @objc
     func buttonAction() {
-        _fetchVideo()
+        _fetchVideo(word: wordTemp)
+    }
+    
+    
+    
+    // file private function
+    fileprivate func _animateSpringView(_ viewToAnimate: UIView) {
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+    
+            viewToAnimate.transform = CGAffineTransform(scaleX: 0.97, y: 0.97)
+
+        }) { (_) in
+            
+            UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+                
+                viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
+                
+            }, completion: nil)
+            
+        }
+        
     }
     
     
