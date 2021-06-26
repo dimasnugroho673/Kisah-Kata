@@ -31,9 +31,22 @@ class QuizViewController: UIViewController {
 
         blurVIew.bounds =  self.view.bounds
         
-        popupBenarView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.9, height: self.view.bounds.height * 0.4)
         
-        popupSalahView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.9, height: self.view.bounds.height * 0.4)
+        
+        optionA.layer.cornerRadius = 12
+        optionB.layer.cornerRadius = 12
+        optionC.layer.cornerRadius = 12
+        optionD.layer.cornerRadius = 12
+        
+        nextButtonBenar.layer.cornerRadius = 12
+        nextButtonSalah.layer.cornerRadius = 12
+        
+        popupBenarView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.9, height: self.view.bounds.height * 0.4)
+        popupBenarView.roundedBorder(cornerRadius: 24)
+        
+        popupSalahView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.9, height: self.view.bounds.height * 0.45)
+        popupSalahView.roundedBorder(cornerRadius: 24)
+        
         // Do any additional setup after loading the view.
         
         updateQuestion()
@@ -50,7 +63,7 @@ class QuizViewController: UIViewController {
 
 
         }else{
-            
+            jawabanLabel.text = "Jawaban Benar : \(allQuestions.list[questionNumber].jawabanQuiz)"
             animateScaleIn(desiredView: blurVIew)
             animateScaleIn(desiredView: popupSalahView)
             
@@ -70,7 +83,6 @@ class QuizViewController: UIViewController {
     @IBAction func nextButtonSalah(_ sender: Any) {
         if questionNumber <= allQuestions.list.count - 1{
         animateScaleOut(desiredView: blurVIew)
-        jawabanLabel.text = "Jawaban Benar : \(allQuestions.list[questionNumber].jawabanQuiz)"
         animateScaleOut(desiredView: popupSalahView)
         questionNumber += 1
             updateQuestion()
