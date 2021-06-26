@@ -26,6 +26,9 @@ class QuizViewController: UIViewController {
     var score: Int = 0
     var selectedAnswer: Int = 0
     
+    // score from story
+    var expWordResult: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,6 +54,8 @@ class QuizViewController: UIViewController {
         
         updateQuestion()
         // Do any additional setup after loading the view.
+        
+        thumbImage.image = UIImage(named: "img_S_1_1")?.roundedImage
     }
     
     @IBAction func answerPressed(_ sender: UIButton) {

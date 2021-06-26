@@ -25,7 +25,7 @@ extension UIImage {
         UIGraphicsBeginImageContextWithOptions(self.size, false, 1)
         UIBezierPath(
             roundedRect: rect,
-            cornerRadius: 24
+            cornerRadius: 102
             ).addClip()
         self.draw(in: rect)
         return UIGraphicsGetImageFromCurrentImageContext()!
