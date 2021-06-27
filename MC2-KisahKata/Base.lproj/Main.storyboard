@@ -349,7 +349,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moZ-0h-s5i">
-                            <rect key="frame" x="15" y="15" width="321" height="320"/>
+                            <rect key="frame" x="15" y="15" width="320" height="320"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="320" id="BPX-dg-6FD"/>
@@ -357,7 +357,7 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4u-mR-zVa">
-                            <rect key="frame" x="15" y="345" width="321" height="40"/>
+                            <rect key="frame" x="15" y="345" width="320" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="7LY-Jj-Cz6"/>
                                 <constraint firstAttribute="width" constant="320" id="cnh-LX-Vfd"/>
@@ -367,7 +367,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NHz-0A-9Nd">
-                            <rect key="frame" x="15" y="398" width="321" height="108"/>
+                            <rect key="frame" x="15" y="398" width="320" height="108"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CR-HW-PsF">
                                     <rect key="frame" x="0.0" y="-25" width="320" height="136"/>
@@ -384,7 +384,7 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTr-tj-Pir">
-                            <rect key="frame" x="15" y="534" width="321" height="45"/>
+                            <rect key="frame" x="15" y="534" width="320" height="45"/>
                             <color key="backgroundColor" name="PrimaryColor"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="321" id="c5C-2f-4LV"/>
@@ -548,23 +548,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masukkan nama kamu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0R-Tu-b9N">
-                                <rect key="frame" x="38" y="333" width="314" height="28"/>
+                                <rect key="frame" x="38" y="333" width="314" height="28.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hrs-7d-7zv">
-                                <rect key="frame" x="38" y="369" width="314" height="34"/>
+                                <rect key="frame" x="38" y="369.33333333333331" width="314" height="34"/>
                                 <color key="backgroundColor" name="textInputColor"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="M-Eggy-Bubble-Hai-Bundle" translatesAutoresizingMaskIntoConstraints="NO" id="uv7-2w-8mO">
-                                <rect key="frame" x="78" y="477" width="343" height="333"/>
+                                <rect key="frame" x="78" y="477.33333333333326" width="343" height="332.66666666666674"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtF-pP-xej">
-                                <rect key="frame" x="38" y="424" width="200" height="45"/>
+                                <rect key="frame" x="38" y="424.33333333333331" width="200" height="45"/>
                                 <color key="backgroundColor" name="PrimaryColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="YOM-Kd-Jqz"/>
