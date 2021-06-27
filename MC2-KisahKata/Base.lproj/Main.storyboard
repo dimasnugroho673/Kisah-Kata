@@ -99,7 +99,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="IaK-54-zay" kind="showDetail" identifier="kosakataMenu" id="51a-wN-Zbb"/>
+                                            <segue destination="IaK-54-zay" kind="show" id="lNm-I1-Uxm"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔠 KosaKata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXZ-3s-ePp">
@@ -357,7 +357,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moZ-0h-s5i">
-                            <rect key="frame" x="15" y="15" width="321" height="320"/>
+                            <rect key="frame" x="15" y="15" width="320" height="320"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="320" id="BPX-dg-6FD"/>
@@ -365,7 +365,7 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4u-mR-zVa">
-                            <rect key="frame" x="15" y="345" width="321" height="40"/>
+                            <rect key="frame" x="15" y="345" width="320" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="7LY-Jj-Cz6"/>
                                 <constraint firstAttribute="width" constant="320" id="cnh-LX-Vfd"/>
@@ -375,7 +375,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NHz-0A-9Nd">
-                            <rect key="frame" x="15" y="398" width="321" height="108"/>
+                            <rect key="frame" x="15" y="398" width="320" height="108"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CR-HW-PsF">
                                     <rect key="frame" x="0.0" y="-25" width="320" height="136"/>
@@ -392,7 +392,7 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTr-tj-Pir">
-                            <rect key="frame" x="15" y="534" width="321" height="45"/>
+                            <rect key="frame" x="15" y="534" width="320" height="45"/>
                             <color key="backgroundColor" name="PrimaryColor"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="321" id="c5C-2f-4LV"/>
@@ -820,37 +820,37 @@
             <objects>
                 <viewController id="IaK-54-zay" customClass="KosaKataMenuViewController" customModule="MC2_KisahKata" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0GY-2F-bKb">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cyU-eH-a1F">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="5" id="nKq-LK-9rp">
-                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="itemSize" width="180" height="170"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="2" minY="10" maxX="2" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="viewCellKosaKataMenu" id="xyt-jb-bCk" customClass="KosaKataMenuCollectionViewCell" customModule="MC2_KisahKata" customModuleProvider="target">
-                                        <rect key="frame" x="95" y="10" width="200" height="200"/>
+                                        <rect key="frame" x="5" y="0.0" width="180" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DRd-4B-mEO">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mW7-Ge-x4c">
-                                                    <rect key="frame" x="0.0" y="178" width="200" height="17"/>
+                                                    <rect key="frame" x="0.0" y="130" width="180" height="35"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dAG-Lf-yI7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="168"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="120"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="168" id="6gA-x5-thb"/>
-                                                        <constraint firstAttribute="width" constant="200" id="mza-z1-gi7"/>
+                                                        <constraint firstAttribute="height" constant="120" id="6gA-x5-thb"/>
+                                                        <constraint firstAttribute="width" constant="180" id="mza-z1-gi7"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -864,7 +864,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="mW7-Ge-x4c" secondAttribute="trailing" id="qbE-mr-EZL"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="200" height="200"/>
+                                        <size key="customSize" width="180" height="170"/>
                                         <connections>
                                             <outlet property="KosaKataImage" destination="dAG-Lf-yI7" id="v9O-nj-h8d"/>
                                             <outlet property="KosaKataLabel" destination="mW7-Ge-x4c" id="PxD-g5-v7E"/>
@@ -882,6 +882,7 @@
                             <constraint firstItem="cyU-eH-a1F" firstAttribute="top" secondItem="kbM-O5-hVF" secondAttribute="top" id="tfG-AA-6QE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="isM-36-HyN"/>
                     <connections>
                         <outlet property="collectionView" destination="cyU-eH-a1F" id="5Wm-8F-WsA"/>
                     </connections>
