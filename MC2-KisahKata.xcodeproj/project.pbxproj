@@ -18,6 +18,11 @@
 		408C014726817BC400C59A24 /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014226817BC400C59A24 /* Baloo2-Regular.ttf */; };
 		408C014826817BC400C59A24 /* Baloo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014326817BC400C59A24 /* Baloo2-Medium.ttf */; };
 		408C014926817BC400C59A24 /* Baloo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408C014426817BC400C59A24 /* Baloo2-Bold.ttf */; };
+		40BE38012689264800414B06 /* sibi_memancing.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 40BE37FC2689264800414B06 /* sibi_memancing.mp4 */; };
+		40BE38022689264800414B06 /* sibi_tampan.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 40BE37FD2689264800414B06 /* sibi_tampan.mp4 */; };
+		40BE38032689264800414B06 /* sibi_yatim.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 40BE37FE2689264800414B06 /* sibi_yatim.mp4 */; };
+		40BE38042689264800414B06 /* sibi_bertani.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 40BE37FF2689264800414B06 /* sibi_bertani.mp4 */; };
+		40BE38052689264800414B06 /* sibi_kering.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 40BE38002689264800414B06 /* sibi_kering.mp4 */; };
 		40CAC7DC2687847800D229B3 /* StoryEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CAC7DB2687847800D229B3 /* StoryEndViewController.swift */; };
 		40DD145326857A9C00A271EF /* MC2_KisahKata.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC12267B00D000880A62 /* MC2_KisahKata.xcdatamodeld */; };
 		40DD14682685F1AF00A271EF /* story_1_4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 40DD14622685F1AE00A271EF /* story_1_4.gif */; };
@@ -58,6 +63,11 @@
 		408C014226817BC400C59A24 /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
 		408C014326817BC400C59A24 /* Baloo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Medium.ttf"; sourceTree = "<group>"; };
 		408C014426817BC400C59A24 /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
+		40BE37FC2689264800414B06 /* sibi_memancing.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sibi_memancing.mp4; sourceTree = "<group>"; };
+		40BE37FD2689264800414B06 /* sibi_tampan.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sibi_tampan.mp4; sourceTree = "<group>"; };
+		40BE37FE2689264800414B06 /* sibi_yatim.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sibi_yatim.mp4; sourceTree = "<group>"; };
+		40BE37FF2689264800414B06 /* sibi_bertani.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sibi_bertani.mp4; sourceTree = "<group>"; };
+		40BE38002689264800414B06 /* sibi_kering.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sibi_kering.mp4; sourceTree = "<group>"; };
 		40CAC7DB2687847800D229B3 /* StoryEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryEndViewController.swift; sourceTree = "<group>"; };
 		40DD14622685F1AE00A271EF /* story_1_4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = story_1_4.gif; sourceTree = "<group>"; };
 		40DD14632685F1AF00A271EF /* story_1_6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = story_1_6.gif; sourceTree = "<group>"; };
@@ -141,6 +151,18 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		40BE37FB2689260D00414B06 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				40BE37FF2689264800414B06 /* sibi_bertani.mp4 */,
+				40BE38002689264800414B06 /* sibi_kering.mp4 */,
+				40BE37FC2689264800414B06 /* sibi_memancing.mp4 */,
+				40BE37FD2689264800414B06 /* sibi_tampan.mp4 */,
+				40BE37FE2689264800414B06 /* sibi_yatim.mp4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
 		40DD14542685903400A271EF /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +199,7 @@
 		40E4BC08267B00D000880A62 /* MC2-KisahKata */ = {
 			isa = PBXGroup;
 			children = (
+				40BE37FB2689260D00414B06 /* Videos */,
 				E3A8EF3E2687A4650027349B /* Controller */,
 				40DD14542685903400A271EF /* Images */,
 				405E60F9268438C3008B8499 /* Models */,
@@ -288,12 +311,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40BE38052689264800414B06 /* sibi_kering.mp4 in Resources */,
 				40DD145326857A9C00A271EF /* MC2_KisahKata.xcdatamodeld in Resources */,
 				40DD146C2685F1AF00A271EF /* story_1_2.gif in Resources */,
 				40DD14692685F1AF00A271EF /* story_1_6.gif in Resources */,
 				40DD14682685F1AF00A271EF /* story_1_4.gif in Resources */,
 				408C014926817BC400C59A24 /* Baloo2-Bold.ttf in Resources */,
 				408C014726817BC400C59A24 /* Baloo2-Regular.ttf in Resources */,
+				40BE38012689264800414B06 /* sibi_memancing.mp4 in Resources */,
 				40E4BC19267B00D700880A62 /* LaunchScreen.storyboard in Resources */,
 				40DD146A2685F1AF00A271EF /* story_1_1.gif in Resources */,
 				40DD146B2685F1AF00A271EF /* story_1_3.gif in Resources */,
@@ -302,6 +327,9 @@
 				40E4BC16267B00D700880A62 /* Assets.xcassets in Resources */,
 				408C014526817BC400C59A24 /* Baloo2-SemiBold.ttf in Resources */,
 				40E4BC11267B00D000880A62 /* Main.storyboard in Resources */,
+				40BE38032689264800414B06 /* sibi_yatim.mp4 in Resources */,
+				40BE38022689264800414B06 /* sibi_tampan.mp4 in Resources */,
+				40BE38042689264800414B06 /* sibi_bertani.mp4 in Resources */,
 				408C014626817BC400C59A24 /* Baloo2-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

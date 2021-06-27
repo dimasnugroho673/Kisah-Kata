@@ -270,7 +270,21 @@ class StorytellingViewController: UIViewController {
         do {
             try kosakatas = manageObjectContext.fetch(kosakataRequest)
             
-            let videoURL = URL(string: kosakatas[0].urlVideo!)!
+            /// video online
+//            let videoURL = URL(string: kosakatas[0].urlVideo!)!
+            
+            /// kalo videonya offline
+            let file = kosakatas[0].urlVideo!.components(separatedBy: ".")
+    
+            guard let filePath = Bundle.main.path(forResource: file[0], ofType:file[1]) else {
+                  debugPrint( "\(file.joined(separator: ".")) not found")
+                  return
+            }
+            
+            /// video offline
+            let videoURL = URL(fileURLWithPath: filePath)
+            
+           
             
             let player = AVPlayer(url: videoURL)
             playerLayer = AVPlayerLayer(player: player)
@@ -302,18 +316,7 @@ class StorytellingViewController: UIViewController {
             print("Gagal load data video!")
         }
         
-        /// kalo videonya offline
-//        let file = "video_sibi_tampan.mov".components(separatedBy: ".")
-//
-//        guard let filePath = Bundle.main.path(forResource: file[0], ofType:file[1]) else {
-//              debugPrint( "\(file.joined(separator: ".")) not found")
-//              return
-//        }
-        
-        // video offline
-//        let videoURL = URL(fileURLWithPath: filePath)
-        
-        // video online
+
         
        
         
