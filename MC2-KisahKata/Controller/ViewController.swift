@@ -37,7 +37,8 @@ class ViewController: UIViewController {
 //        customTitleColor()
         
         // check is data in core data exist?
-        checkData()
+        _checkData()
+        _checkUserIsLogged()
         
     }
     
@@ -136,7 +137,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private func checkData() {
+    private func _checkData() {
         let dataExist: Int = UserDefaults.standard.integer(forKey: "dataExist")
 
         if dataExist != 1 {
@@ -146,6 +147,17 @@ class ViewController: UIViewController {
             print("data has been dump!")
         } else {
 //            print("data exist!")
+        }
+    }
+    
+    private func _checkUserIsLogged() {
+        let username: String = UserDefaults.standard.string(forKey: "username") ?? ""
+        
+        if username == "" {
+            let controller = storyboard?.instantiateViewController(withIdentifier: "loginScreen") as! IntroViewController
+            controller.modalPresentationStyle = .fullScreen
+            controller.modalTransitionStyle = .coverVertical
+            present(controller, animated: true, completion: nil)
         }
     }
 }

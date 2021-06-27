@@ -22,6 +22,9 @@ class ListCeritaViewController: UIViewController, UITableViewDelegate, UITableVi
         // Do any additional setup after loading the view.
         ceritaTableView.delegate = self
         ceritaTableView.dataSource = self
+        
+//        ceritaTableView.separatorStyle = .none
+        ceritaTableView.showsVerticalScrollIndicator = false
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -35,32 +38,61 @@ class ListCeritaViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ceritaTableView.dequeueReusableCell(withIdentifier: "ceritaCell") as! CeritaTableViewCell
-//        let story = cerita[indexPath.row]
-//        let img = thumbnail[indexPath.row]
+
         let story = storiesData.list[indexPath.row].title
         let img = storiesData.list[indexPath.row].coverImage
         
         cell.ceritaLabel.text = story
         cell.ceritaImage.image = UIImage(named: img)
+        cell.ceritaView.roundedBorder()
         
-//        cell.ceritaView.layer.cornerRadius = cell.ceritaView.frame.height / 2
-//        cell.ceritaImage.layer.cornerRadius = cell.ceritaImage.frame.height / 2
+        cell.selectionStyle = .none
+        
+        if indexPath.row == 0 {
+            
+            cell.ceritaView.backgroundColor = UIColor(named: "VeryLowInterferenceColor")
+        } else {
+            cell.ceritaView.backgroundColor = UIColor(named: "LowInterferenceColor")
+        }
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200.0
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "storyTellingSegue", sender: nil)
-//        let storyTellingController = StorytellingViewController(indexStory: indexPath.row)
-//        navigationController?.pushViewController(storyTellingController, animated: true)
+        if indexPath.row < 1 {
+            performSegue(withIdentifier: "storyTellingSegue", sender: nil)
+        } else {
+            
+            // Create new Alert
+            var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus mencapai poin minimun untuk membuka cerita ini", preferredStyle: .alert)
+            
+            // Create OK button with action handler
+            let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+             })
+            
+//            let imgViewTitle = UIImageView(frame: CGRect(x: 10, y: 10, width: 30, height: 30))
+//               imgViewTitle.image = UIImage(systemName: "lock.rectangle.stack")
+//            dialogMessage.view.addSubview(imgViewTitle)
+            
+            //Add OK button to a dialog message
+            dialogMessage.addAction(ok)
+            // Present Alert to
+            self.present(dialogMessage, animated: true, completion: nil)
+            
+            
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.destination.isKind(of: StorytellingViewController.self){
+        if segue.destination.isKind(of: StorytellingViewController.self){
             if let storyVC = segue.destination as? StorytellingViewController {
                 storyVC.indexStory = ceritaTableView.indexPathForSelectedRow!.row
                 storyVC.story = storiesData.list[ceritaTableView.indexPathForSelectedRow!.row]
-//            }
+            }
             
         }
         
