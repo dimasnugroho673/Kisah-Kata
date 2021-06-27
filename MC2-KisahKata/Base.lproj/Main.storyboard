@@ -32,9 +32,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="👋Halo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54s-Az-w7b">
-                                <rect key="frame" x="166" y="136.66666666666666" width="63.333333333333343" height="23.333333333333343"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" fixedFrame="YES" text="Halo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54s-Az-w7b">
+                                <rect key="frame" x="169" y="141" width="71" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -44,13 +45,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fi-xp-1ky">
-                                <rect key="frame" x="0.0" y="254" width="389" height="235"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fi-xp-1ky">
+                                <rect key="frame" x="6.6666666666666572" y="254" width="389" height="235"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle " translatesAutoresizingMaskIntoConstraints="NO" id="Mja-PH-W4M">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Rectangle " translatesAutoresizingMaskIntoConstraints="NO" id="Mja-PH-W4M">
                                         <rect key="frame" x="22" y="30.666666666666686" width="345" height="174"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTC-n3-JTD">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTC-n3-JTD">
                                         <rect key="frame" x="34" y="7" width="321" height="221"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="321" id="ZXq-zE-D2L"/>
@@ -64,7 +65,7 @@
                                             <segue destination="5ke-Gn-ZK6" kind="show" id="esM-jp-Yhn"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🕍 Cerita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBi-9v-u9r">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="🕍 Cerita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBi-9v-u9r">
                                         <rect key="frame" x="60" y="172" width="119" height="40"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="28"/>
                                         <nil key="textColor"/>
@@ -83,7 +84,7 @@
                                     <constraint firstItem="eTC-n3-JTD" firstAttribute="leading" secondItem="4fi-xp-1ky" secondAttribute="leading" constant="34" id="wy7-GR-Rcu"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xhn-8a-65u">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xhn-8a-65u">
                                 <rect key="frame" x="0.0" y="515" width="395.33333333333331" height="235"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="gTv-3P-UlY">
@@ -121,15 +122,16 @@
                                     <constraint firstItem="MtK-qP-Rbs" firstAttribute="bottom" secondItem="WXZ-3s-ePp" secondAttribute="bottom" constant="16" id="o7L-MU-Wae"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Arif Firmansyah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-li-Vwi">
-                                <rect key="frame" x="88" y="157" width="215" height="74.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" fixedFrame="YES" text="Xp Terkumpul : 1200  🔥" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOc-ps-esa">
+                                <rect key="frame" x="118.99999999999999" y="220.66666666666666" width="170.66666666666663" height="25.333333333333343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Xp Terkumpul : 1200  🔥" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOc-ps-esa">
-                                <rect key="frame" x="119.00000000000001" y="227.66666666666666" width="157.33333333333337" height="18.333333333333343"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="Arif Firmansyah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-li-Vwi">
+                                <rect key="frame" x="96" y="165" width="211" height="47.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -138,27 +140,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="box-U3-Xzy" secondAttribute="trailing" symbolic="YES" id="1HG-ED-m1Z"/>
-                            <constraint firstItem="Xhn-8a-65u" firstAttribute="centerX" secondItem="54s-Az-w7b" secondAttribute="centerX" id="1pw-4o-2tf"/>
-                            <constraint firstItem="EKO-li-Vwi" firstAttribute="top" secondItem="54s-Az-w7b" secondAttribute="bottom" constant="-3" id="9Hv-xg-6Xb"/>
-                            <constraint firstItem="4fi-xp-1ky" firstAttribute="centerX" secondItem="FOc-ps-esa" secondAttribute="centerX" constant="-3.1666666666666856" id="CPx-61-uw3"/>
-                            <constraint firstItem="FOc-ps-esa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="DoC-6U-8Tc"/>
-                            <constraint firstItem="4fi-xp-1ky" firstAttribute="top" secondItem="FOc-ps-esa" secondAttribute="bottom" constant="8" id="GtH-Cw-nXI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="box-U3-Xzy" secondAttribute="bottom" constant="377" id="VwY-I9-fub"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="54s-Az-w7b" secondAttribute="trailing" constant="160.66999999999999" id="YvY-PV-31k"/>
-                            <constraint firstItem="54s-Az-w7b" firstAttribute="centerX" secondItem="FOc-ps-esa" secondAttribute="centerX" id="ZHy-v8-7ph"/>
                             <constraint firstItem="box-U3-Xzy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eo4-nN-o8m"/>
                             <constraint firstItem="box-U3-Xzy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="f47-2f-Dg5"/>
-                            <constraint firstItem="54s-Az-w7b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="h13-QJ-Heq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FOc-ps-esa" secondAttribute="bottom" constant="564" id="iSQ-8c-Qgx"/>
                             <constraint firstItem="EKO-li-Vwi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jUg-Tj-hbH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xhn-8a-65u" secondAttribute="bottom" constant="60" id="jib-Jx-mtr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4fi-xp-1ky" secondAttribute="bottom" constant="321" id="joP-Zc-pxa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="54s-Az-w7b" secondAttribute="bottom" constant="650" id="nr5-Bd-rRe"/>
                             <constraint firstItem="Xhn-8a-65u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pAe-l5-lcu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EKO-li-Vwi" secondAttribute="trailing" id="qSm-ZX-U86"/>
                             <constraint firstItem="Xhn-8a-65u" firstAttribute="top" secondItem="4fi-xp-1ky" secondAttribute="bottom" constant="26" id="uwm-VO-89h"/>
-                            <constraint firstItem="FOc-ps-esa" firstAttribute="top" secondItem="EKO-li-Vwi" secondAttribute="bottom" constant="-3.6666666666666572" id="vaD-yR-ggN"/>
-                            <constraint firstItem="FOc-ps-esa" firstAttribute="centerX" secondItem="EKO-li-Vwi" secondAttribute="centerX" constant="2.1666666666666856" id="wu8-gT-SUd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="KisahKata" id="BbZ-go-O7K"/>

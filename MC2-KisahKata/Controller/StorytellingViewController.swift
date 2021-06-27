@@ -184,6 +184,9 @@ class StorytellingViewController: UIViewController {
                     switch type {
                     case ActiveType.custom(pattern: "\\s\(word)\\b"):
                         atts[NSAttributedString.Key.font] = UIFont(name: "Baloo2-Medium", size: 17)
+//                        atts[NSAttributedString.Key.underlineStyle] =
+//                        NSAttributedString(string: word, attributes:
+//                            [.underlineStyle: NSUnderlineStyle.single.rawValue]
                     default: ()
                         
                     }
