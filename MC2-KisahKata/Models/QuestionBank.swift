@@ -10,10 +10,10 @@ class QuestionBank {
     var list = [Question] ()
     
     init() {
-        list.append(Question(image: "Danau Toba.jpg", questionText: "Benda apakah ini", choiceA: "Apel", choiceB: "Tomat", choiceC: "Pisang", choiceD: "Mangga", answer: 4, jawaban: "Mangga"))
-        list.append(Question(image: "Danau Toba.jpg", questionText: "Benda apakah ini", choiceA: "Kangkung", choiceB: "Tomat", choiceC: "Pisang", choiceD: "Mangga", answer: 1, jawaban: "Mangga"))
-        list.append(Question(image: "Danau Toba.jpg", questionText: "Benda apakah ini", choiceA: "Apel", choiceB: "Tomat", choiceC: "Rumput", choiceD: "Mangga", answer: 3, jawaban: "Mangga"))
-        list.append(Question(image: "Danau Toba.jpg", questionText: "Benda apakah ini", choiceA: "Apel", choiceB: "Tomat", choiceC: "Pisang", choiceD: "Brokoli", answer: 4, jawaban: "Mangga"))
-        list.append(Question(image: "Danau Toba.jpg", questionText: "Benda apakah ini", choiceA: "Wortel", choiceB: "Tomat", choiceC: "Pisang", choiceD: "Mangga", answer: 1, jawaban: "Mangga"))
+        list.append(Question(image: "Danau Toba.jpg", questionText: "Apa kata dari video isyarat diatas ?", choiceA: "Tampan", choiceB: "Berjalan", choiceC: "Membaca", choiceD: "Yatim", answer: 4, jawaban: "Yatim"))
+        list.append(Question(image: "Danau Toba.jpg", questionText: "Apa kata dari video isyarat diatas ?", choiceA: "Tampan", choiceB: "Yatim", choiceC: "Bertani", choiceD: "Kering", answer: 1, jawaban: "Tampan"))
+        list.append(Question(image: "Danau Toba.jpg", questionText: "Apa kata dari video isyarat diatas ?", choiceA: "Berjalan", choiceB: "Membaca", choiceC: "Kering", choiceD: "Yatim", answer: 3, jawaban: "Kering"))
+        list.append(Question(image: "Danau Toba.jpg", questionText: "Apa kata dari video isyarat diatas ?", choiceA: "Yatim", choiceB: "Tampan", choiceC: "Berjalan", choiceD: "Bertani", answer: 4, jawaban: "Bertani"))
+        list.append(Question(image: "Danau Toba.jpg", questionText: "Apa kata dari video isyarat diatas ?", choiceA: "Memancing", choiceB: "Membaca", choiceC: "Yatim", choiceD: "Berjalan", answer: 1, jawaban: "Memancing"))
     }
 }
