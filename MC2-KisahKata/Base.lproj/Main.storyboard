@@ -460,13 +460,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Kosakata baru dipelajari" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzn-Y8-grQ">
-                                <rect key="frame" x="90" y="519" width="210" height="27"/>
+                                <rect key="frame" x="90" y="519" width="210" height="20"/>
                                 <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="17"/>
                                 <color key="textColor" name="TextSecondaryColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+50 xp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qug-V4-sUc">
-                                <rect key="frame" x="90" y="543" width="210" height="27"/>
+                                <rect key="frame" x="90" y="543" width="210" height="20"/>
                                 <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="17"/>
                                 <color key="textColor" name="TextDangerColor"/>
                                 <nil key="highlightedColor"/>
@@ -695,7 +695,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="318" height="372"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Eggy-Senang " translatesAutoresizingMaskIntoConstraints="NO" id="oHQ-HN-L98">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Eggy-Sedih" translatesAutoresizingMaskIntoConstraints="NO" id="oHQ-HN-L98">
                             <rect key="frame" x="89" y="7" width="140" height="140"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="140" id="1bv-Wy-DNH"/>
@@ -950,6 +950,7 @@
     <resources>
         <image name="ButtonCerita" width="321" height="221"/>
         <image name="KosaKataImage" width="321" height="221"/>
+        <image name="M-Eggy-Sedih" width="774" height="1308"/>
         <image name="M-Eggy-Senang" width="1101" height="1311"/>
         <image name="M-Eggy-Senang " width="230" height="235"/>
         <image name="Rectangle " width="345" height="174"/>
