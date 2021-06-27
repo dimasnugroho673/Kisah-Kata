@@ -10,24 +10,20 @@ import UIKit
 class ScoreViewController: UIViewController {
     
     let userDefault = UserDefaults()
-    var poinScore = Int()
+    var quizScore : Int = 0
     @IBOutlet weak var poinLabel: UILabel!
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var ketLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let data = userDefault.object(forKey: "QuizScore") as? Int {
-            
-            poinScore = data
-            print(poinScore)
-            poinLabel.text = "Score :\(poinScore)"
+        
+            poinLabel.text = "Score :\(quizScore)"
             poinLabel.font = UIFont(name: "Baloo2-Bold", size: 24)
             homeButton.layer.cornerRadius =  12
             ketLabel.font = UIFont(name: "Baloo2-Bold", size: 36)
 //        print(poinScore)
-        }
+        
         // Do any additional setup after loading the view.
     }
     

@@ -14,8 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var poinLabel: UILabel!
     @IBOutlet weak var ceritaButton: UIButton!
+    let userDefault = UserDefaults()
     
     let judul = "✨KisahKata"
+    let score : Int = 0
+    var expWordResult: Int = 0
+    var quizScore : Int = 0
     
     // 1.coredata config
     var kosakatas = [Kosakata]()
@@ -25,6 +29,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         // CoreData config
         manageObjectContext = appDelegate?.persistentContainer.viewContext as! NSManagedObjectContext
         
@@ -49,13 +54,17 @@ class ViewController: UIViewController {
     
 
     func customComponent () {
-        poinLabel.textColor = UIColor.white
-        poinLabel.backgroundColor = UIColor.blue
-        poinLabel.layer.cornerRadius = 10
-        poinLabel.layer.masksToBounds = true
-        haloLabel.font = UIFont(name: "Baloo2-SemiBold", size: 18)
-//        judulLabel.font = UIFont(name: "Baloo2-ExtraBold", size: 22)
-        poinLabel.font = UIFont(name: "Baloo2-ExtraBold", size: 14)
+        
+        if let data = userDefault.object(forKey: "QuizScore") as? Int {
+            poinLabel.textColor = UIColor.white
+            poinLabel.backgroundColor = UIColor.blue
+            poinLabel.layer.cornerRadius = 10
+            poinLabel.text = "Poin Terkumpul : \(data) 🔥"
+            poinLabel.layer.masksToBounds = true
+            haloLabel.font = UIFont(name: "Baloo2-SemiBold", size: 18)
+    //        judulLabel.font = UIFont(name: "Baloo2-ExtraBold", size: 22)
+            poinLabel.font = UIFont(name: "Baloo2-ExtraBold", size: 14)
+        }
         nameLabel.font = UIFont(name: "Baloo2-Regular", size: 32
         )
         

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class Question {
+class Question : Identifiable {
     let questionImage: String
     let question: String
     let optionA: String
@@ -17,13 +17,13 @@ class Question {
     let jawabanQuiz : String
     
     init(image: String, questionText: String, choiceA: String, choiceB: String, choiceC: String, choiceD: String, answer: Int, jawaban: String){
-        questionImage = image
-        question = questionText
-        optionA = choiceA
-        optionB = choiceB
-        optionC = choiceC
-        optionD = choiceD
-        correctAnswer = answer
-        jawabanQuiz = jawaban
+        self.questionImage = image
+        self.question = questionText
+        self.optionA = choiceA
+        self.optionB = choiceB
+        self.optionC = choiceC
+        self.optionD = choiceD
+        self.correctAnswer = answer
+        self.jawabanQuiz = jawaban
     }
 }

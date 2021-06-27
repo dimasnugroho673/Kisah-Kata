@@ -442,6 +442,7 @@ class StorytellingViewController: UIViewController {
     
     
     
+    
     // file private function
     fileprivate func _animateSpringView(_ viewToAnimate: UIView) {
         UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {

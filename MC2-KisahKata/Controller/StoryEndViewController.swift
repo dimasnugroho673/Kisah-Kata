@@ -40,8 +40,8 @@ class StoryEndViewController: UIViewController {
         if let quizVC = segue.destination as? QuizViewController {
             quizVC.expWordResult = self.expWordResult
         }
-
-    }
+        
+}
     
     
     // file private function

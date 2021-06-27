@@ -20,29 +20,43 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var nextButtonBenar: UIButton!
     @IBOutlet weak var nextButtonSalah: UIButton!
     @IBOutlet weak var jawabanLabel: UILabel!
+    @IBOutlet weak var quizPageControl: UIPageControl!
     
     let allQuestions = QuestionBank()
     var questionNumber: Int = 0
     var score: Int = 0
     var selectedAnswer: Int = 0
+    var quiz: Question? = nil
+    var activePart: Int = 0
+    
     
     // score from story
     var expWordResult: Int = 0
+
+    var expTotal : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("total\(expWordResult)")
+        
+        
 
         blurVIew.bounds =  self.view.bounds
-        
-        
-        
+
         optionA.layer.cornerRadius = 12
+        optionA.titleLabel?.font = UIFont(name: "Baloo2-Bold", size: 16)
         optionB.layer.cornerRadius = 12
+        optionB.titleLabel?.font = UIFont(name: "Baloo2-Bold", size: 16)
         optionC.layer.cornerRadius = 12
+        optionC.titleLabel?.font = UIFont(name: "Baloo2-Bold", size: 16)
         optionD.layer.cornerRadius = 12
+        optionD.titleLabel?.font = UIFont(name: "Baloo2-Bold", size: 16)
         
         nextButtonBenar.layer.cornerRadius = 12
         nextButtonSalah.layer.cornerRadius = 12
+        
+        pertanyaanLabel.font = UIFont(name: "Baloo2-Bold", size: 24)
         
         popupBenarView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.9, height: self.view.bounds.height * 0.4)
         popupBenarView.roundedBorder(cornerRadius: 24)
@@ -56,14 +70,33 @@ class QuizViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         thumbImage.image = UIImage(named: "img_S_1_1")?.roundedImage
+        
+        
     }
+    
+    private func _fetchPageControl(page: Int) {
+        quizPageControl.numberOfPages = allQuestions.list.count
+        quizPageControl.frame(forAlignmentRect: CGRect(x: 0, y: 0, width: 16, height: 4))
+        quizPageControl?.currentPage = Int(page)
+    }
+    
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        print("Hasil\(score)")
+//        if let quizVC = segue.destination as? ScoreViewController {
+//            quizVC.quizScore = self.score
+//
+//        }
+//    }
     
     @IBAction func answerPressed(_ sender: UIButton) {
         if sender.tag == selectedAnswer {
             animateScaleIn(desiredView: blurVIew)
             animateScaleIn(desiredView: popupBenarView)
             score += 50
-            print("Masuk")
+            expTotal = score + expWordResult
+//            print("Masuk")
 
 
 
@@ -82,6 +115,7 @@ class QuizViewController: UIViewController {
         animateScaleOut(desiredView: popupBenarView)
         questionNumber += 1
             updateQuestion()
+            _fetchPageControl(page: self.activePart)
         
     }
 }
@@ -91,13 +125,17 @@ class QuizViewController: UIViewController {
         animateScaleOut(desiredView: popupSalahView)
         questionNumber += 1
             updateQuestion()
+            
     }
         
 }
     
+    
     func updateQuestion(){
         
+        
         if questionNumber <= allQuestions.list.count - 1{
+            
             thumbImage.image = UIImage(named:(allQuestions.list[questionNumber].questionImage))
 //            questionLabel.text = allQuestions.list[questionNumber].question
             optionA.setTitle(allQuestions.list[questionNumber].optionA, for: UIControl.State.normal)
@@ -112,16 +150,19 @@ class QuizViewController: UIViewController {
         }
         else {
             let vc = storyboard?.instantiateViewController(identifier: "ScoreViewController") as! ScoreViewController
-            let poin = UserDefaults.standard.set(score, forKey: "QuizScore")
+            vc.quizScore = self.score
+            let poin = UserDefaults.standard.set(expTotal, forKey: "QuizScore")
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true)
-            print("Selesai")
+            
+            
+//            print("Selesai")
             
             
         }
         
-        print(questionNumber)
-        print(allQuestions.list.count)
+//        print(questionNumber)
+//        print(allQuestions.list.count)
     }
     
     func animateScaleIn(desiredView: UIView) {
@@ -155,5 +196,7 @@ class QuizViewController: UIViewController {
             
         })
     }
-
+    
+    
+        
 }
