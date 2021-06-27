@@ -40,6 +40,10 @@ class ViewController: UIViewController {
         _checkData()
         _checkUserIsLogged()
         
+        nameLabel.text = UserDefaults.standard.string(forKey: "username") ?? ""
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
     }
     
 //    func customTitleColor () {

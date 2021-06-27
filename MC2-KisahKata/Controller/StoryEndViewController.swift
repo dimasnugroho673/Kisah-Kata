@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class StoryEndViewController: UIViewController {
 
@@ -21,6 +22,10 @@ class StoryEndViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+        
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         startQuizButton.roundedBorder(cornerRadius: 12)
         

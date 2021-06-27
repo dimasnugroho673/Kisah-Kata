@@ -67,6 +67,7 @@ class StorytellingViewController: UIViewController {
         manageObjectContext = appDelegate?.persistentContainer.viewContext as! NSManagedObjectContext
         
         self.title = story!.title
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         prevButton.roundedBorder(cornerRadius: 12)
         prevButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
@@ -375,6 +376,8 @@ class StorytellingViewController: UIViewController {
             self._animateSpringView(sender)
             
         }
+        
+        UIImpactFeedbackGenerator(style: .soft).impactOccurred()
     }
 
     
@@ -390,7 +393,7 @@ class StorytellingViewController: UIViewController {
             performSegue(withIdentifier: "scoreStorySegue", sender: nil)
         }
         
-
+        UIImpactFeedbackGenerator(style: .soft).impactOccurred()
     }
     
     @IBAction func closeDetailPopUpView(_ sender: UIButton) {

@@ -18,12 +18,19 @@ class ListCeritaViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Kisah"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.barTintColor = UIColor.white
 
-        // Do any additional setup after loading the view.
+       
         ceritaTableView.delegate = self
         ceritaTableView.dataSource = self
         
-//        ceritaTableView.separatorStyle = .none
+        
+        
+        ceritaTableView.separatorStyle = .none
         ceritaTableView.showsVerticalScrollIndicator = false
     }
     

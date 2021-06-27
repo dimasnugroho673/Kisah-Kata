@@ -28,30 +28,30 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MC2_KisahKata" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" ambiguous="YES" text="👋Halo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54s-Az-w7b">
-                                <rect key="frame" x="166" y="136.66666666666663" width="63.333333333333343" height="23.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="👋Halo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54s-Az-w7b">
+                                <rect key="frame" x="166" y="136.66666666666666" width="63.333333333333343" height="23.333333333333343"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="box-U3-Xzy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="box-U3-Xzy">
                                 <rect key="frame" x="77" y="411" width="42" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fi-xp-1ky">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fi-xp-1ky">
                                 <rect key="frame" x="0.0" y="254" width="389" height="235"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle " translatesAutoresizingMaskIntoConstraints="NO" id="Mja-PH-W4M">
-                                        <rect key="frame" x="22" y="30.666666666666657" width="345" height="174"/>
+                                        <rect key="frame" x="22" y="30.666666666666686" width="345" height="174"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTC-n3-JTD">
-                                        <rect key="frame" x="34" y="6.9999999999999716" width="321" height="221"/>
+                                        <rect key="frame" x="34" y="7" width="321" height="221"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="321" id="ZXq-zE-D2L"/>
                                             <constraint firstAttribute="height" constant="221" id="nG0-2w-sq8"/>
@@ -65,7 +65,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🕍 Cerita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBi-9v-u9r">
-                                        <rect key="frame" x="60" y="171.99999999999997" width="119" height="40"/>
+                                        <rect key="frame" x="60" y="172" width="119" height="40"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -83,7 +83,7 @@
                                     <constraint firstItem="eTC-n3-JTD" firstAttribute="leading" secondItem="4fi-xp-1ky" secondAttribute="leading" constant="34" id="wy7-GR-Rcu"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xhn-8a-65u">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xhn-8a-65u">
                                 <rect key="frame" x="0.0" y="515" width="395.33333333333331" height="235"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 2" translatesAutoresizingMaskIntoConstraints="NO" id="gTv-3P-UlY">
@@ -121,14 +121,14 @@
                                     <constraint firstItem="MtK-qP-Rbs" firstAttribute="bottom" secondItem="WXZ-3s-ePp" secondAttribute="bottom" constant="16" id="o7L-MU-Wae"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="Arif Firmansyah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-li-Vwi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Arif Firmansyah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-li-Vwi">
                                 <rect key="frame" x="88" y="157" width="215" height="74.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" ambiguous="YES" text="Xp Terkumpul : 1200  🔥" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOc-ps-esa">
-                                <rect key="frame" x="119.00000000000001" y="227.66666666666663" width="157.33333333333337" height="18.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Xp Terkumpul : 1200  🔥" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOc-ps-esa">
+                                <rect key="frame" x="119.00000000000001" y="227.66666666666666" width="157.33333333333337" height="18.333333333333343"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -178,11 +178,11 @@
             <objects>
                 <viewController id="5ke-Gn-ZK6" customClass="ListCeritaViewController" customModule="MC2_KisahKata" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2R1-qt-POO">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="goh-fs-1No">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ceritaCell" id="jlH-KO-cXm" customClass="CeritaTableViewCell" customModule="MC2_KisahKata" customModuleProvider="target">
@@ -247,7 +247,9 @@
                             <constraint firstItem="mMu-vn-plI" firstAttribute="trailing" secondItem="goh-fs-1No" secondAttribute="trailing" id="Y4R-pH-qMu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RP3-oY-Rze"/>
+                    <navigationItem key="navigationItem" id="RP3-oY-Rze">
+                        <barButtonItem key="backBarButtonItem" title="   " id="P7Q-bt-d3z"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="ceritaTableView" destination="goh-fs-1No" id="wNO-Da-8MH"/>
                         <segue destination="mtm-ID-3L6" kind="show" identifier="storyTellingSegue" id="l1d-rS-qga"/>
@@ -262,23 +264,23 @@
             <objects>
                 <viewController storyboardIdentifier="testQ " id="mtm-ID-3L6" customClass="StorytellingViewController" customModule="MC2_KisahKata" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BZJ-f0-jjw">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="its-oK-mzo">
-                                <rect key="frame" x="20" y="10" width="350" height="27"/>
+                                <rect key="frame" x="20" y="98" width="350" height="27"/>
                                 <color key="pageIndicatorTintColor" systemColor="systemGray6Color"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="systemBlueColor"/>
                             </pageControl>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_S_1_1" translatesAutoresizingMaskIntoConstraints="NO" id="mil-LS-c2U">
-                                <rect key="frame" x="20" y="47" width="350" height="350"/>
+                                <rect key="frame" x="20" y="135" width="350" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="0I7-4i-zbZ"/>
                                     <constraint firstAttribute="height" constant="350" id="CBc-Th-moU"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xia-kp-zUv">
-                                <rect key="frame" x="99" y="711" width="271" height="45"/>
+                                <rect key="frame" x="99" y="765" width="271" height="45"/>
                                 <color key="backgroundColor" name="PrimaryColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="271" id="VtS-82-PHf"/>
@@ -294,7 +296,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWd-fG-hcj">
-                                <rect key="frame" x="20" y="711" width="65" height="45"/>
+                                <rect key="frame" x="20" y="765" width="65" height="45"/>
                                 <color key="backgroundColor" name="LowInterferenceColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="FQN-KD-IkE"/>
@@ -431,18 +433,18 @@
             <objects>
                 <viewController id="b0o-ZL-MV9" customClass="StoryEndViewController" customModule="MC2_KisahKata" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6uP-ZL-TgX">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Eggy-Senang" translatesAutoresizingMaskIntoConstraints="NO" id="I8I-4M-XT6">
-                                <rect key="frame" x="63" y="72" width="264" height="269"/>
+                                <rect key="frame" x="63" y="160" width="264" height="269"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="264" id="Pes-cl-uFh"/>
                                     <constraint firstAttribute="height" constant="269" id="tfh-OA-aXF"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kisah Selesai" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kS6-Ej-QOw">
-                                <rect key="frame" x="63" y="361" width="264" height="47"/>
+                                <rect key="frame" x="63" y="449" width="264" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="Awj-j6-U4z"/>
                                     <constraint firstAttribute="width" constant="264" id="jRa-eW-PTN"/>
@@ -452,7 +454,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nj-M4-aV1">
-                                <rect key="frame" x="63" y="416" width="264" height="2"/>
+                                <rect key="frame" x="63" y="504" width="264" height="2"/>
                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="264" id="9SZ-Jd-n1D"/>
@@ -460,13 +462,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Kosakata baru dipelajari" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzn-Y8-grQ">
-                                <rect key="frame" x="90" y="431" width="210" height="27"/>
+                                <rect key="frame" x="90" y="519" width="210" height="27"/>
                                 <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="17"/>
                                 <color key="textColor" name="TextSecondaryColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+50 xp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qug-V4-sUc">
-                                <rect key="frame" x="90" y="455" width="210" height="27"/>
+                                <rect key="frame" x="90" y="543" width="210" height="27"/>
                                 <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="17"/>
                                 <color key="textColor" name="TextDangerColor"/>
                                 <nil key="highlightedColor"/>
@@ -624,17 +626,17 @@
             <objects>
                 <viewController id="HUH-zE-wfY" customClass="QuizViewController" customModule="MC2_KisahKata" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JTc-N7-F5D">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2SP-CU-9xb">
-                                <rect key="frame" x="27.666666666666657" y="32" width="335.66666666666674" height="335"/>
+                                <rect key="frame" x="27.666666666666657" y="120" width="335.66666666666674" height="335"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="335" id="6Zx-bc-IEi"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pertanyaan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2E-HN-u4y">
-                                <rect key="frame" x="60" y="407" width="270" height="21"/>
+                                <rect key="frame" x="60" y="495" width="270" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -692,7 +694,7 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="i1E-Zu-MVj">
-                                <rect key="frame" x="20" y="10" width="350" height="27"/>
+                                <rect key="frame" x="20" y="98" width="350" height="27"/>
                                 <color key="pageIndicatorTintColor" systemColor="systemGray6Color"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="systemBlueColor"/>
                             </pageControl>
@@ -871,11 +873,11 @@
             <objects>
                 <viewController id="IaK-54-zay" customClass="KosaKataMenuViewController" customModule="MC2_KisahKata" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0GY-2F-bKb">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cyU-eH-a1F">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="5" id="nKq-LK-9rp">
                                     <size key="itemSize" width="180" height="170"/>
@@ -1000,7 +1002,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="c1B-00-PB1"/>
+        <segue reference="9iX-XN-u3O"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ButtonCerita" width="321" height="221"/>
