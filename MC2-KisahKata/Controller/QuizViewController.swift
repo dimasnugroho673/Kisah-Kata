@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class QuizViewController: UIViewController {
     @IBOutlet weak var thumbImage: UIImageView!
@@ -22,6 +23,9 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var jawabanLabel: UILabel!
     @IBOutlet weak var quizPageControl: UIPageControl!
     
+    @IBOutlet weak var videoContainerView: UIView!
+    
+    
     let allQuestions = QuestionBank()
     var questionNumber: Int = 0
     var score: Int = 0
@@ -35,28 +39,34 @@ class QuizViewController: UIViewController {
 
     var expTotal : Int = 0
     
+    var playerLayer = AVPlayerLayer()
+    
+    let playVideoButton = UIButton(frame: CGRect(x: 100, y: 400, width: 200, height: 60))
+    
+    var imageTemp: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("total\(expWordResult)")
+        self.title = "Kuis"
         
-        
+        videoContainerView.roundedBorder(cornerRadius: 12)
 
         blurVIew.bounds =  self.view.bounds
 
-        optionA.layer.cornerRadius = 12
+        optionA.roundedBorder(cornerRadius: 12)
         optionA.titleLabel?.font = UIFont(name: "Baloo2-Bold", size: 16)
-        optionB.layer.cornerRadius = 12
+        optionB.roundedBorder(cornerRadius: 12)
         optionB.titleLabel?.font = UIFont(name: "Baloo2-Bold", size: 16)
-        optionC.layer.cornerRadius = 12
+        optionC.roundedBorder(cornerRadius: 12)
         optionC.titleLabel?.font = UIFont(name: "Baloo2-Bold", size: 16)
-        optionD.layer.cornerRadius = 12
+        optionD.roundedBorder(cornerRadius: 12)
         optionD.titleLabel?.font = UIFont(name: "Baloo2-Bold", size: 16)
         
-        nextButtonBenar.layer.cornerRadius = 12
-        nextButtonSalah.layer.cornerRadius = 12
+        nextButtonBenar.roundedBorder(cornerRadius: 12)
+        nextButtonSalah.roundedBorder(cornerRadius: 12)
         
-        pertanyaanLabel.font = UIFont(name: "Baloo2-Bold", size: 24)
+        pertanyaanLabel.font = UIFont(name: "Baloo2-Bold", size: 18)
         
         popupBenarView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.9, height: self.view.bounds.height * 0.4)
         popupBenarView.roundedBorder(cornerRadius: 24)
@@ -69,13 +79,16 @@ class QuizViewController: UIViewController {
         updateQuestion()
         // Do any additional setup after loading the view.
         
-        thumbImage.image = UIImage(named: "img_S_1_1")?.roundedImage
+//        thumbImage.image = UIImage(named: "img_S_1_1")?.roundedImage
+        quizPageControl.numberOfPages = allQuestions.list.count
+        
+        imageTemp = allQuestions.list[questionNumber].questionImage
         
         
     }
     
     private func _fetchPageControl(page: Int) {
-        quizPageControl.numberOfPages = allQuestions.list.count
+       
         quizPageControl.frame(forAlignmentRect: CGRect(x: 0, y: 0, width: 16, height: 4))
         quizPageControl?.currentPage = Int(page)
     }
@@ -97,10 +110,14 @@ class QuizViewController: UIViewController {
             score += 50
             expTotal = score + expWordResult
 //            print("Masuk")
-
-
+            
+            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
 
         }else{
+            
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            
+            
             jawabanLabel.text = "Jawaban Benar : \(allQuestions.list[questionNumber].jawabanQuiz)"
             animateScaleIn(desiredView: blurVIew)
             animateScaleIn(desiredView: popupSalahView)
@@ -111,21 +128,25 @@ class QuizViewController: UIViewController {
     
     @IBAction func nextButtonBenar(_ sender: Any) {
         if questionNumber <= allQuestions.list.count - 1{
-        animateScaleOut(desiredView: blurVIew)
-        animateScaleOut(desiredView: popupBenarView)
-        questionNumber += 1
+            animateScaleOut(desiredView: blurVIew)
+            animateScaleOut(desiredView: popupBenarView)
+            questionNumber += 1
+            self.activePart += 1
+            
             updateQuestion()
             _fetchPageControl(page: self.activePart)
-        
     }
 }
     @IBAction func nextButtonSalah(_ sender: Any) {
         if questionNumber <= allQuestions.list.count - 1{
-        animateScaleOut(desiredView: blurVIew)
-        animateScaleOut(desiredView: popupSalahView)
-        questionNumber += 1
-            updateQuestion()
+            animateScaleOut(desiredView: blurVIew)
+            animateScaleOut(desiredView: popupSalahView)
+            questionNumber += 1
+            self.activePart += 1
             
+            updateQuestion()
+            _fetchPageControl(page: self.activePart)
+
     }
         
 }
@@ -135,17 +156,24 @@ class QuizViewController: UIViewController {
         
         
         if questionNumber <= allQuestions.list.count - 1{
+            _fetchIlustration(image: allQuestions.list[questionNumber].questionImage)
             
-            thumbImage.image = UIImage(named:(allQuestions.list[questionNumber].questionImage))
-//            questionLabel.text = allQuestions.list[questionNumber].question
+//            thumbImage.image = UIImage(named:(allQuestions.list[questionNumber].questionImage))
+            pertanyaanLabel.text = allQuestions.list[questionNumber].question
             optionA.setTitle(allQuestions.list[questionNumber].optionA, for: UIControl.State.normal)
             optionB.setTitle(allQuestions.list[questionNumber].optionB, for: UIControl.State.normal)
             optionC.setTitle(allQuestions.list[questionNumber].optionC, for: UIControl.State.normal)
             optionD.setTitle(allQuestions.list[questionNumber].optionD, for: UIControl.State.normal)
             selectedAnswer = allQuestions.list[questionNumber].correctAnswer
             
-            print(selectedAnswer)
+            _fetchIlustration(image: allQuestions.list[questionNumber].questionImage)
+            
+            imageTemp = allQuestions.list[questionNumber].questionImage
+            
+//            print(selectedAnswer)
 //            updateUI()
+            
+        
             
         }
         else {
@@ -154,6 +182,8 @@ class QuizViewController: UIViewController {
             let poin = UserDefaults.standard.set(expTotal, forKey: "QuizScore")
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true)
+            
+            NotificationCenter.default.removeObserver(self)
             
             
 //            print("Selesai")
@@ -164,6 +194,66 @@ class QuizViewController: UIViewController {
 //        print(questionNumber)
 //        print(allQuestions.list.count)
     }
+    
+    private func _fetchIlustration(image: String) {
+        
+        print("image ilustration", image)
+        
+        playVideoButton.isHidden = true
+        
+        /// kalo videonya offline
+        let file = image.components(separatedBy: ".")
+
+        guard let filePath = Bundle.main.path(forResource: file[0], ofType:file[1]) else {
+              debugPrint( "\(file.joined(separator: ".")) not found")
+              return
+        }
+        
+        /// video offline
+        let videoURL = URL(fileURLWithPath: filePath)
+        
+       
+        
+        let player = AVPlayer(url: videoURL)
+        playerLayer = AVPlayerLayer(player: player)
+        playerLayer.backgroundColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+        playerLayer.frame.size.width = videoContainerView.bounds.width
+        playerLayer.frame.size.height = videoContainerView.bounds.height
+        playerLayer.videoGravity = .resizeAspectFill
+        
+        playVideoButton.setImage(UIImage(named: "button_play_dark"), for: .normal)
+        playVideoButton.tintColor = UIColor.white
+        playVideoButton.layer.frame = CGRect(x: videoContainerView.frame.width / 2 - 30, y: videoContainerView.frame.height / 2 - 30, width: 60, height: 60)
+        playVideoButton.addTarget(self,
+                            action: #selector(buttonAction),
+                            for: .touchUpInside)
+        playVideoButton.contentHorizontalAlignment = .fill
+        playVideoButton.contentVerticalAlignment = .fill
+        
+        videoContainerView.roundedBorder(cornerRadius: 12)
+        videoContainerView.layer.addSublayer(playerLayer)
+        videoContainerView.addSubview(playVideoButton)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(videoDidEnd), name:
+        NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+        
+        player.isMuted = true
+        player.play()
+        
+    }
+    
+    @objc
+    func buttonAction() {
+        _fetchIlustration(image: imageTemp)
+    }
+    
+    
+    // OBSERVER
+    @objc func videoDidEnd(notification: NSNotification) {
+        playVideoButton.isHidden = false
+    }
+    
+    
     
     func animateScaleIn(desiredView: UIView) {
         let backgroundView = self.view!

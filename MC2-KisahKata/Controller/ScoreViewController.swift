@@ -18,24 +18,40 @@ class ScoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-            poinLabel.text = "Score :\(quizScore)"
+            poinLabel.text = "Exp : \(quizScore)"
             poinLabel.font = UIFont(name: "Baloo2-Bold", size: 24)
-            homeButton.layer.cornerRadius =  12
+            homeButton.roundedBorder(cornerRadius: 12)
             ketLabel.font = UIFont(name: "Baloo2-Bold", size: 36)
 //        print(poinScore)
         
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func pressToHome(_ sender: UIButton) {
+        
+        self._animateSpringView(sender)
+        
+        let vc = storyboard?.instantiateViewController(identifier: "homeScreen") as! ViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
-    */
+    
+    // file private function
+    fileprivate func _animateSpringView(_ viewToAnimate: UIView) {
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+    
+            viewToAnimate.transform = CGAffineTransform(scaleX: 0.97, y: 0.97)
 
+        }) { (_) in
+            
+            UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+                
+                viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
+                
+            }, completion: nil)
+            
+        }
+        
+    }
+   
 }

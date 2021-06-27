@@ -42,9 +42,22 @@ class ViewController: UIViewController {
         
         nameLabel.text = UserDefaults.standard.string(forKey: "username") ?? ""
         
+        
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
     }
+    
+    
+    /// HIDING NAVIGATION BAR
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        navigationController?.setNavigationBarHidden(true, animated: animated)
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        navigationController?.setNavigationBarHidden(false, animated: animated)
+//    }
     
 //    func customTitleColor () {
 //        let atributetext = NSMutableAttributedString(string: judul)
