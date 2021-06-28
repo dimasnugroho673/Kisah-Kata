@@ -10,6 +10,7 @@ import CoreData
 
 class ViewController: UIViewController {
 //    @IBOutlet weak var judulLabel: UILabel!
+    @IBOutlet weak var judulLabel: UILabel!
     @IBOutlet weak var haloLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var poinLabel: UILabel!
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
         manageObjectContext = appDelegate?.persistentContainer.viewContext as! NSManagedObjectContext
         
         customComponent()
-//        customTitleColor()
+        customTitleColor()
         
         // check is data in core data exist?
         _checkData()
@@ -44,31 +45,34 @@ class ViewController: UIViewController {
         
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        poinLabel.backgroundColor = UIColor(named: "PrimaryColor")
+        nameLabel.textColor = UIColor(named: "SecondaryColor")
         
     }
     
     
-    /// HIDING NAVIGATION BAR
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        navigationController?.setNavigationBarHidden(true, animated: animated)
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        navigationController?.setNavigationBarHidden(false, animated: animated)
-//    }
+//     HIDING NAVIGATION BAR
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
-//    func customTitleColor () {
-//        let atributetext = NSMutableAttributedString(string: judul)
-//
-//        atributetext.addAttribute(.foregroundColor, value: UIColor.systemBlue, range: NSRange(location: 1, length: 6))
-//
-//        atributetext.addAttribute(.foregroundColor, value: UIColor.systemOrange, range: NSRange(location: 6, length: 4))
-//
-//        judulLabel.attributedText = atributetext
-//
-//    }
+    func customTitleColor () {
+        let atributetext = NSMutableAttributedString(string: judul)
+
+        atributetext.addAttribute(.foregroundColor, value: UIColor.systemBlue, range: NSRange(location: 1, length: 6))
+
+        atributetext.addAttribute(.foregroundColor, value: UIColor.systemOrange, range: NSRange(location: 6, length: 4))
+
+        judulLabel.attributedText = atributetext
+        
+
+    }
     
 
     func customComponent () {
@@ -80,7 +84,7 @@ class ViewController: UIViewController {
             poinLabel.text = "Poin Terkumpul : \(data) 🔥"
             poinLabel.layer.masksToBounds = true
             haloLabel.font = UIFont(name: "Baloo2-SemiBold", size: 18)
-    //        judulLabel.font = UIFont(name: "Baloo2-ExtraBold", size: 22)
+            judulLabel.font = UIFont(name: "Baloo2-ExtraBold", size: 22)
             poinLabel.font = UIFont(name: "Baloo2-ExtraBold", size: 14)
         }
         nameLabel.font = UIFont(name: "Baloo2-Regular", size: 32
