@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var poinLabel: UILabel!
     @IBOutlet weak var ceritaButton: UIButton!
+    @IBOutlet weak var ceritaButtonLabel: UILabel!
+    @IBOutlet weak var kosakataButtonLabel: UILabel!
     let userDefault = UserDefaults()
     
     let judul = "✨KisahKata"
@@ -86,6 +88,8 @@ class ViewController: UIViewController {
             haloLabel.font = UIFont(name: "Baloo2-SemiBold", size: 18)
             judulLabel.font = UIFont(name: "Baloo2-ExtraBold", size: 22)
             poinLabel.font = UIFont(name: "Baloo2-ExtraBold", size: 14)
+            ceritaButtonLabel.font = UIFont(name: "Baloo2-ExtraBold", size: 28)
+            kosakataButtonLabel.font = UIFont(name: "Baloo2-ExtraBold", size: 28)
         }
         nameLabel.font = UIFont(name: "Baloo2-Regular", size: 32
         )
