@@ -133,7 +133,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Arif Firmansyah" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKO-li-Vwi">
-                                <rect key="frame" x="90.999999999999986" y="165" width="208.66666666666663" height="47.333333333333343"/>
+                                <rect key="frame" x="34" y="165" width="319" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47.333333333333343" id="x9m-3X-WGe"/>
                                 </constraints>
@@ -157,7 +157,7 @@
                             <constraint firstItem="EKO-li-Vwi" firstAttribute="top" secondItem="54s-Az-w7b" secondAttribute="bottom" constant="3" id="Cy4-XV-w8b"/>
                             <constraint firstItem="4fi-xp-1ky" firstAttribute="top" secondItem="FOc-ps-esa" secondAttribute="bottom" id="Dax-Yl-Q4Q"/>
                             <constraint firstItem="54s-Az-w7b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="NPp-y7-tF7"/>
-                            <constraint firstItem="EKO-li-Vwi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="91" id="SP1-Xq-Xcm"/>
+                            <constraint firstItem="EKO-li-Vwi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="SP1-Xq-Xcm"/>
                             <constraint firstItem="FOc-ps-esa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="UDo-jB-24d"/>
                             <constraint firstItem="4fi-xp-1ky" firstAttribute="centerX" secondItem="FOc-ps-esa" secondAttribute="centerX" id="Uzr-u2-NSS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="box-U3-Xzy" secondAttribute="bottom" constant="377" id="VwY-I9-fub"/>
@@ -170,7 +170,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xhn-8a-65u" secondAttribute="bottom" constant="60" id="jib-Jx-mtr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4fi-xp-1ky" secondAttribute="bottom" constant="321" id="joP-Zc-pxa"/>
                             <constraint firstItem="FOc-ps-esa" firstAttribute="top" secondItem="EKO-li-Vwi" secondAttribute="bottom" constant="8.333333333333286" id="lBH-SR-TC6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EKO-li-Vwi" secondAttribute="trailing" constant="90.329999999999998" id="mnG-U3-ooM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EKO-li-Vwi" secondAttribute="trailing" constant="37" id="mnG-U3-ooM"/>
                             <constraint firstItem="Xhn-8a-65u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pAe-l5-lcu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="54s-Az-w7b" secondAttribute="trailing" constant="159" id="sej-rI-tdQ"/>
                             <constraint firstItem="Xhn-8a-65u" firstAttribute="top" secondItem="4fi-xp-1ky" secondAttribute="bottom" constant="26" id="uwm-VO-89h"/>
@@ -179,8 +179,10 @@
                     <navigationItem key="navigationItem" id="CbN-Lo-0HZ"/>
                     <connections>
                         <outlet property="ceritaButton" destination="eTC-n3-JTD" id="7NZ-5X-tHF"/>
+                        <outlet property="ceritaButtonLabel" destination="oBi-9v-u9r" id="Eph-qe-ReB"/>
                         <outlet property="haloLabel" destination="54s-Az-w7b" id="PuP-4Z-acr"/>
                         <outlet property="judulLabel" destination="Xf1-5G-VhX" id="Wow-fY-lHk"/>
+                        <outlet property="kosakataButtonLabel" destination="WXZ-3s-ePp" id="doN-Ht-fhd"/>
                         <outlet property="nameLabel" destination="EKO-li-Vwi" id="aHa-fK-W7m"/>
                         <outlet property="poinLabel" destination="FOc-ps-esa" id="OKv-ic-883"/>
                     </connections>
