@@ -307,22 +307,6 @@
                                 <color key="pageIndicatorTintColor" systemColor="systemGray6Color"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="systemBlueColor"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xia-kp-zUv">
-                                <rect key="frame" x="99" y="711" width="271" height="45"/>
-                                <color key="backgroundColor" name="PrimaryColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="271" id="VtS-82-PHf"/>
-                                    <constraint firstAttribute="height" constant="45" id="hMt-LZ-ZkU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="18"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Selanjutnya">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextPart:" destination="mtm-ID-3L6" eventType="touchUpInside" id="bdR-WD-ze8"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWd-fG-hcj">
                                 <rect key="frame" x="20" y="711" width="65" height="45"/>
                                 <color key="backgroundColor" name="LowInterferenceColor"/>
@@ -337,6 +321,22 @@
                                 </state>
                                 <connections>
                                     <action selector="prevPart:" destination="mtm-ID-3L6" eventType="touchUpInside" id="QQG-Zh-9QX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xia-kp-zUv">
+                                <rect key="frame" x="99" y="711" width="271" height="45"/>
+                                <color key="backgroundColor" name="PrimaryColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="271" id="VtS-82-PHf"/>
+                                    <constraint firstAttribute="height" constant="45" id="hMt-LZ-ZkU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Selanjutnya">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPart:" destination="mtm-ID-3L6" eventType="touchUpInside" id="bdR-WD-ze8"/>
                                 </connections>
                             </button>
                         </subviews>
