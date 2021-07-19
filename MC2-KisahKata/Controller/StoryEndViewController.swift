@@ -29,8 +29,9 @@ class StoryEndViewController: UIViewController {
         
         startQuizButton.roundedBorder(cornerRadius: 12)
         
-        wordLearnedLabel.text = "\(wordLearned) Kosakata baru dipelajari"
-        expWordLearned.text = "+\(expWordResult) exp"
+        
+//        wordLearnedLabel.text = "\(wordLearned) Kosakata baru dipelajari"
+//        expWordLearned.text = "+\(expWordResult) exp"
     }
     
     @IBAction func startQuizAction(_ sender: UIButton) {

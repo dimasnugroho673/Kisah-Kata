@@ -31,6 +31,7 @@ class StorytellingViewController: UIViewController {
     @IBOutlet weak var blurDetailPopUpView: UIView!
     
     
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var videoContainerView: UIView!
     @IBOutlet weak var descriptionDetailContainerView: UIView!
     @IBOutlet weak var titleDetailPopUpLabel: UILabel!
@@ -100,6 +101,8 @@ class StorytellingViewController: UIViewController {
         descriptionDetailContainerView.backgroundColor = UIColor.white
         
         closeDetailPopUpButton.roundedBorder(cornerRadius: 12)
+        
+        backgroundView.layer.cornerRadius = 24
         
         
         
@@ -197,7 +200,7 @@ class StorytellingViewController: UIViewController {
             
         }
         
-        scriptStory.frame = CGRect(x: 25, y: 450, width: view.frame.width - 30, height: 270)
+        scriptStory.frame = CGRect(x: 40, y: 380, width: view.frame.width - 60, height: 270)
         
         // text showing
         scriptStory.text = story!.stories[self.activePart]
