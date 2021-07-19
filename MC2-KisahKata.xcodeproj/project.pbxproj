@@ -40,6 +40,11 @@
 		40E4BC19267B00D700880A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E4BC17267B00D700880A62 /* LaunchScreen.storyboard */; };
 		510EE6042682B35B0052B35B /* ListCeritaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EE6022682B35B0052B35B /* ListCeritaViewController.swift */; };
 		510EE6072682B9750052B35B /* CeritaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510EE6062682B9740052B35B /* CeritaTableViewCell.swift */; };
+		5126FD5D26A552C300D9088B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5126FD5C26A552C300D9088B /* HomeViewController.swift */; };
+		5126FD6126A556C600D9088B /* TemaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5126FD5F26A556C600D9088B /* TemaTableViewCell.swift */; };
+		5126FD6226A556C600D9088B /* TemaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5126FD6026A556C600D9088B /* TemaTableViewCell.xib */; };
+		5126FD6526A556E000D9088B /* JudulCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5126FD6326A556E000D9088B /* JudulCollectionViewCell.swift */; };
+		5126FD6626A556E000D9088B /* JudulCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5126FD6426A556E000D9088B /* JudulCollectionViewCell.xib */; };
 		515C2774268739250010C136 /* KosaKataMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C2773268739250010C136 /* KosaKataMenuViewController.swift */; };
 		515C2776268739930010C136 /* KosaKataMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C2775268739930010C136 /* KosaKataMenuCollectionViewCell.swift */; };
 		515C2778268739B20010C136 /* Kosakata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C2777268739B20010C136 /* Kosakata.swift */; };
@@ -87,6 +92,11 @@
 		40E4BC1A267B00D700880A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		510EE6022682B35B0052B35B /* ListCeritaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCeritaViewController.swift; sourceTree = "<group>"; };
 		510EE6062682B9740052B35B /* CeritaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeritaTableViewCell.swift; sourceTree = "<group>"; };
+		5126FD5C26A552C300D9088B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5126FD5F26A556C600D9088B /* TemaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemaTableViewCell.swift; sourceTree = "<group>"; };
+		5126FD6026A556C600D9088B /* TemaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemaTableViewCell.xib; sourceTree = "<group>"; };
+		5126FD6326A556E000D9088B /* JudulCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudulCollectionViewCell.swift; sourceTree = "<group>"; };
+		5126FD6426A556E000D9088B /* JudulCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JudulCollectionViewCell.xib; sourceTree = "<group>"; };
 		515C2773268739250010C136 /* KosaKataMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KosaKataMenuViewController.swift; sourceTree = "<group>"; };
 		515C2775268739930010C136 /* KosaKataMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KosaKataMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		515C2777268739B20010C136 /* Kosakata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kosakata.swift; sourceTree = "<group>"; };
@@ -199,6 +209,7 @@
 		40E4BC08267B00D000880A62 /* MC2-KisahKata */ = {
 			isa = PBXGroup;
 			children = (
+				5126FD5E26A5569E00D9088B /* Cell */,
 				40BE37FB2689260D00414B06 /* Videos */,
 				E3A8EF3E2687A4650027349B /* Controller */,
 				40DD14542685903400A271EF /* Images */,
@@ -218,6 +229,17 @@
 				515C2777268739B20010C136 /* Kosakata.swift */,
 			);
 			path = "MC2-KisahKata";
+			sourceTree = "<group>";
+		};
+		5126FD5E26A5569E00D9088B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5126FD5F26A556C600D9088B /* TemaTableViewCell.swift */,
+				5126FD6026A556C600D9088B /* TemaTableViewCell.xib */,
+				5126FD6326A556E000D9088B /* JudulCollectionViewCell.swift */,
+				5126FD6426A556E000D9088B /* JudulCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		8503D0030795AC24B0818B0B /* Pods */ = {
@@ -248,6 +270,7 @@
 				E3F7FA492686DC1900AE784A /* QuizViewController.swift */,
 				E3F7FA4F2687384500AE784A /* ScoreViewController.swift */,
 				40E4BC0D267B00D000880A62 /* ViewController.swift */,
+				5126FD5C26A552C300D9088B /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -316,6 +339,7 @@
 				40DD146C2685F1AF00A271EF /* story_1_2.gif in Resources */,
 				40DD14692685F1AF00A271EF /* story_1_6.gif in Resources */,
 				40DD14682685F1AF00A271EF /* story_1_4.gif in Resources */,
+				5126FD6626A556E000D9088B /* JudulCollectionViewCell.xib in Resources */,
 				408C014926817BC400C59A24 /* Baloo2-Bold.ttf in Resources */,
 				408C014726817BC400C59A24 /* Baloo2-Regular.ttf in Resources */,
 				40BE38012689264800414B06 /* sibi_memancing.mp4 in Resources */,
@@ -323,6 +347,7 @@
 				40DD146A2685F1AF00A271EF /* story_1_1.gif in Resources */,
 				40DD146B2685F1AF00A271EF /* story_1_3.gif in Resources */,
 				40DD146D2685F1AF00A271EF /* story_1_5.gif in Resources */,
+				5126FD6226A556C600D9088B /* TemaTableViewCell.xib in Resources */,
 				408C014826817BC400C59A24 /* Baloo2-Medium.ttf in Resources */,
 				40E4BC16267B00D700880A62 /* Assets.xcassets in Resources */,
 				408C014526817BC400C59A24 /* Baloo2-SemiBold.ttf in Resources */,
@@ -390,14 +415,17 @@
 				E3F7FA4A2686DC1900AE784A /* QuizViewController.swift in Sources */,
 				405E60F5268434E3008B8499 /* Extension.swift in Sources */,
 				405E60F826843576008B8499 /* GifImage.swift in Sources */,
+				5126FD5D26A552C300D9088B /* HomeViewController.swift in Sources */,
 				E3E23E86268585AB008C3CD0 /* IntroViewController.swift in Sources */,
 				400409702684F774007B3A94 /* Kosakata+CoreDataClass.swift in Sources */,
 				405E60FB26843909008B8499 /* Stories.swift in Sources */,
+				5126FD6526A556E000D9088B /* JudulCollectionViewCell.swift in Sources */,
 				405E60F226842E23008B8499 /* StorytellingViewController.swift in Sources */,
 				40DD146F268609AB00A271EF /* StoriesData.swift in Sources */,
 				515C2778268739B20010C136 /* Kosakata.swift in Sources */,
 				40E4BC0E267B00D000880A62 /* ViewController.swift in Sources */,
 				510EE6042682B35B0052B35B /* ListCeritaViewController.swift in Sources */,
+				5126FD6126A556C600D9088B /* TemaTableViewCell.swift in Sources */,
 				515C2774268739250010C136 /* KosaKataMenuViewController.swift in Sources */,
 				E3F7FA502687384500AE784A /* ScoreViewController.swift in Sources */,
 				40E4BC0A267B00D000880A62 /* AppDelegate.swift in Sources */,
