@@ -16,6 +16,8 @@ class HomeViewController: UIViewController {
     var models = Cerita()
     var tappedCell: JudulCollectionViewCell!
     
+    var indexCellTap: Int = 0
+    
     // 1.coredata config
     var kosakatas = [Kosakata]()
     var manageObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
@@ -26,6 +28,7 @@ class HomeViewController: UIViewController {
         
         // CoreData config
         manageObjectContext = appDelegate?.persistentContainer.viewContext as! NSManagedObjectContext
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         // check is data in core data exist?
         _checkData()
@@ -182,24 +185,24 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.destination.isKind(of: StorytellingViewController.self){
-//            if let storyVC = segue.destination as? StorytellingViewController {
-//                storyVC.indexStory = ceritaTableView.indexPathForSelectedRow!.row
-//                storyVC.story = storiesData.list[ceritaTableView.indexPathForSelectedRow!.row]
-//            }
-//
-//        }
-//
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination.isKind(of: StoryOverviewViewController.self){
+            if let storyOverviewVC = segue.destination as? StoryOverviewViewController {
+//                storyOverviewVC.indexStory = ceritaTableView.indexPathForSelectedRow!.row
+                storyOverviewVC.indexStoryReceiver = self.indexCellTap
+            }
+
+        }
+
+    }
 }
 
 extension HomeViewController: CollectionViewCellDelegate {
     func collectionView(collectionviewcell: JudulCollectionViewCell?, index: Int, didTappedInTableViewCell: TemaTableViewCell) {
         if let judulsRow = didTappedInTableViewCell.rowList{
-//            self.tappedCell = judulsRow[index]
             
-            print("delegate active")
+            self.indexCellTap = index
+            print("tapped cell", index)
             
             performSegue(withIdentifier: "toOverviewStorySegue", sender: nil)
         }

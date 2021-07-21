@@ -32,7 +32,7 @@ class StoriesData {
     
     let highlightedWords: [[String]] = [
         [
-            "Selamat pagi",
+            "Selamat pagi,",
             "memperkenalkan",
             "panggil",
             "bersaudara",

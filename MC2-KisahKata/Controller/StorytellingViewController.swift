@@ -17,6 +17,7 @@ class StorytellingViewController: UIViewController {
     
     let scriptStory = ActiveLabel()
 
+    var indexStoryReceiver: Int = 0
     
     var story: Stories? = nil
     var indexStory: Int = 0
@@ -93,7 +94,7 @@ class StorytellingViewController: UIViewController {
         
         videoContainerView.roundedBorder(cornerRadius: 12)
         
-        backgroundView.layer.cornerRadius = 24
+        backgroundView.roundedBorder(cornerRadius: 24)
         view.addSubview(nextFloatingButton)
         view.addSubview(prevFloatingButton)
         nextFloatingButton.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
@@ -151,6 +152,10 @@ class StorytellingViewController: UIViewController {
     
     private func _fetchIlustration() {
         if story!.storyIlustrations[indexStory].hasPrefix("story") {
+            ilustrationStoryImage.image = UIImage(named: story!.storyIlustrations[self.activePart])
+            ilustrationStoryImage.layer.cornerRadius = 12
+            ilustrationStoryImage.contentMode = .scaleAspectFill
+        } else if story!.storyIlustrations[indexStory].hasPrefix("gif") {
             ilustrationStoryImage.image = UIImage.gifImageWithName(story!.storyIlustrations[self.activePart])
             ilustrationStoryImage.layer.cornerRadius = 24
             ilustrationStoryImage.animationRepeatCount = 1
@@ -256,7 +261,7 @@ class StorytellingViewController: UIViewController {
         do {
             try kosakatas = manageObjectContext.fetch(kosakataRequest)
         
-            textviewDescriptionSignLanguage.text = kosakatas[0].deskripsi!
+            textviewDescriptionSignLanguage.text = kosakatas[self.indexStoryReceiver].deskripsi!
         } catch {
             print("Gagal load data deskrpsi!")
         }
@@ -278,8 +283,8 @@ class StorytellingViewController: UIViewController {
 //            let videoURL = URL(string: kosakatas[0].urlVideo!)!
             
             /// kalo videonya offline
-//            let file = kosakatas[0].urlVideo!.components(separatedBy: ".")
-            let file = "sibi_bermain.mp4".components(separatedBy: ".")
+            let file = kosakatas[self.indexStoryReceiver].urlVideo!.components(separatedBy: ".")
+//            let file = "sibi_bermain.mp4".components(separatedBy: ".")
     
             guard let filePath = Bundle.main.path(forResource: file[0], ofType:file[1]) else {
                   debugPrint( "\(file.joined(separator: ".")) not found")
@@ -318,11 +323,6 @@ class StorytellingViewController: UIViewController {
         } catch {
             print("Gagal load data video!")
         }
-        
-
-        
-       
-        
     }
     
     // animate in popup
@@ -423,7 +423,8 @@ class StorytellingViewController: UIViewController {
             self._animateSpringView(sender)
         } else if self.activePart == story!.stories.count - 1 {
             self._animateSpringView(sender)
-            performSegue(withIdentifier: "scoreStorySegue", sender: nil)
+//            performSegue(withIdentifier: "scoreStorySegue", sender: nil)
+            performSegue(withIdentifier: "endStorySegue", sender: nil)
         }
         
         UIImpactFeedbackGenerator(style: .soft).impactOccurred()
@@ -431,8 +432,29 @@ class StorytellingViewController: UIViewController {
     }
     
     
-    @IBAction func buttonClosePopUpView(_ sender: Any) {
+    @IBAction func buttonClosePopUpView(_ sender: UIButton) {
         _animateOut(desiredView: viewHintBgBlur)
+        
+        NotificationCenter.default.removeObserver(self)
+     
+        playVideoButton.isHidden = true
+        
+        let kosakataRequest: NSFetchRequest<Kosakata> = Kosakata.fetchRequest()
+        kosakataRequest.predicate = NSPredicate(format: "kata = %@", wordTemp)
+        kosakataRequest.returnsObjectsAsFaults = false
+        
+        do {
+            try kosakatas = manageObjectContext.fetch(kosakataRequest)
+            
+            kosakatas[self.indexStoryReceiver].sudahDipelajari = 1
+//            print("\(wordTemp) berhasil dipelajari")
+            self.wordClicked.insert(wordTemp)
+            print("word click count", wordClicked.count)
+            
+            self._animateSpringView(sender)
+        } catch {
+            print("\(wordTemp) belum berhasil dipelajari")
+        }
     }
     
     @IBAction func closeDetailPopUpView(_ sender: UIButton) {
@@ -450,7 +472,7 @@ class StorytellingViewController: UIViewController {
         do {
             try kosakatas = manageObjectContext.fetch(kosakataRequest)
             
-            kosakatas[0].sudahDipelajari = 1
+            kosakatas[self.indexStoryReceiver].sudahDipelajari = 1
 //            print("\(wordTemp) berhasil dipelajari")
             self.wordClicked.insert(wordTemp)
             print("word click count", wordClicked.count)
@@ -475,8 +497,13 @@ class StorytellingViewController: UIViewController {
     // PREPARE SEGUE
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let endStoryVC = segue.destination as? StoryEndViewController {
-                endStoryVC.expWordResult = self.wordClicked.count * 10
-                endStoryVC.wordLearned = self.wordClicked.count
+            endStoryVC.expWordResult = self.wordClicked.count * 10
+            endStoryVC.wordLearned = self.wordClicked.count
+        } else if let endStoryVC = segue.destination as? PracticeEndViewController {
+            endStoryVC.expWordResult = self.wordClicked.count * 10
+            endStoryVC.wordLearned = self.wordClicked.count
+            endStoryVC.totalAllWordHighlightInStory = story!.highlightedWords.count
+            endStoryVC.indexStoryReceiver = self.indexStoryReceiver
         }
 
     }
