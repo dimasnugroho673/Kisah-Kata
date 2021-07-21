@@ -16,7 +16,8 @@ class TemaTableViewCell: UITableViewCell {
     @IBOutlet weak var temaLabel: UILabel!
     @IBOutlet weak var temaImage: UIImageView!
     @IBOutlet weak var judulCollectionView: UICollectionView!
-    @IBOutlet weak var CollectionView: UIView!
+    @IBOutlet weak var bgView: UIView!
+    
     
     weak var cellDelegate: CollectionViewCellDelegate?
     
@@ -29,6 +30,8 @@ class TemaTableViewCell: UITableViewCell {
         let cellNib = UINib(nibName: "JudulCollectionViewCell", bundle: nil)
         self.judulCollectionView.register(cellNib, forCellWithReuseIdentifier: "judulCell")
         
+        bgView.layer.cornerRadius = 20
+        
         judulCollectionView.delegate = self
         judulCollectionView.dataSource = self
         judulCollectionView.backgroundColor = UIColor.clear
@@ -40,8 +43,8 @@ class TemaTableViewCell: UITableViewCell {
 //                flowLayout.scrollDirection = .vertical
                 
         flowLayout.itemSize = CGSize(width: 330, height: 67)
-        flowLayout.minimumLineSpacing = 2.0
-        flowLayout.minimumInteritemSpacing = 5.0
+        flowLayout.minimumLineSpacing = 10.0
+        flowLayout.minimumInteritemSpacing = 20.0
         
                 
                 self.judulCollectionView.collectionViewLayout = flowLayout

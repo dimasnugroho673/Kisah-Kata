@@ -34,6 +34,8 @@ class HomeViewController: UIViewController {
         // check is data in core data exist?
         _checkData()
         _checkUserIsLogged()
+        
+        userLabel.text = UserDefaults.standard.string(forKey: "username") ?? ""
 
         // Do any additional setup after loading the view.
         let cellNib = UINib(nibName: "TemaTableViewCell", bundle: nil)
