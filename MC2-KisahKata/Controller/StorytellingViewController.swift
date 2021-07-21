@@ -32,11 +32,12 @@ class StorytellingViewController: UIViewController {
     
     
     @IBOutlet weak var backgroundView: UIView!
+    
+    @IBOutlet weak var viewHintBgBlur: UIVisualEffectView!
     @IBOutlet weak var videoContainerView: UIView!
-    @IBOutlet weak var descriptionDetailContainerView: UIView!
-    @IBOutlet weak var titleDetailPopUpLabel: UILabel!
-    @IBOutlet weak var descriptionDetailPopUpLabel: UILabel!
-    @IBOutlet weak var closeDetailPopUpButton: UIButton!
+    @IBOutlet weak var labelTtitleHint: UILabel!
+    @IBOutlet weak var textviewDescriptionSignLanguage: UITextView!
+    @IBOutlet weak var buttonCloseHint: UIButton!
     
     var playerLayer = AVPlayerLayer()
     
@@ -76,16 +77,6 @@ class StorytellingViewController: UIViewController {
     }()
     
     
-//    init(indexStory: Int) {
-//        self.indexStory = indexStory
-//        super.init(nibName: nil, bundle: nil)
-//    }
-    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//
-    
     var kosakatas = [Kosakata]()
     var manageObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
@@ -98,34 +89,9 @@ class StorytellingViewController: UIViewController {
         self.title = story!.title
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-       
-        
-        if self.activePart == 0 {
-//            prevButton.isHidden = true
-        }
-        
-//        nextButton.roundedBorder(cornerRadius: 12)
-//        nextButton.setTitle("Selanjutnya", for: .normal)
-//        nextButton.backgroundColor = UIColor(named: "PrimaryColor")
-//        nextButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
-//        nextButton.semanticContentAttribute = .forceRightToLeft
-//        nextButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
-        
-        
         _generateContent()
         
         videoContainerView.roundedBorder(cornerRadius: 12)
-        
-        // set blur width to bounds
-        blurDetailPopUpView.bounds = self.view.bounds
-        blurDetailPopUpView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
-        
-        detailPopUpView.bounds = CGRect(x: 0, y: 0, width: self.view.bounds.width * 0.9, height: self.view.bounds.height * 0.75)
-        detailPopUpView.roundedBorder(cornerRadius: 24)
-       
-        descriptionDetailContainerView.backgroundColor = UIColor.white
-        
-        closeDetailPopUpButton.roundedBorder(cornerRadius: 12)
         
         backgroundView.layer.cornerRadius = 24
         view.addSubview(nextFloatingButton)
@@ -134,35 +100,15 @@ class StorytellingViewController: UIViewController {
         prevFloatingButton.addTarget(self, action: #selector(didTapPrevButton), for: .touchUpInside)
         
         
+        // set blur width to bounds
+        viewHintBgBlur.bounds = self.view.bounds
+        viewHintBgBlur.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         
-//        nextButton.setImage(UIImage(systemName: "chevron.forward"), for: .normal)
-//        nextButton.contentHorizontalAlignment = .left
+        buttonCloseHint.roundedBorder(cornerRadius: 12)
+        buttonCloseHint.semanticContentAttribute = .forceRightToLeft
+        buttonCloseHint.imageEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
         
-//        let button = UIButton(type: UIButton.ButtonType.system) as UIButton
-//
-//               let xPostion:CGFloat = 400
-//               let yPostion:CGFloat = 100
-//               let buttonWidth:CGFloat = 150
-//               let buttonHeight:CGFloat = 45
-//
-//        button.frame = CGRect(x:20, y:view.frame.height - 100, width:buttonWidth, height:buttonHeight)
-//
-////        button.translatesAutoresizingMaskIntoConstraints = false
-//
-//               button.backgroundColor = UIColor.lightGray
-//               button.setTitle("Tap me", for: UIControl.State.normal)
-//               button.tintColor = UIColor.black
-////               button.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
-//
-//               self.view.addSubview(button)
-//
-//        NSLayoutConstraint.activate([
-//
-//            button.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-//            button.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
-//            button.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor,constant: -buttonHeight),
-//            button.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
-//        ])
+        videoContainerView.roundedBorder(cornerRadius: 12)
             
     }
     
@@ -287,11 +233,10 @@ class StorytellingViewController: UIViewController {
         // set haptic feedback
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         
-        _animateIn(desiredView: blurDetailPopUpView)
-        _animateIn(desiredView: detailPopUpView)
+        _animateIn(desiredView: viewHintBgBlur)
         
         wordTemp = word
-        titleDetailPopUpLabel.text = word.capitalized
+        labelTtitleHint.text = word.capitalized
         _fetchVideo(word: word)
         _fetchDescription(word: word)
     }
@@ -311,7 +256,7 @@ class StorytellingViewController: UIViewController {
         do {
             try kosakatas = manageObjectContext.fetch(kosakataRequest)
         
-            descriptionDetailPopUpLabel.text = kosakatas[0].deskripsi!
+            textviewDescriptionSignLanguage.text = kosakatas[0].deskripsi!
         } catch {
             print("Gagal load data deskrpsi!")
         }
@@ -333,7 +278,8 @@ class StorytellingViewController: UIViewController {
 //            let videoURL = URL(string: kosakatas[0].urlVideo!)!
             
             /// kalo videonya offline
-            let file = kosakatas[0].urlVideo!.components(separatedBy: ".")
+//            let file = kosakatas[0].urlVideo!.components(separatedBy: ".")
+            let file = "sibi_bertani.mp4".components(separatedBy: ".")
     
             guard let filePath = Bundle.main.path(forResource: file[0], ofType:file[1]) else {
                   debugPrint( "\(file.joined(separator: ".")) not found")
@@ -342,8 +288,6 @@ class StorytellingViewController: UIViewController {
             
             /// video offline
             let videoURL = URL(fileURLWithPath: filePath)
-            
-           
             
             let player = AVPlayer(url: videoURL)
             playerLayer = AVPlayerLayer(player: player)
@@ -484,6 +428,11 @@ class StorytellingViewController: UIViewController {
         
         UIImpactFeedbackGenerator(style: .soft).impactOccurred()
         
+    }
+    
+    
+    @IBAction func buttonClosePopUpView(_ sender: Any) {
+        _animateOut(desiredView: viewHintBgBlur)
     }
     
     @IBAction func closeDetailPopUpView(_ sender: UIButton) {
