@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		400409702684F774007B3A94 /* Kosakata+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4004096E2684F774007B3A94 /* Kosakata+CoreDataClass.swift */; };
 		400409712684F774007B3A94 /* Kosakata+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4004096F2684F774007B3A94 /* Kosakata+CoreDataProperties.swift */; };
+		400471D026A7D82A00D0C8FE /* StoryOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400471CF26A7D82A00D0C8FE /* StoryOverviewViewController.swift */; };
 		405E60F226842E23008B8499 /* StorytellingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E60F126842E23008B8499 /* StorytellingViewController.swift */; };
 		405E60F5268434E3008B8499 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E60F4268434E3008B8499 /* Extension.swift */; };
 		405E60F826843576008B8499 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405E60F726843576008B8499 /* GifImage.swift */; };
@@ -62,6 +63,7 @@
 /* Begin PBXFileReference section */
 		4004096E2684F774007B3A94 /* Kosakata+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kosakata+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4004096F2684F774007B3A94 /* Kosakata+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kosakata+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		400471CF26A7D82A00D0C8FE /* StoryOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryOverviewViewController.swift; sourceTree = "<group>"; };
 		405E60F126842E23008B8499 /* StorytellingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytellingViewController.swift; sourceTree = "<group>"; };
 		405E60F4268434E3008B8499 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		405E60F726843576008B8499 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				E3F7FA4F2687384500AE784A /* ScoreViewController.swift */,
 				40E4BC0D267B00D000880A62 /* ViewController.swift */,
 				5126FD5C26A552C300D9088B /* HomeViewController.swift */,
+				400471CF26A7D82A00D0C8FE /* StoryOverviewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				400409702684F774007B3A94 /* Kosakata+CoreDataClass.swift in Sources */,
 				405E60FB26843909008B8499 /* Stories.swift in Sources */,
 				5126FD6526A556E000D9088B /* JudulCollectionViewCell.swift in Sources */,
+				400471D026A7D82A00D0C8FE /* StoryOverviewViewController.swift in Sources */,
 				405E60F226842E23008B8499 /* StorytellingViewController.swift in Sources */,
 				40DD146F268609AB00A271EF /* StoriesData.swift in Sources */,
 				515C2778268739B20010C136 /* Kosakata.swift in Sources */,
@@ -592,7 +596,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B7LC8VVXHV;
+				DEVELOPMENT_TEAM = D7589S3EHF;
 				INFOPLIST_FILE = "MC2-KisahKata/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -612,7 +616,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B7LC8VVXHV;
+				DEVELOPMENT_TEAM = D7589S3EHF;
 				INFOPLIST_FILE = "MC2-KisahKata/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
         temaTableView.delegate = self
         temaTableView.dataSource = self
     }
+    
 }
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,6 +38,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = temaTableView.dequeueReusableCell(withIdentifier: "temaCell", for: indexPath)as! TemaTableViewCell
         
+        
+        
         let urutan = models.objectArray[indexPath.row].Urutan
         cell.urutanLabel.text = urutan
         let tema = models.objectArray[indexPath.row].Tema
@@ -45,13 +48,32 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.temaImage.image = UIImage(named: img)
         let dataJudul = models.objectArray[indexPath.row].ListJudul
         cell.updateCell(row: dataJudul)
+        
+        cell.cellDelegate = self
+        
         return cell
     }
-}
-//extension HomeViewController: CollectionViewCellDelegate{
-//    func collectionView(collectionviewcell: JudulCollectionViewCell?, index: Int, didTappedInTableViewCell: TemaTableViewCell) {
-//        if let judulsRow = didTappedInTableViewCell.rowList{
-//            self.tappedCell = judulsRow[index]
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.destination.isKind(of: StorytellingViewController.self){
+//            if let storyVC = segue.destination as? StorytellingViewController {
+//                storyVC.indexStory = ceritaTableView.indexPathForSelectedRow!.row
+//                storyVC.story = storiesData.list[ceritaTableView.indexPathForSelectedRow!.row]
+//            }
+//
 //        }
+//
 //    }
-//}
+}
+
+extension HomeViewController: CollectionViewCellDelegate {
+    func collectionView(collectionviewcell: JudulCollectionViewCell?, index: Int, didTappedInTableViewCell: TemaTableViewCell) {
+        if let judulsRow = didTappedInTableViewCell.rowList{
+//            self.tappedCell = judulsRow[index]
+            
+            print("delegate active")
+            
+            performSegue(withIdentifier: "toOverviewStorySegue", sender: nil)
+        }
+    }
+}
