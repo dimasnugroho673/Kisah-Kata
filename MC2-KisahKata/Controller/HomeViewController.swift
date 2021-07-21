@@ -40,6 +40,7 @@ class HomeViewController: UIViewController {
         self.temaTableView.register(cellNib, forCellReuseIdentifier: "temaCell")
         temaTableView.delegate = self
         temaTableView.dataSource = self
+        temaTableView.separatorStyle = .none
         
     }
     
@@ -167,6 +168,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 389
     }
+
     
     
     
@@ -193,6 +195,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         if segue.destination.isKind(of: StoryOverviewViewController.self){
             if let storyOverviewVC = segue.destination as? StoryOverviewViewController {
 //                storyOverviewVC.indexStory = ceritaTableView.indexPathForSelectedRow!.row
+                
                 storyOverviewVC.indexStoryReceiver = self.indexCellTap
             }
 

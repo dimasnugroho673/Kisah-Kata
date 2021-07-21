@@ -36,7 +36,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" red="0.25101926920000001" green="0.56500226259999997" blue="0.96867746109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="RLM-wd-qlt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="23" id="AZa-Wr-T39"/>
                 <constraint firstItem="RLM-wd-qlt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="MBr-P1-RyI"/>
@@ -50,6 +50,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="star_3" width="820" height="164"/>
+        <image name="star_3" width="492" height="164"/>
     </resources>
 </document>

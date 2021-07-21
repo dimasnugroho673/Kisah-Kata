@@ -35,8 +35,6 @@ class TemaTableViewCell: UITableViewCell {
         
         
         
-        CollectionView.backgroundColor = UIColor(white: 0, alpha: 0)
-        CollectionView.isOpaque = false
         
         let flowLayout = UICollectionViewFlowLayout()
 //                flowLayout.scrollDirection = .vertical
