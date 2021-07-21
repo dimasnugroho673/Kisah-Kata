@@ -48,6 +48,9 @@
 		515C2774268739250010C136 /* KosaKataMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C2773268739250010C136 /* KosaKataMenuViewController.swift */; };
 		515C2776268739930010C136 /* KosaKataMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C2775268739930010C136 /* KosaKataMenuCollectionViewCell.swift */; };
 		515C2778268739B20010C136 /* Kosakata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C2777268739B20010C136 /* Kosakata.swift */; };
+		515D7DEB26A71B9F00DA3CE5 /* TemaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D7DEA26A71B9F00DA3CE5 /* TemaModel.swift */; };
+		515D7DED26A71BAF00DA3CE5 /* JudulModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D7DEC26A71BAF00DA3CE5 /* JudulModel.swift */; };
+		515D7DEF26A7246800DA3CE5 /* Cerita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515D7DEE26A7246800DA3CE5 /* Cerita.swift */; };
 		E3E23E86268585AB008C3CD0 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E23E85268585AB008C3CD0 /* IntroViewController.swift */; };
 		E3F7FA4A2686DC1900AE784A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7FA492686DC1900AE784A /* QuizViewController.swift */; };
 		E3F7FA4C2687331300AE784A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7FA4B2687331300AE784A /* Question.swift */; };
@@ -100,6 +103,9 @@
 		515C2773268739250010C136 /* KosaKataMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KosaKataMenuViewController.swift; sourceTree = "<group>"; };
 		515C2775268739930010C136 /* KosaKataMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KosaKataMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		515C2777268739B20010C136 /* Kosakata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kosakata.swift; sourceTree = "<group>"; };
+		515D7DEA26A71B9F00DA3CE5 /* TemaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemaModel.swift; sourceTree = "<group>"; };
+		515D7DEC26A71BAF00DA3CE5 /* JudulModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudulModel.swift; sourceTree = "<group>"; };
+		515D7DEE26A7246800DA3CE5 /* Cerita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cerita.swift; sourceTree = "<group>"; };
 		6CD898E0D2D4EF52F0CB290F /* Pods-MC2-KisahKata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC2-KisahKata.release.xcconfig"; path = "Target Support Files/Pods-MC2-KisahKata/Pods-MC2-KisahKata.release.xcconfig"; sourceTree = "<group>"; };
 		6D4803DD54A0B36CC3E2C562 /* Pods_MC2_KisahKata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MC2_KisahKata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC1C319238B248BA1A3FDC4 /* Pods-MC2-KisahKata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC2-KisahKata.debug.xcconfig"; path = "Target Support Files/Pods-MC2-KisahKata/Pods-MC2-KisahKata.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 				40DD146E268609AB00A271EF /* StoriesData.swift */,
 				E3F7FA4B2687331300AE784A /* Question.swift */,
 				E3F7FA4D2687333500AE784A /* QuestionBank.swift */,
+				515D7DEE26A7246800DA3CE5 /* Cerita.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,6 +245,8 @@
 				5126FD6026A556C600D9088B /* TemaTableViewCell.xib */,
 				5126FD6326A556E000D9088B /* JudulCollectionViewCell.swift */,
 				5126FD6426A556E000D9088B /* JudulCollectionViewCell.xib */,
+				515D7DEA26A71B9F00DA3CE5 /* TemaModel.swift */,
+				515D7DEC26A71BAF00DA3CE5 /* JudulModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -413,6 +422,7 @@
 				E3F7FA4E2687333500AE784A /* QuestionBank.swift in Sources */,
 				400409712684F774007B3A94 /* Kosakata+CoreDataProperties.swift in Sources */,
 				E3F7FA4A2686DC1900AE784A /* QuizViewController.swift in Sources */,
+				515D7DEB26A71B9F00DA3CE5 /* TemaModel.swift in Sources */,
 				405E60F5268434E3008B8499 /* Extension.swift in Sources */,
 				405E60F826843576008B8499 /* GifImage.swift in Sources */,
 				5126FD5D26A552C300D9088B /* HomeViewController.swift in Sources */,
@@ -425,8 +435,10 @@
 				515C2778268739B20010C136 /* Kosakata.swift in Sources */,
 				40E4BC0E267B00D000880A62 /* ViewController.swift in Sources */,
 				510EE6042682B35B0052B35B /* ListCeritaViewController.swift in Sources */,
+				515D7DED26A71BAF00DA3CE5 /* JudulModel.swift in Sources */,
 				5126FD6126A556C600D9088B /* TemaTableViewCell.swift in Sources */,
 				515C2774268739250010C136 /* KosaKataMenuViewController.swift in Sources */,
+				515D7DEF26A7246800DA3CE5 /* Cerita.swift in Sources */,
 				E3F7FA502687384500AE784A /* ScoreViewController.swift in Sources */,
 				40E4BC0A267B00D000880A62 /* AppDelegate.swift in Sources */,
 				515C2776268739930010C136 /* KosaKataMenuCollectionViewCell.swift in Sources */,

@@ -8,6 +8,9 @@
 import UIKit
 
 class JudulCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var judulLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
