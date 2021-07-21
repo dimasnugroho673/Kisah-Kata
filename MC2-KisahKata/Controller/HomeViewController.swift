@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
         self.temaTableView.register(cellNib, forCellReuseIdentifier: "temaCell")
         temaTableView.delegate = self
         temaTableView.dataSource = self
+        
     }
     
 }

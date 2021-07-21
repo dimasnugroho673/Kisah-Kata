@@ -33,7 +33,7 @@ class TemaTableViewCell: UITableViewCell {
         judulCollectionView.dataSource = self
         judulCollectionView.backgroundColor = UIColor.clear
         
-        self.layer.cornerRadius = 14
+        
         
         CollectionView.backgroundColor = UIColor(white: 0, alpha: 0)
         CollectionView.isOpaque = false
