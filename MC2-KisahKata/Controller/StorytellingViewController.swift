@@ -279,7 +279,7 @@ class StorytellingViewController: UIViewController {
             
             /// kalo videonya offline
 //            let file = kosakatas[0].urlVideo!.components(separatedBy: ".")
-            let file = "sibi_bertani.mp4".components(separatedBy: ".")
+            let file = "sibi_bermain.mp4".components(separatedBy: ".")
     
             guard let filePath = Bundle.main.path(forResource: file[0], ofType:file[1]) else {
                   debugPrint( "\(file.joined(separator: ".")) not found")
