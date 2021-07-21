@@ -131,7 +131,7 @@ class StorytellingViewController: UIViewController {
         view.addSubview(nextFloatingButton)
         view.addSubview(prevFloatingButton)
         nextFloatingButton.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
-        prevFloatingButton.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
+        prevFloatingButton.addTarget(self, action: #selector(didTapPrevButton), for: .touchUpInside)
         
         
         
@@ -168,9 +168,13 @@ class StorytellingViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         if self.activePart == 0 {
-            nextFloatingButton.frame = CGRect(x: view.frame.size.width / 2 - 30 , y: view.frame.size.height - 100, width: 60, height: 60)
-            prevFloatingButton.frame = CGRect(x: view.frame.size.width / 2 - 30 , y: view.frame.size.height - 100, width: 60, height: 60)
-            prevFloatingButton.isHidden = true
+//            self.nextFloatingButton.frame = CGRect(x: self.view.frame.size.width / 2 - 30 , y: self.view.frame.size.height - 100, width: 60, height: 60)
+            UIButton.animate(withDuration: 1.0, animations: {
+                self.nextFloatingButton.frame = CGRect(x: self.view.frame.size.width / 2 - 30 , y: self.view.frame.size.height - 100, width: 60, height: 60)
+                self.prevFloatingButton.frame = CGRect(x: self.view.frame.size.width / 2 - 30 , y: self.view.frame.size.height - 100, width: 60, height: 60)
+                self.prevFloatingButton.isHidden = true
+            })
+            
         } else {
             prevFloatingButton.isHidden = false
             UIButton.animate(withDuration: 1.0, animations: {
@@ -267,6 +271,7 @@ class StorytellingViewController: UIViewController {
                 nextFloatingButton.backgroundColor = UIColor.init(named: "buttonColorGreen")
                 let image = UIImage(systemName: "checkmark.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
                 nextFloatingButton.setImage(image, for: .normal)
+                
             } else {
                 let image = UIImage(systemName: "arrow.right.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
                 nextFloatingButton.setImage(image, for: .normal)
