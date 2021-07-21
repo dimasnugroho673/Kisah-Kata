@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class HomeViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class HomeViewController: UIViewController {
     
     var models = Cerita()
     var tappedCell: JudulCollectionViewCell!
+    let cellSpacingHeight: CGFloat = 20
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 389
     }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = temaTableView.dequeueReusableCell(withIdentifier: "temaCell", for: indexPath)as! TemaTableViewCell
@@ -73,7 +77,12 @@ extension HomeViewController: CollectionViewCellDelegate {
             
             print("delegate active")
             
+            
             performSegue(withIdentifier: "toOverviewStorySegue", sender: nil)
         }
     }
+    
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//            return cellSpacingHeight
+//        }
 }

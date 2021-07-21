@@ -11,10 +11,16 @@ class JudulCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var judulLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.layer.cornerRadius = 14
         // Initialization code
+        
+        
+        
     }
 
 }

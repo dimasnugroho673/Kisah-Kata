@@ -16,6 +16,7 @@ class TemaTableViewCell: UITableViewCell {
     @IBOutlet weak var temaLabel: UILabel!
     @IBOutlet weak var temaImage: UIImageView!
     @IBOutlet weak var judulCollectionView: UICollectionView!
+    @IBOutlet weak var CollectionView: UIView!
     
     weak var cellDelegate: CollectionViewCellDelegate?
     
@@ -30,6 +31,25 @@ class TemaTableViewCell: UITableViewCell {
         
         judulCollectionView.delegate = self
         judulCollectionView.dataSource = self
+        judulCollectionView.backgroundColor = UIColor.clear
+        
+        self.layer.cornerRadius = 14
+        
+        CollectionView.backgroundColor = UIColor(white: 0, alpha: 0)
+        CollectionView.isOpaque = false
+        
+        let flowLayout = UICollectionViewFlowLayout()
+//                flowLayout.scrollDirection = .vertical
+                
+        flowLayout.itemSize = CGSize(width: 330, height: 67)
+        flowLayout.minimumLineSpacing = 2.0
+        flowLayout.minimumInteritemSpacing = 5.0
+        
+                
+                self.judulCollectionView.collectionViewLayout = flowLayout
+                self.judulCollectionView.showsVerticalScrollIndicator = false
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,6 +57,8 @@ class TemaTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
     
 }
 
@@ -67,7 +89,7 @@ extension TemaTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "judulCell", for: indexPath)as! JudulCollectionViewCell
         cell.judulLabel.text = self.rowList?[indexPath.row].Judul ?? ""
-        cell.scoreLabel.text = self.rowList?[indexPath.row].Score ?? ""
+//        cell.scoreLabel.text = self.rowList?[indexPath.row].Score ?? ""
         return cell
     }
 }
