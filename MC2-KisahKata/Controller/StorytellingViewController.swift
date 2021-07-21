@@ -115,7 +115,7 @@ class StorytellingViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         if self.activePart == 0 {
-//            self.nextFloatingButton.frame = CGRect(x: self.view.frame.size.width / 2 - 30 , y: self.view.frame.size.height - 100, width: 60, height: 60)
+            self.nextFloatingButton.frame = CGRect(x: self.view.frame.size.width / 2 - 30 , y: self.view.frame.size.height - 100, width: 60, height: 60)
             UIButton.animate(withDuration: 1.0, animations: {
                 self.nextFloatingButton.frame = CGRect(x: self.view.frame.size.width / 2 - 30 , y: self.view.frame.size.height - 100, width: 60, height: 60)
                 self.prevFloatingButton.frame = CGRect(x: self.view.frame.size.width / 2 - 30 , y: self.view.frame.size.height - 100, width: 60, height: 60)
