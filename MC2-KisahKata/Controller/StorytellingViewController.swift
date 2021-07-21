@@ -24,13 +24,14 @@ class StorytellingViewController: UIViewController {
     @IBOutlet weak var storyPageControl: UIPageControl!
     @IBOutlet weak var ilustrationStoryImage: UIImageView!
     
-    @IBOutlet weak var prevButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
+//    @IBOutlet weak var prevButton: UIButton!
+//    @IBOutlet weak var nextButton: UIButton!
     
     @IBOutlet weak var detailPopUpView: UIView!
     @IBOutlet weak var blurDetailPopUpView: UIView!
     
     
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var videoContainerView: UIView!
     @IBOutlet weak var descriptionDetailContainerView: UIView!
     @IBOutlet weak var titleDetailPopUpLabel: UILabel!
@@ -45,6 +46,34 @@ class StorytellingViewController: UIViewController {
 //    var wordClickedCounter: Int
     
     var wordClicked: Set<String> = []
+    
+    private let nextFloatingButton: UIButton = {
+        let button = UIButton()
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 30
+        button.backgroundColor = UIColor.init(named: "buttonColorBlue")
+        
+        
+        let image = UIImage(systemName: "arrow.right.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
+        button.setImage(image, for: .normal)
+        button.tintColor = .white
+        button.setTitleColor(.white, for: .normal)
+        return button
+    }()
+    
+    private let prevFloatingButton: UIButton = {
+        let button = UIButton()
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 30
+        button.backgroundColor = .white
+        
+        
+        let image = UIImage(systemName: "arrow.backward.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
+        button.setImage(image, for: .normal)
+        button.tintColor = .gray
+        button.setTitleColor(.gray, for: .normal)
+        return button
+    }()
     
     
 //    init(indexStory: Int) {
@@ -69,21 +98,18 @@ class StorytellingViewController: UIViewController {
         self.title = story!.title
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-        prevButton.roundedBorder(cornerRadius: 12)
-        prevButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
-        prevButton.tintColor = UIColor.darkGray
-        prevButton.backgroundColor = UIColor(named: "LowInterferenceColor")
+       
         
         if self.activePart == 0 {
-            prevButton.isHidden = true
+//            prevButton.isHidden = true
         }
         
-        nextButton.roundedBorder(cornerRadius: 12)
-        nextButton.setTitle("Selanjutnya", for: .normal)
-        nextButton.backgroundColor = UIColor(named: "PrimaryColor")
-        nextButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
-        nextButton.semanticContentAttribute = .forceRightToLeft
-        nextButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
+//        nextButton.roundedBorder(cornerRadius: 12)
+//        nextButton.setTitle("Selanjutnya", for: .normal)
+//        nextButton.backgroundColor = UIColor(named: "PrimaryColor")
+//        nextButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+//        nextButton.semanticContentAttribute = .forceRightToLeft
+//        nextButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
         
         
         _generateContent()
@@ -100,6 +126,12 @@ class StorytellingViewController: UIViewController {
         descriptionDetailContainerView.backgroundColor = UIColor.white
         
         closeDetailPopUpButton.roundedBorder(cornerRadius: 12)
+        
+        backgroundView.layer.cornerRadius = 24
+        view.addSubview(nextFloatingButton)
+        view.addSubview(prevFloatingButton)
+        nextFloatingButton.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
+        prevFloatingButton.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
         
         
         
@@ -132,6 +164,23 @@ class StorytellingViewController: UIViewController {
 //            button.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
 //        ])
             
+    }
+    
+    override func viewDidLayoutSubviews() {
+        if self.activePart == 0 {
+            nextFloatingButton.frame = CGRect(x: view.frame.size.width / 2 - 30 , y: view.frame.size.height - 100, width: 60, height: 60)
+            prevFloatingButton.frame = CGRect(x: view.frame.size.width / 2 - 30 , y: view.frame.size.height - 100, width: 60, height: 60)
+            prevFloatingButton.isHidden = true
+        } else {
+            prevFloatingButton.isHidden = false
+            UIButton.animate(withDuration: 1.0, animations: {
+                self.nextFloatingButton.frame = CGRect(x: self.view.frame.size.width / 2 + 20, y: self.view.frame.size.height - 100, width: 60, height: 60)
+                self.prevFloatingButton.frame = CGRect(x: self.view.frame.size.width / 2 - 80 , y: self.view.frame.size.height - 100, width: 60, height: 60)
+                
+            })
+            
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -197,7 +246,7 @@ class StorytellingViewController: UIViewController {
             
         }
         
-        scriptStory.frame = CGRect(x: 25, y: 450, width: view.frame.width - 30, height: 270)
+        scriptStory.frame = CGRect(x: 40, y: 380, width: view.frame.width - 60, height: 270)
         
         // text showing
         scriptStory.text = story!.stories[self.activePart]
@@ -209,15 +258,20 @@ class StorytellingViewController: UIViewController {
     
     private func _fetchButton() {
         if self.activePart == 0 {
-            prevButton.isHidden = true
+            
         } else {
-            prevButton.isHidden = false
+            
             
             if self.activePart == story!.stories.count - 1 {
 //                print("cerita mentok!!")
-                nextButton.setTitle("Kerjakan kuis", for: .normal)
+                nextFloatingButton.backgroundColor = UIColor.init(named: "buttonColorGreen")
+                let image = UIImage(systemName: "checkmark.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
+                nextFloatingButton.setImage(image, for: .normal)
             } else {
-                nextButton.setTitle("Selanjutnya", for: .normal)
+                let image = UIImage(systemName: "arrow.right.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32, weight: .medium))
+                nextFloatingButton.setImage(image, for: .normal)
+                nextFloatingButton.backgroundColor = UIColor.init(named: "buttonColorBlue")
+                
             }
             
         }
@@ -385,9 +439,33 @@ class StorytellingViewController: UIViewController {
         
         UIImpactFeedbackGenerator(style: .soft).impactOccurred()
     }
+    
+    @objc private func didTapPrevButton(_ sender: UIButton){
+        if self.activePart == 0 {
+            
+            self.activePart = 0
+            _generateContent()
+            _fetchPageControl(page: self.activePart)
+         
+            self._animateSpringView(sender)
+            
+        } else if self.activePart <= story!.stories.count - 1 {
+            
+            self.activePart -= 1
+            _generateContent()
+            _fetchPageControl(page: self.activePart)
+            
+            self._animateSpringView(sender)
+            
+        }
+        
+        UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+    }
 
     
-    @IBAction func nextPart(_ sender: UIButton) {
+   
+    
+    @objc private func didTapNextButton(_ sender: UIButton){
         if self.activePart < story!.stories.count - 1 {
             self.activePart += 1
             _generateContent()
@@ -400,6 +478,7 @@ class StorytellingViewController: UIViewController {
         }
         
         UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+        
     }
     
     @IBAction func closeDetailPopUpView(_ sender: UIButton) {

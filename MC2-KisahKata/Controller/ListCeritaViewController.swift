@@ -22,7 +22,7 @@ class ListCeritaViewController: UIViewController, UITableViewDelegate, UITableVi
         self.title = "Kisah"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.barTintColor = UIColor.white
+//        navigationController?.navigationBar.barTintColor = UIColor.blue
 
        
         ceritaTableView.delegate = self
