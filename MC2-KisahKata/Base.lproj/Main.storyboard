@@ -271,14 +271,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ceritaCell" id="jlH-KO-cXm" customClass="CeritaTableViewCell" customModule="MC2_KisahKata" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="159.33332824707031"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="166.66667175292969"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jlH-KO-cXm" id="I7B-HG-WFu">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="159.33332824707031"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="166.66667175292969"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKI-rG-RSQ">
-                                                    <rect key="frame" x="20" y="11" width="350" height="137.33333333333334"/>
+                                                    <rect key="frame" x="20" y="11" width="350" height="144.66666666666666"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5AQ-fT-aIU">
                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="96"/>
@@ -289,7 +289,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judul" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qq3-8d-Ou1">
-                                                            <rect key="frame" x="15" y="106" width="330" height="21.333333333333329"/>
+                                                            <rect key="frame" x="15" y="106" width="330" height="28.666666666666657"/>
                                                             <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="18"/>
                                                             <color key="textColor" name="TextSecondaryColor"/>
                                                             <nil key="highlightedColor"/>
@@ -398,6 +398,7 @@
                         <outlet property="videoContainerView" destination="AzR-aC-HSM" id="EGy-jm-Vmu"/>
                         <outlet property="viewHintBgBlur" destination="aZa-PU-QpI" id="QCN-ht-lCT"/>
                         <segue destination="b0o-ZL-MV9" kind="show" identifier="scoreStorySegue" id="ESb-VY-Xqo"/>
+                        <segue destination="JM3-In-QCl" kind="show" identifier="endStorySegue" id="BPJ-w7-0t8"/>
                     </connections>
                 </viewController>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" id="aZa-PU-QpI">
@@ -430,7 +431,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIv-6U-1Mf">
-                                <rect key="frame" x="79" y="627" width="292" height="28"/>
+                                <rect key="frame" x="79" y="617" width="292" height="38"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Petunjuk Praktik : ">
                                         <attributes>
@@ -461,7 +462,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vcc-eL-kuv">
-                                <rect key="frame" x="15" y="606" width="356" height="1"/>
+                                <rect key="frame" x="15" y="596" width="356" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="660-no-Em6"/>
@@ -476,13 +477,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksy-3S-9eG">
-                                <rect key="frame" x="18" y="452" width="350" height="29.333333333333314"/>
+                                <rect key="frame" x="18" y="452" width="350" height="39.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Pemuda/pe·mu·da/ n orang muda laki-laki; remaja; teruna: para -- ini akan menjadi pemimpin bangsa;~ tawon ki pemuda " textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InG-aa-jW7">
-                                <rect key="frame" x="15" y="481.33333333333326" width="356" height="100"/>
+                                <rect key="frame" x="15" y="491.66666666666674" width="356" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="a7c-wv-8Ro"/>
@@ -544,8 +545,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mari kita praktik Isyarat!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzn-Y8-grQ">
-                                <rect key="frame" x="50" y="552" width="289" height="79.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mari kita praktik Isyarat!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzn-Y8-grQ">
+                                <rect key="frame" x="50" y="552" width="289" height="107.33333333333337"/>
                                 <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -638,38 +639,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IntroBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="0hA-Ym-WI6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundIntro" translatesAutoresizingMaskIntoConstraints="NO" id="0hA-Ym-WI6">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selamat Datang di KisahKata" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnV-dz-QUp">
-                                <rect key="frame" x="38" y="189" width="233" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="233" id="Sp3-Yt-Qam"/>
-                                    <constraint firstAttribute="height" constant="75" id="cgz-Ez-LKt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masukkan nama kamu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0R-Tu-b9N">
-                                <rect key="frame" x="38" y="307" width="314" height="21"/>
+                                <rect key="frame" x="38" y="307" width="314" height="28.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hrs-7d-7zv">
-                                <rect key="frame" x="38" y="336" width="314" height="34"/>
+                                <rect key="frame" x="38" y="343.33333333333331" width="314" height="34"/>
                                 <color key="backgroundColor" name="textInputColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="314" id="2Tr-4T-63B"/>
+                                    <constraint firstAttribute="height" constant="34" id="48i-bs-GzI"/>
+                                </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtF-pP-xej">
-                                <rect key="frame" x="38" y="391" width="200" height="45"/>
-                                <color key="backgroundColor" name="PrimaryColor"/>
+                                <rect key="frame" x="38" y="397.33333333333331" width="200" height="45"/>
+                                <color key="backgroundColor" name="buttonColorBlue"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="YOM-Kd-Jqz"/>
-                                    <constraint firstAttribute="height" constant="45" id="iPw-9E-k2q"/>
+                                    <constraint firstAttribute="height" constant="45" id="Kj4-Pe-jcK"/>
+                                    <constraint firstAttribute="width" constant="200" id="bby-oI-QSH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baloo2-SemiBold" family="Baloo 2" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -680,26 +675,56 @@
                                     <action selector="startLearn:" destination="Olg-Av-rlx" eventType="touchUpInside" id="6yy-vh-lWs"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnV-dz-QUp">
+                                <rect key="frame" x="38" y="134" width="314" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="314" id="uP7-KT-cIe"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Selamat Datang di ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="32" name="Baloo2-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Kisah">
+                                        <attributes>
+                                            <color key="NSColor" red="0.3529411764705882" green="0.67450980392156867" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="32" name="Baloo2-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Kata">
+                                        <attributes>
+                                            <color key="NSColor" red="0.90196078431372551" green="0.94509803921568625" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="32" name="Baloo2-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mGc-Vj-mHb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="X0R-Tu-b9N" firstAttribute="top" secondItem="fnV-dz-QUp" secondAttribute="bottom" constant="43" id="1jm-w7-S37"/>
-                            <constraint firstItem="rtF-pP-xej" firstAttribute="top" secondItem="Hrs-7d-7zv" secondAttribute="bottom" constant="21" id="4eJ-aO-eZn"/>
-                            <constraint firstItem="mGc-Vj-mHb" firstAttribute="trailing" secondItem="X0R-Tu-b9N" secondAttribute="trailing" constant="38" id="7eM-m8-Bgf"/>
-                            <constraint firstItem="Hrs-7d-7zv" firstAttribute="top" secondItem="X0R-Tu-b9N" secondAttribute="bottom" constant="8" id="88H-Ml-jUZ"/>
-                            <constraint firstItem="mGc-Vj-mHb" firstAttribute="trailing" secondItem="rtF-pP-xej" secondAttribute="trailing" constant="152" id="DQp-DA-jwd"/>
-                            <constraint firstItem="fnV-dz-QUp" firstAttribute="leading" secondItem="mGc-Vj-mHb" secondAttribute="leading" constant="38" id="N7Y-Q9-lqr"/>
-                            <constraint firstItem="mGc-Vj-mHb" firstAttribute="trailing" secondItem="fnV-dz-QUp" secondAttribute="trailing" constant="119" id="ObY-ic-fTi"/>
-                            <constraint firstItem="Hrs-7d-7zv" firstAttribute="leading" secondItem="mGc-Vj-mHb" secondAttribute="leading" constant="38" id="Ssc-as-YtE"/>
+                            <constraint firstItem="Hrs-7d-7zv" firstAttribute="top" secondItem="X0R-Tu-b9N" secondAttribute="bottom" constant="8" id="2pa-dP-UMV"/>
+                            <constraint firstItem="X0R-Tu-b9N" firstAttribute="leading" secondItem="mGc-Vj-mHb" secondAttribute="leading" constant="38" id="DQk-Ue-mfA"/>
+                            <constraint firstItem="Hrs-7d-7zv" firstAttribute="leading" secondItem="mGc-Vj-mHb" secondAttribute="leading" constant="38" id="Dmx-aS-Wga"/>
+                            <constraint firstItem="mGc-Vj-mHb" firstAttribute="trailing" secondItem="X0R-Tu-b9N" secondAttribute="trailing" constant="38" id="RgH-P9-0GJ"/>
                             <constraint firstItem="0hA-Ym-WI6" firstAttribute="trailing" secondItem="FxC-BN-fmB" secondAttribute="trailing" id="WAB-Hn-A9l"/>
+                            <constraint firstItem="fnV-dz-QUp" firstAttribute="top" secondItem="mGc-Vj-mHb" secondAttribute="top" constant="90" id="ZNq-PW-xxe"/>
+                            <constraint firstItem="fnV-dz-QUp" firstAttribute="leading" secondItem="mGc-Vj-mHb" secondAttribute="leading" constant="38" id="ZdY-69-zdF"/>
                             <constraint firstAttribute="bottom" secondItem="0hA-Ym-WI6" secondAttribute="bottom" id="atT-91-Sbl"/>
+                            <constraint firstItem="rtF-pP-xej" firstAttribute="top" secondItem="Hrs-7d-7zv" secondAttribute="bottom" constant="20" id="bQd-TH-fdh"/>
                             <constraint firstItem="0hA-Ym-WI6" firstAttribute="leading" secondItem="FxC-BN-fmB" secondAttribute="leading" id="cpt-W0-CPy"/>
-                            <constraint firstItem="rtF-pP-xej" firstAttribute="leading" secondItem="mGc-Vj-mHb" secondAttribute="leading" constant="38" id="hpo-aL-iRC"/>
+                            <constraint firstItem="mGc-Vj-mHb" firstAttribute="trailing" secondItem="Hrs-7d-7zv" secondAttribute="trailing" constant="38" id="ijT-tG-HfU"/>
+                            <constraint firstItem="rtF-pP-xej" firstAttribute="leading" secondItem="mGc-Vj-mHb" secondAttribute="leading" constant="38" id="kpJ-aC-WHE"/>
                             <constraint firstItem="0hA-Ym-WI6" firstAttribute="top" secondItem="FxC-BN-fmB" secondAttribute="top" id="lCF-gM-i3W"/>
-                            <constraint firstItem="X0R-Tu-b9N" firstAttribute="leading" secondItem="mGc-Vj-mHb" secondAttribute="leading" constant="38" id="r30-ok-qEc"/>
-                            <constraint firstItem="fnV-dz-QUp" firstAttribute="top" secondItem="mGc-Vj-mHb" secondAttribute="top" constant="145" id="ujZ-gF-gjK"/>
-                            <constraint firstItem="mGc-Vj-mHb" firstAttribute="trailing" secondItem="Hrs-7d-7zv" secondAttribute="trailing" constant="38" id="znx-6v-K0I"/>
+                            <constraint firstItem="mGc-Vj-mHb" firstAttribute="trailing" secondItem="rtF-pP-xej" secondAttribute="trailing" constant="152" id="mna-70-L9r"/>
+                            <constraint firstItem="X0R-Tu-b9N" firstAttribute="top" secondItem="fnV-dz-QUp" secondAttribute="bottom" constant="72" id="o57-4u-Zza"/>
+                            <constraint firstItem="mGc-Vj-mHb" firstAttribute="trailing" secondItem="fnV-dz-QUp" secondAttribute="trailing" constant="38" id="vPW-ag-zri"/>
                         </constraints>
                     </view>
                     <connections>
@@ -926,14 +951,14 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Eggy-Senang " translatesAutoresizingMaskIntoConstraints="NO" id="E36-ge-uQ9">
-                            <rect key="frame" x="89" y="8" width="140" height="140"/>
+                            <rect key="frame" x="89" y="8" width="173" height="140"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="140" id="6oI-0Y-eFb"/>
                                 <constraint firstAttribute="height" constant="140" id="dub-7B-ekc"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jawaban Kamu Benar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfN-oL-ape">
-                            <rect key="frame" x="45" y="148" width="229" height="89"/>
+                            <rect key="frame" x="45" y="148" width="262" height="89"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="229" id="DUu-uH-LTI"/>
                                 <constraint firstAttribute="height" constant="89" id="qj5-Hf-ZVj"/>
@@ -942,7 +967,7 @@
                             <color key="textColor" name="TextSucessColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaa-lc-BUa">
-                            <rect key="frame" x="15" y="396" width="288" height="45"/>
+                            <rect key="frame" x="15" y="396" width="321" height="45"/>
                             <color key="backgroundColor" name="PrimaryColor"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="321" id="XAm-qa-m8f"/>
@@ -1134,13 +1159,13 @@
                                 <rect key="frame" x="0.0" y="452" width="390" height="392"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tema 1 | Perkenalan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VR-M6-qdy">
-                                        <rect key="frame" x="8" y="80" width="374" height="20"/>
+                                        <rect key="frame" x="8" y="80" width="374" height="27"/>
                                         <fontDescription key="fontDescription" name="Baloo2-Regular" family="Baloo 2" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Salam Kenal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sN8-lA-ODR">
-                                        <rect key="frame" x="8" y="115" width="374" height="23"/>
+                                        <rect key="frame" x="8" y="122" width="374" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="5Fc-hu-uM4"/>
                                         </constraints>
@@ -1149,9 +1174,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNg-O7-fBr">
-                                        <rect key="frame" x="49" y="163" width="292" height="40"/>
+                                        <rect key="frame" x="49" y="170" width="292" height="40"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star_4" translatesAutoresizingMaskIntoConstraints="NO" id="7o0-JA-0yN">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star_3" translatesAutoresizingMaskIntoConstraints="NO" id="7o0-JA-0yN">
                                                 <rect key="frame" x="40" y="3" width="212" height="34"/>
                                             </imageView>
                                         </subviews>
@@ -1232,6 +1257,9 @@
                     <navigationItem key="navigationItem" title="Salam Kenal" id="0yo-vT-W1X"/>
                     <connections>
                         <outlet property="buttonReadStory" destination="ofN-o2-SmD" id="YAy-7W-aiW"/>
+                        <outlet property="imageStarPoint" destination="7o0-JA-0yN" id="By6-qA-d1M"/>
+                        <outlet property="labelThemeStory" destination="2VR-M6-qdy" id="tl1-IM-MU6"/>
+                        <outlet property="labelTitleStory" destination="sN8-lA-ODR" id="ROt-yx-Ige"/>
                         <outlet property="viewOverviewContainer" destination="x9C-sE-CSN" id="SUM-1G-eM1"/>
                         <outlet property="viewStarContainer" destination="TNg-O7-fBr" id="Gzu-qP-fvz"/>
                     </connections>
@@ -1240,22 +1268,141 @@
             </objects>
             <point key="canvasLocation" x="4178" y="146"/>
         </scene>
+        <!--Practice End View Controller-->
+        <scene sceneID="yBQ-0e-tuC">
+            <objects>
+                <viewController id="JM3-In-QCl" customClass="PracticeEndViewController" customModule="MC2_KisahKata" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gwe-Ro-z0K">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TwinHalfCircle" translatesAutoresizingMaskIntoConstraints="NO" id="S0k-wg-cc5">
+                                <rect key="frame" x="-48" y="-9" width="486" height="853"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBz-jE-Zhm">
+                                <rect key="frame" x="49" y="582" width="292" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star_2" translatesAutoresizingMaskIntoConstraints="NO" id="DvC-xA-EII">
+                                        <rect key="frame" x="40" y="3" width="212" height="34"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Dgo-Fc-0GD"/>
+                                    <constraint firstAttribute="bottom" secondItem="DvC-xA-EII" secondAttribute="bottom" constant="3" id="J8w-wG-HxD"/>
+                                    <constraint firstItem="DvC-xA-EII" firstAttribute="leading" secondItem="iBz-jE-Zhm" secondAttribute="leading" constant="40" id="W90-mq-3Nb"/>
+                                    <constraint firstAttribute="trailing" secondItem="DvC-xA-EII" secondAttribute="trailing" constant="40" id="jfP-Gr-Hit"/>
+                                    <constraint firstItem="DvC-xA-EII" firstAttribute="top" secondItem="iBz-jE-Zhm" secondAttribute="top" constant="3" id="nU1-wv-MAZ"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Eggy-Senang-rotate60" translatesAutoresizingMaskIntoConstraints="NO" id="xgo-kD-fAL">
+                                <rect key="frame" x="168" y="141" width="280" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Ia6-hR-2PZ"/>
+                                    <constraint firstAttribute="height" constant="270" id="yCI-l8-UEj"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Eggy-Senang-rotate-45" translatesAutoresizingMaskIntoConstraints="NO" id="8BL-nk-rS0">
+                                <rect key="frame" x="-72" y="217" width="280" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="QZU-kv-o1o"/>
+                                    <constraint firstAttribute="width" constant="280" id="mmp-hT-Fuk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berhasil!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMU-Gf-7wR">
+                                <rect key="frame" x="20" y="526" width="350" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Lej-Oq-9Pg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kamu telah menyelesaikan kisah dengan baik" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3r-4O-5kY">
+                                <rect key="frame" x="49" y="630" width="292" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="gM3-Pv-kQB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baloo2-Medium" family="Baloo 2" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwG-re-ohz">
+                                <rect key="frame" x="20" y="764" width="350" height="50"/>
+                                <color key="backgroundColor" name="buttonColorBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Mgb-rC-pHw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baloo2-Bold" family="Baloo 2" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Tutup"/>
+                                <connections>
+                                    <action selector="buttonCloseTap:" destination="JM3-In-QCl" eventType="touchUpInside" id="KQ0-0s-Yx7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Xf-aU-b2v"/>
+                        <color key="backgroundColor" name="PrimaryDarkColor"/>
+                        <constraints>
+                            <constraint firstItem="xgo-kD-fAL" firstAttribute="leading" secondItem="2Xf-aU-b2v" secondAttribute="leading" constant="168" id="3t8-rI-cz9"/>
+                            <constraint firstItem="2Xf-aU-b2v" firstAttribute="trailing" secondItem="k3r-4O-5kY" secondAttribute="trailing" constant="49" id="5aI-ZI-W6Z"/>
+                            <constraint firstItem="S0k-wg-cc5" firstAttribute="top" secondItem="Gwe-Ro-z0K" secondAttribute="top" constant="-9" id="Ab7-o7-cqC"/>
+                            <constraint firstAttribute="bottom" secondItem="S0k-wg-cc5" secondAttribute="bottom" id="BQr-aO-Hue"/>
+                            <constraint firstItem="aMU-Gf-7wR" firstAttribute="leading" secondItem="2Xf-aU-b2v" secondAttribute="leading" constant="20" id="CAL-Pm-k0R"/>
+                            <constraint firstItem="8BL-nk-rS0" firstAttribute="top" secondItem="2Xf-aU-b2v" secondAttribute="top" constant="129" id="E4B-U9-9Ll"/>
+                            <constraint firstItem="2Xf-aU-b2v" firstAttribute="trailing" secondItem="8BL-nk-rS0" secondAttribute="trailing" constant="182" id="ENV-BH-0Av"/>
+                            <constraint firstAttribute="trailing" secondItem="xgo-kD-fAL" secondAttribute="trailing" constant="-58" id="Jn1-SJ-zD3"/>
+                            <constraint firstAttribute="trailing" secondItem="S0k-wg-cc5" secondAttribute="trailing" constant="-48" id="MSp-GK-se4"/>
+                            <constraint firstItem="xgo-kD-fAL" firstAttribute="top" secondItem="2Xf-aU-b2v" secondAttribute="top" constant="53" id="PmJ-7e-agb"/>
+                            <constraint firstItem="2Xf-aU-b2v" firstAttribute="trailing" secondItem="wwG-re-ohz" secondAttribute="trailing" constant="20" id="QBd-og-1gK"/>
+                            <constraint firstItem="aMU-Gf-7wR" firstAttribute="top" secondItem="Gwe-Ro-z0K" secondAttribute="topMargin" constant="438" id="Slo-wX-EYo"/>
+                            <constraint firstItem="S0k-wg-cc5" firstAttribute="leading" secondItem="Gwe-Ro-z0K" secondAttribute="leading" constant="-48" id="Sym-Nn-eWP"/>
+                            <constraint firstItem="8BL-nk-rS0" firstAttribute="leading" secondItem="Gwe-Ro-z0K" secondAttribute="leading" constant="-72" id="XFy-er-wwS"/>
+                            <constraint firstItem="wwG-re-ohz" firstAttribute="leading" secondItem="2Xf-aU-b2v" secondAttribute="leading" constant="20" id="YKJ-o6-zcv"/>
+                            <constraint firstItem="2Xf-aU-b2v" firstAttribute="trailing" secondItem="iBz-jE-Zhm" secondAttribute="trailing" constant="49" id="cxF-lF-i2g"/>
+                            <constraint firstItem="k3r-4O-5kY" firstAttribute="leading" secondItem="2Xf-aU-b2v" secondAttribute="leading" constant="49" id="dfk-PP-te4"/>
+                            <constraint firstItem="k3r-4O-5kY" firstAttribute="top" secondItem="iBz-jE-Zhm" secondAttribute="bottom" constant="8" id="dsy-gw-xyD"/>
+                            <constraint firstItem="iBz-jE-Zhm" firstAttribute="leading" secondItem="2Xf-aU-b2v" secondAttribute="leading" constant="49" id="hdC-fB-AyZ"/>
+                            <constraint firstItem="iBz-jE-Zhm" firstAttribute="top" secondItem="aMU-Gf-7wR" secondAttribute="bottom" constant="8" id="pcW-fz-CQP"/>
+                            <constraint firstItem="2Xf-aU-b2v" firstAttribute="trailing" secondItem="aMU-Gf-7wR" secondAttribute="trailing" constant="20" id="q46-gN-Dko"/>
+                            <constraint firstAttribute="bottom" secondItem="wwG-re-ohz" secondAttribute="bottom" constant="30" id="qpb-hy-cYy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YDZ-oF-n3T"/>
+                    <connections>
+                        <outlet property="buttonClose" destination="wwG-re-ohz" id="Ffd-lY-C39"/>
+                        <outlet property="imageEggy1" destination="xgo-kD-fAL" id="s8z-Ds-Pu7"/>
+                        <outlet property="imageEggy2" destination="8BL-nk-rS0" id="KRI-Kw-qEc"/>
+                        <outlet property="imageStarPoint" destination="DvC-xA-EII" id="3AX-9m-vbH"/>
+                        <outlet property="labelLearningResult" destination="aMU-Gf-7wR" id="5f4-Pb-1ak"/>
+                        <outlet property="labelLearningResultAppreciate" destination="k3r-4O-5kY" id="UlY-W0-4Gx"/>
+                        <outlet property="viewStarContainer" destination="iBz-jE-Zhm" id="Fc4-q2-OeB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4h2-D4-MBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7143" y="-670"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Cerita Background" width="321" height="221"/>
-        <image name="IntroBackground1" width="375" height="812"/>
         <image name="KosaKata Background" width="321" height="221"/>
         <image name="M-Eggy-Sedih" width="774" height="1308"/>
         <image name="M-Eggy-Senang " width="230" height="235"/>
         <image name="M-Eggy-Senang 6" width="210" height="210"/>
+        <image name="M-Eggy-Senang-rotate-45" width="3716" height="3567"/>
+        <image name="M-Eggy-Senang-rotate60" width="3501" height="3588"/>
         <image name="Rectangle " width="345" height="174"/>
         <image name="Rectangle 2" width="345" height="174"/>
+        <image name="TwinHalfCircle" width="1500" height="3248"/>
         <image name="backgroundEndStory" width="375" height="812"/>
+        <image name="backgroundIntro" width="1500" height="3248"/>
         <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
         <image name="img_S_1_1" width="1560" height="1560"/>
         <image name="smiley" catalog="system" width="128" height="121"/>
-        <image name="star_4" width="820" height="164"/>
+        <image name="star_2" width="492" height="164"/>
+        <image name="star_3" width="492" height="164"/>
         <namedColor name="BgNavigationBar">
             <color red="0.019999999552965164" green="0.23100000619888306" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

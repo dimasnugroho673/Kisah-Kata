@@ -37,7 +37,11 @@ class StoryEndViewController: UIViewController {
     @IBAction func startQuizAction(_ sender: UIButton) {
         self._animateSpringView(sender)
         
-        performSegue(withIdentifier: "quizSegue", sender: nil)
+        
+        // yang quiz dibatalin karena sementara belum dipakai
+//        performSegue(withIdentifier: "quizSegue", sender: nil)
+        
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     
