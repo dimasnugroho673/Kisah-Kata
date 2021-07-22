@@ -206,6 +206,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
             print("item select")
         } else {
+            
             var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus menyelesaikan cerita di tema sebelumnya untuk membuka cerita ini", preferredStyle: .alert)
             
             let ok = UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in

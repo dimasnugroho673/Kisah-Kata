@@ -32,6 +32,9 @@ class TemaTableViewCell: UITableViewCell {
         
         bgView.layer.cornerRadius = 20
         
+        urutanLabel.font = UIFont(name: "Baloo2-Regular", size: 14)
+        temaLabel.font = UIFont(name: "Baloo2-SemiBold", size: 24)
+        
         judulCollectionView.delegate = self
         judulCollectionView.dataSource = self
         judulCollectionView.backgroundColor = UIColor.clear
@@ -96,21 +99,32 @@ extension TemaTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "judulCell", for: indexPath)as! JudulCollectionViewCell
         cell.judulLabel.text = self.rowList?[indexPath.item].Judul ?? ""
         
-        let scoreStory: Int = Int(UserDefaults.standard.string(forKey: "ScoreStory\(indexPath)") ?? "") ?? 0
-        
-        switch scoreStory {
-        case 0:
-            cell.scoreImage.image = UIImage(named: "star_0")
+        let scoreStory: Int = Int(UserDefaults.standard.string(forKey: "ScoreStory\(indexPath.item)") ?? "") ?? 0
+       
+        if indexPath.row < 1 {
+
+            switch scoreStory {
+            case 0:
+                cell.scoreImage.image = UIImage(named: "star_0")
+                
+            case 10...20:
+                cell.scoreImage.image = UIImage(named: "star_2")
+
+            case 30...40:
+                cell.scoreImage.image = UIImage(named: "star_3")
+
+            default:
+                print("Mantapp")
+            }
             
-        case 10...20:
-            cell.scoreImage.image = UIImage(named: "star_2")
-
-        case 30...40:
-            cell.scoreImage.image = UIImage(named: "star_3")
-
-        default:
-            print("Mantapp")
-        }
+        } else {
+            
+            cell.scoreImage.image = UIImage(named: "Lock")
+            
+            
+    }
+        
+        
 //        cell.scoreLabel.text = self.rowList?[indexPath.row].Score ?? ""
         return cell
     }

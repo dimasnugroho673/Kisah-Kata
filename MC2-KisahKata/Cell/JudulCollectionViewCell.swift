@@ -20,6 +20,8 @@ class JudulCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 14
         // Initialization code
         
+        judulLabel.font = UIFont(name: "Baloo2-SemiBold", size: 14)
+        
         
         
     }
