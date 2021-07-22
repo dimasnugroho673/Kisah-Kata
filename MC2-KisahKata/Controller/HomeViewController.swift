@@ -188,10 +188,28 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let dataJudul = models.objectArray[indexPath.row].ListJudul
         cell.updateCell(row: dataJudul)
         
+        
+        
         cell.cellDelegate = self
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row < 1 {
+
+            print("item select")
+        } else {
+            var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus menyelesaikan cerita di tema sebelumnya untuk membuka cerita ini", preferredStyle: .alert)
+            
+            let ok = UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
+            })
+            dialogMessage.addAction(ok)
+            self.present(dialogMessage, animated: true, completion: nil)
+                
+            }
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination.isKind(of: StoryOverviewViewController.self){
@@ -209,16 +227,29 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 extension HomeViewController: CollectionViewCellDelegate {
     func collectionView(collectionviewcell: JudulCollectionViewCell?, index: Int, didTappedInTableViewCell: TemaTableViewCell) {
         if let judulsRow = didTappedInTableViewCell.rowList{
+            if index < 1 {
+                performSegue(withIdentifier: "toOverviewStorySegue", sender: nil)
+                self.indexCellTap = index
+                print("tapped cell", index)
+                print("item select")
+            } else {
+                var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus menyelesaikan cerita sebelumnya untuk membuka cerita ini", preferredStyle: .alert)
+                
+                let ok = UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
+                })
+                dialogMessage.addAction(ok)
+                self.present(dialogMessage, animated: true, completion: nil)
+                    
+                }
+            }
             
-            self.indexCellTap = index
-            print("tapped cell", index)
             
             
-            performSegue(withIdentifier: "toOverviewStorySegue", sender: nil)
+            
         }
     }
     
 //    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 //            return cellSpacingHeight
 //        }
-}
+

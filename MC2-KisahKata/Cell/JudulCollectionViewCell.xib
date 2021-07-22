@@ -45,6 +45,7 @@
             </constraints>
             <connections>
                 <outlet property="judulLabel" destination="RLM-wd-qlt" id="vvb-GF-XAu"/>
+                <outlet property="scoreImage" destination="qEA-gu-0b5" id="nh2-tn-DBy"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="103.45982142857143"/>
         </collectionViewCell>
