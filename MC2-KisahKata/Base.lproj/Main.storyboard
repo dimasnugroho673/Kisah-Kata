@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftK-Hf-iK4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3189.2307692307691" y="-669.66824644549763"/>
+            <point key="canvasLocation" x="2722" y="146"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -263,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2303.0769230769229" y="145.73459715639811"/>
+            <point key="canvasLocation" x="3994" y="1483"/>
         </scene>
         <!--List Cerita View Controller-->
         <scene sceneID="Zsm-hy-qyu">
@@ -348,7 +348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ac-Et-OSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3224.6153846153843" y="145.73459715639811"/>
+            <point key="canvasLocation" x="4897" y="1448"/>
         </scene>
         <!--Storytelling View Controller-->
         <scene sceneID="tju-wY-QNJ">
@@ -1080,7 +1080,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNm-oR-pAE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2303" y="864"/>
+            <point key="canvasLocation" x="3457" y="1704"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="kGe-cZ-9Hj">
@@ -1156,7 +1156,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_S_1_1" translatesAutoresizingMaskIntoConstraints="NO" id="JaG-tr-GJU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="story_1_1" translatesAutoresizingMaskIntoConstraints="NO" id="JaG-tr-GJU">
                                 <rect key="frame" x="0.0" y="88" width="390" height="402"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="402" id="TSu-Vo-odB"/>
@@ -1410,6 +1410,7 @@
         <image name="smiley" catalog="system" width="128" height="121"/>
         <image name="star_2" width="492" height="164"/>
         <image name="star_3" width="492" height="164"/>
+        <image name="story_1_1" width="1560" height="1621"/>
         <namedColor name="BgNavigationBar">
             <color red="0.019999999552965164" green="0.23100000619888306" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

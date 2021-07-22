@@ -73,7 +73,11 @@ extension TemaTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)as! JudulCollectionViewCell
-        
+//        if indexPath.row < 1 {
+//            print("item select")
+//        } else {
+//            var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus menyelesaikan cerita sebelumnya untuk membuka cerita ini", preferredStyle: .alert)
+//        }
         
         
         print("I'm tapping the \(indexPath.item)")
@@ -90,7 +94,23 @@ extension TemaTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "judulCell", for: indexPath)as! JudulCollectionViewCell
-        cell.judulLabel.text = self.rowList?[indexPath.row].Judul ?? ""
+        cell.judulLabel.text = self.rowList?[indexPath.item].Judul ?? ""
+        
+        let scoreStory: Int = Int(UserDefaults.standard.string(forKey: "ScoreStory\(indexPath)") ?? "") ?? 0
+        
+        switch scoreStory {
+        case 0:
+            cell.scoreImage.image = UIImage(named: "star_0")
+            
+        case 10...20:
+            cell.scoreImage.image = UIImage(named: "star_2")
+
+        case 30...40:
+            cell.scoreImage.image = UIImage(named: "star_3")
+
+        default:
+            print("Mantapp")
+        }
 //        cell.scoreLabel.text = self.rowList?[indexPath.row].Score ?? ""
         return cell
     }

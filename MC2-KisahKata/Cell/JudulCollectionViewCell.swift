@@ -11,6 +11,7 @@ class JudulCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var judulLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
+    @IBOutlet weak var scoreImage: UIImageView!
     
 
     override func awakeFromNib() {
