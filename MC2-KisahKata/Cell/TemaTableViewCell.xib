@@ -13,7 +13,7 @@
         <tableViewCell contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="temaCell" id="KGk-i7-Jjw" customClass="TemaTableViewCell" customModule="MC2_KisahKata" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="329" height="389"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="329" height="389"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -51,6 +51,8 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="ddm-ba-Lbf" firstAttribute="right" secondItem="H2p-sc-9uM" secondAttribute="right" id="0Wd-SS-O97"/>
                     <constraint firstItem="dXp-N3-05x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="3VE-2n-QWH"/>
@@ -73,6 +75,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" red="0.092017911369999997" green="0.22721213100000001" blue="0.43924069399999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <connections>
+                <outlet property="ContentView" destination="H2p-sc-9uM" id="TE2-Db-v8I"/>
                 <outlet property="bgView" destination="ddm-ba-Lbf" id="R50-ha-fNV"/>
                 <outlet property="judulCollectionView" destination="Vz7-hy-Xyp" id="FIV-iK-NW9"/>
                 <outlet property="temaImage" destination="jaq-qN-MWZ" id="ow4-p4-ubf"/>

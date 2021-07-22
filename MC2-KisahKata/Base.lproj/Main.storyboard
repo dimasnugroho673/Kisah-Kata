@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R39-su-YIV">
-                                <rect key="frame" x="170" y="148" width="50" height="26"/>
+                                <rect key="frame" x="170" y="150" width="50" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                         <constraints>
                             <constraint firstItem="ldz-Xh-Dzk" firstAttribute="top" secondItem="OUi-se-T76" secondAttribute="bottom" constant="40" id="6WO-XP-ZlK"/>
                             <constraint firstItem="R39-su-YIV" firstAttribute="centerX" secondItem="8gE-TF-B3X" secondAttribute="centerX" id="E1i-eU-4TI"/>
-                            <constraint firstItem="R39-su-YIV" firstAttribute="top" secondItem="8ss-Gr-cdf" secondAttribute="bottom" constant="5" id="FPD-6v-bFv"/>
+                            <constraint firstItem="R39-su-YIV" firstAttribute="top" secondItem="8ss-Gr-cdf" secondAttribute="bottom" constant="7" id="FPD-6v-bFv"/>
                             <constraint firstItem="oKs-vT-93v" firstAttribute="centerX" secondItem="8gE-TF-B3X" secondAttribute="centerX" id="KlT-7z-2Ax"/>
                             <constraint firstItem="ldz-Xh-Dzk" firstAttribute="leading" secondItem="SSf-nP-LLJ" secondAttribute="leading" constant="15" id="QHT-yw-RHt"/>
                             <constraint firstItem="OUi-se-T76" firstAttribute="centerX" secondItem="8gE-TF-B3X" secondAttribute="centerX" id="TFC-16-uwj"/>
@@ -82,11 +82,13 @@
                             <constraint firstItem="8ss-Gr-cdf" firstAttribute="centerX" secondItem="8gE-TF-B3X" secondAttribute="centerX" id="mHZ-0B-pZg"/>
                             <constraint firstItem="8ss-Gr-cdf" firstAttribute="top" secondItem="SSf-nP-LLJ" secondAttribute="top" constant="34" id="nWS-u7-9v1"/>
                             <constraint firstItem="SSf-nP-LLJ" firstAttribute="bottom" secondItem="ldz-Xh-Dzk" secondAttribute="bottom" id="o7l-vH-inq"/>
-                            <constraint firstItem="oKs-vT-93v" firstAttribute="top" secondItem="R39-su-YIV" secondAttribute="bottom" constant="12" id="xUU-Sf-qOd"/>
+                            <constraint firstItem="oKs-vT-93v" firstAttribute="top" secondItem="R39-su-YIV" secondAttribute="bottom" constant="10" id="xUU-Sf-qOd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="KisahKata" id="xik-kp-kQT"/>
                     <connections>
+                        <outlet property="descLabel" destination="OUi-se-T76" id="zrn-Ws-kmg"/>
+                        <outlet property="haloLabel" destination="8ss-Gr-cdf" id="wow-2R-brP"/>
                         <outlet property="temaTableView" destination="ldz-Xh-Dzk" id="1NN-pg-5su"/>
                         <outlet property="userLabel" destination="R39-su-YIV" id="CaP-im-KNY"/>
                         <segue destination="LDQ-Ga-Q4j" kind="show" identifier="toOverviewStorySegue" id="Suu-p9-X8X"/>
@@ -956,14 +958,14 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-Eggy-Senang " translatesAutoresizingMaskIntoConstraints="NO" id="E36-ge-uQ9">
-                            <rect key="frame" x="89" y="8" width="140" height="140"/>
+                            <rect key="frame" x="89" y="8" width="173" height="140"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="140" id="6oI-0Y-eFb"/>
                                 <constraint firstAttribute="height" constant="140" id="dub-7B-ekc"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jawaban Kamu Benar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfN-oL-ape">
-                            <rect key="frame" x="45" y="148" width="229" height="89"/>
+                            <rect key="frame" x="45" y="148" width="262" height="89"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="229" id="DUu-uH-LTI"/>
                                 <constraint firstAttribute="height" constant="89" id="qj5-Hf-ZVj"/>
@@ -972,7 +974,7 @@
                             <color key="textColor" name="TextSucessColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaa-lc-BUa">
-                            <rect key="frame" x="15" y="396" width="288" height="45"/>
+                            <rect key="frame" x="15" y="396" width="321" height="45"/>
                             <color key="backgroundColor" name="PrimaryColor"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="321" id="XAm-qa-m8f"/>

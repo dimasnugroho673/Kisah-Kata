@@ -12,6 +12,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var temaTableView: UITableView!
+    @IBOutlet weak var haloLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
     
     var models = Cerita()
     var tappedCell: JudulCollectionViewCell!
@@ -43,6 +45,10 @@ class HomeViewController: UIViewController {
         temaTableView.delegate = self
         temaTableView.dataSource = self
         temaTableView.separatorStyle = .none
+        
+        haloLabel.font = UIFont(name: "Baloo2-SemiBold", size: 14)
+        userLabel.font = UIFont(name: "Baloo2-SemiBold", size: 24)
+        descLabel.font = UIFont(name: "Baloo2-Reguler", size: 14)
         
     }
     

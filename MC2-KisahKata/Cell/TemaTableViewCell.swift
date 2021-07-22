@@ -17,7 +17,7 @@ class TemaTableViewCell: UITableViewCell {
     @IBOutlet weak var temaImage: UIImageView!
     @IBOutlet weak var judulCollectionView: UICollectionView!
     @IBOutlet weak var bgView: UIView!
-    
+    @IBOutlet weak var ContentView: UIView!
     
     weak var cellDelegate: CollectionViewCellDelegate?
     
@@ -35,6 +35,7 @@ class TemaTableViewCell: UITableViewCell {
         judulCollectionView.delegate = self
         judulCollectionView.dataSource = self
         judulCollectionView.backgroundColor = UIColor.clear
+        ContentView.backgroundColor =  UIColor.clear
         
         
         
