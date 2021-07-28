@@ -155,6 +155,8 @@
 		405E60F9268438C3008B8499 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				515D7DEA26A71B9F00DA3CE5 /* TemaModel.swift */,
+				515D7DEC26A71BAF00DA3CE5 /* JudulModel.swift */,
 				405E60FA26843909008B8499 /* Stories.swift */,
 				40DD146E268609AB00A271EF /* StoriesData.swift */,
 				E3F7FA4B2687331300AE784A /* Question.swift */,
@@ -226,7 +228,7 @@
 		40E4BC08267B00D000880A62 /* MC2-KisahKata */ = {
 			isa = PBXGroup;
 			children = (
-				5126FD5E26A5569E00D9088B /* Cell */,
+				516FB15E26B12CBD00E0EA12 /* View */,
 				40BE37FB2689260D00414B06 /* Videos */,
 				E3A8EF3E2687A4650027349B /* Controller */,
 				40DD14542685903400A271EF /* Images */,
@@ -236,9 +238,7 @@
 				40844363268096AE001BAC12 /* Font */,
 				40E4BC09267B00D000880A62 /* AppDelegate.swift */,
 				40E4BC0B267B00D000880A62 /* SceneDelegate.swift */,
-				40E4BC0F267B00D000880A62 /* Main.storyboard */,
 				40E4BC15267B00D700880A62 /* Assets.xcassets */,
-				40E4BC17267B00D700880A62 /* LaunchScreen.storyboard */,
 				40E4BC1A267B00D700880A62 /* Info.plist */,
 				40E4BC12267B00D000880A62 /* MC2_KisahKata.xcdatamodeld */,
 				510EE6062682B9740052B35B /* CeritaTableViewCell.swift */,
@@ -248,17 +248,15 @@
 			path = "MC2-KisahKata";
 			sourceTree = "<group>";
 		};
-		5126FD5E26A5569E00D9088B /* Cell */ = {
+		516FB15E26B12CBD00E0EA12 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5126FD5F26A556C600D9088B /* TemaTableViewCell.swift */,
 				5126FD6026A556C600D9088B /* TemaTableViewCell.xib */,
-				5126FD6326A556E000D9088B /* JudulCollectionViewCell.swift */,
+				40E4BC0F267B00D000880A62 /* Main.storyboard */,
+				40E4BC17267B00D700880A62 /* LaunchScreen.storyboard */,
 				5126FD6426A556E000D9088B /* JudulCollectionViewCell.xib */,
-				515D7DEA26A71B9F00DA3CE5 /* TemaModel.swift */,
-				515D7DEC26A71BAF00DA3CE5 /* JudulModel.swift */,
 			);
-			path = Cell;
+			path = View;
 			sourceTree = "<group>";
 		};
 		8503D0030795AC24B0818B0B /* Pods */ = {
@@ -281,6 +279,8 @@
 		E3A8EF3E2687A4650027349B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5126FD5F26A556C600D9088B /* TemaTableViewCell.swift */,
+				5126FD6326A556E000D9088B /* JudulCollectionViewCell.swift */,
 				E3E23E85268585AB008C3CD0 /* IntroViewController.swift */,
 				510EE6022682B35B0052B35B /* ListCeritaViewController.swift */,
 				405E60F126842E23008B8499 /* StorytellingViewController.swift */,
