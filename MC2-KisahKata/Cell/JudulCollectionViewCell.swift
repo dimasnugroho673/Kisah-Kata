@@ -13,6 +13,7 @@ class JudulCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var scoreImage: UIImageView!
     
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

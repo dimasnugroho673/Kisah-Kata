@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
         _checkUserIsLogged()
         
         userLabel.text = UserDefaults.standard.string(forKey: "username") ?? ""
-
+        
         // Do any additional setup after loading the view.
         let cellNib = UINib(nibName: "TemaTableViewCell", bundle: nil)
         self.temaTableView.register(cellNib, forCellReuseIdentifier: "temaCell")
@@ -105,7 +105,7 @@ class HomeViewController: UIViewController {
         newKosakata6.setValue("Melakukan sesuatu untuk bersenang-senang", forKey: "deskripsi")
         newKosakata6.setValue(0, forKey: "sudahDipelajari")
         newKosakata6.setValue("", forKey: "deskripsiVideo")
-
+        
         newKosakata7.setValue("cita-cita", forKey: "kata")
         newKosakata7.setValue("kerja", forKey: "kategori")
         newKosakata7.setValue("sibi_cita-cita.mp4", forKey: "urlVideo")
@@ -131,13 +131,13 @@ class HomeViewController: UIViewController {
     
     private func _loadData() {
         let kosakataRequest: NSFetchRequest<Kosakata> = Kosakata.fetchRequest()
-
+        
         let sort = [NSSortDescriptor(key: "kata", ascending: true)]
         kosakataRequest.sortDescriptors = sort
-
+        
         do {
             try kosakatas = manageObjectContext.fetch(kosakataRequest)
-          
+            
         } catch {
             print("Gagal load data!")
         }
@@ -145,14 +145,14 @@ class HomeViewController: UIViewController {
     
     private func _checkData() {
         let dataExist: Int = UserDefaults.standard.integer(forKey: "dataExist")
-
+        
         if dataExist != 1 {
             self._addData()
             UserDefaults.standard.setValue(1, forKey: "dataExist")
         } else {
-//            self._loadData()
+            //            self._loadData()
             
-//            print("data exist!")
+            //            print("data exist!")
         }
     }
     
@@ -176,14 +176,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 389
     }
-
+    
     
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = temaTableView.dequeueReusableCell(withIdentifier: "temaCell", for: indexPath)as! TemaTableViewCell
         
-        
+        cell.selectionID = indexPath.row
         
         let urutan = models.objectArray[indexPath.row].Urutan
         cell.urutanLabel.text = urutan
@@ -201,61 +201,56 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row < 1 {
-
-            print("item select")
-        } else {
-            
-            var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus menyelesaikan cerita di tema sebelumnya untuk membuka cerita ini", preferredStyle: .alert)
-            
-            let ok = UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
-            })
-            dialogMessage.addAction(ok)
-            self.present(dialogMessage, animated: true, completion: nil)
-                
-            }
-    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination.isKind(of: StoryOverviewViewController.self){
             if let storyOverviewVC = segue.destination as? StoryOverviewViewController {
-//                storyOverviewVC.indexStory = ceritaTableView.indexPathForSelectedRow!.row
+                //                storyOverviewVC.indexStory = ceritaTableView.indexPathForSelectedRow!.row
                 
                 storyOverviewVC.indexStoryReceiver = self.indexCellTap
             }
-
+            
         }
-
+        
     }
 }
 
 extension HomeViewController: CollectionViewCellDelegate {
-    func collectionView(collectionviewcell: JudulCollectionViewCell?, index: Int, didTappedInTableViewCell: TemaTableViewCell) {
+    func collectionView(collectionviewcell: JudulCollectionViewCell?, index: Int, didTappedInTableViewCell: TemaTableViewCell, selectionID: Int) {
         if let judulsRow = didTappedInTableViewCell.rowList{
-            if index < 1 {
-                performSegue(withIdentifier: "toOverviewStorySegue", sender: nil)
-                self.indexCellTap = index
-                print("tapped cell", index)
-                print("item select")
-            } else {
-                var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus menyelesaikan cerita sebelumnya untuk membuka cerita ini", preferredStyle: .alert)
+            if selectionID < 1{
+                if index < 1 {
+                    performSegue(withIdentifier: "toOverviewStorySegue", sender: nil)
+                    self.indexCellTap = index
+                    print("tapped cell", index)
+                    print("item select")
+                }else {
+                    var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus menyelesaikan cerita sebelumnya untuk membuka cerita ini", preferredStyle: .alert)
+                    
+                    let ok = UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
+                    })
+                    dialogMessage.addAction(ok)
+                    self.present(dialogMessage, animated: true, completion: nil)
+                    
+                }
+                
+            }else {
+                var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus menyelesaikan cerita di tema sebelumnya untuk membuka cerita ini", preferredStyle: .alert)
                 
                 let ok = UIAlertAction(title: "OK", style: .default, handler: {(action) -> Void in
                 })
                 dialogMessage.addAction(ok)
                 self.present(dialogMessage, animated: true, completion: nil)
-                    
-                }
             }
-            
-            
-            
-            
         }
+        
+        
+        
+        
     }
-    
+}
+
 //    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 //            return cellSpacingHeight
 //        }

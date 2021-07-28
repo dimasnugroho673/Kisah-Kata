@@ -8,7 +8,8 @@
 import UIKit
 
 protocol CollectionViewCellDelegate: class {
-    func collectionView(collectionviewcell: JudulCollectionViewCell?, index: Int, didTappedInTableViewCell: TemaTableViewCell)
+    func collectionView(collectionviewcell: JudulCollectionViewCell?, index: Int, didTappedInTableViewCell: TemaTableViewCell, selectionID: Int)
+    
 }
 
 class TemaTableViewCell: UITableViewCell {
@@ -23,7 +24,8 @@ class TemaTableViewCell: UITableViewCell {
     
     var rowList: [JudulModel]?
     
-
+    var selectionID : Int! = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -44,22 +46,22 @@ class TemaTableViewCell: UITableViewCell {
         
         
         let flowLayout = UICollectionViewFlowLayout()
-//                flowLayout.scrollDirection = .vertical
-                
+        //                flowLayout.scrollDirection = .vertical
+        
         flowLayout.itemSize = CGSize(width: 330, height: 67)
         flowLayout.minimumLineSpacing = 10.0
         flowLayout.minimumInteritemSpacing = 20.0
         
-                
-                self.judulCollectionView.collectionViewLayout = flowLayout
-                self.judulCollectionView.showsVerticalScrollIndicator = false
+        
+        self.judulCollectionView.collectionViewLayout = flowLayout
+        self.judulCollectionView.showsVerticalScrollIndicator = false
         
         
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -76,15 +78,15 @@ extension TemaTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)as! JudulCollectionViewCell
-//        if indexPath.row < 1 {
-//            print("item select")
-//        } else {
-//            var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus menyelesaikan cerita sebelumnya untuk membuka cerita ini", preferredStyle: .alert)
-//        }
+        //        if indexPath.row < 1 {
+        //            print("item select")
+        //        } else {
+        //            var dialogMessage = UIAlertController(title: "Cerita masih terkunci", message: "Cerita masih terkunci, kamu harus menyelesaikan cerita sebelumnya untuk membuka cerita ini", preferredStyle: .alert)
+        //        }
         
         
         print("I'm tapping the \(indexPath.item)")
-        self.cellDelegate?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)
+        self.cellDelegate?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self, selectionID: selectionID )
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -100,32 +102,31 @@ extension TemaTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
         cell.judulLabel.text = self.rowList?[indexPath.item].Judul ?? ""
         
         let scoreStory: Int = Int(UserDefaults.standard.string(forKey: "ScoreStory\(indexPath.item)") ?? "") ?? 0
-       
-        if indexPath.row < 1 {
-
-            switch scoreStory {
-            case 0:
-                cell.scoreImage.image = UIImage(named: "star_0")
+        
+        
+        if selectionID < 1 && indexPath.row < 1 {
                 
-            case 10...20:
-                cell.scoreImage.image = UIImage(named: "star_2")
-
-            case 30...40:
-                cell.scoreImage.image = UIImage(named: "star_3")
-
-            default:
-                print("Mantapp")
+                switch scoreStory {
+                case 0:
+                    cell.scoreImage.image = UIImage(named: "star_0")
+                    
+                case 10...20:
+                    cell.scoreImage.image = UIImage(named: "star_2")
+                    
+                case 30...40:
+                    cell.scoreImage.image = UIImage(named: "star_3")
+                    
+                default:
+                    print("Mantapp")
+                }
+            }else {
+                
+                cell.scoreImage.image = UIImage(named: "Lock")
             }
             
-        } else {
-            
-            cell.scoreImage.image = UIImage(named: "Lock")
-            
-            
-    }
         
         
-//        cell.scoreLabel.text = self.rowList?[indexPath.row].Score ?? ""
+        //        cell.scoreLabel.text = self.rowList?[indexPath.row].Score ?? ""
         return cell
     }
 }
