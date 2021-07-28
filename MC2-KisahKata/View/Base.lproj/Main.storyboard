@@ -59,7 +59,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ldz-Xh-Dzk">
-                                <rect key="frame" x="15" y="281.66666666666669" width="360" height="528.33333333333326"/>
+                                <rect key="frame" x="15" y="266.66666666666669" width="360" height="577.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="dKX-jb-CDQ">
                                     <rect key="frame" x="0.0" y="0.0" width="360" height="2"/>
@@ -71,17 +71,17 @@
                         <viewLayoutGuide key="safeArea" id="SSf-nP-LLJ"/>
                         <color key="backgroundColor" red="0.027735780920000001" green="0.19386300440000001" blue="0.39609891180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="ldz-Xh-Dzk" firstAttribute="top" secondItem="OUi-se-T76" secondAttribute="bottom" constant="40" id="6WO-XP-ZlK"/>
+                            <constraint firstItem="ldz-Xh-Dzk" firstAttribute="leading" secondItem="SSf-nP-LLJ" secondAttribute="leading" constant="15" id="4Sf-Y2-ku5"/>
                             <constraint firstItem="R39-su-YIV" firstAttribute="centerX" secondItem="8gE-TF-B3X" secondAttribute="centerX" id="E1i-eU-4TI"/>
                             <constraint firstItem="R39-su-YIV" firstAttribute="top" secondItem="8ss-Gr-cdf" secondAttribute="bottom" constant="7" id="FPD-6v-bFv"/>
                             <constraint firstItem="oKs-vT-93v" firstAttribute="centerX" secondItem="8gE-TF-B3X" secondAttribute="centerX" id="KlT-7z-2Ax"/>
-                            <constraint firstItem="ldz-Xh-Dzk" firstAttribute="leading" secondItem="SSf-nP-LLJ" secondAttribute="leading" constant="15" id="QHT-yw-RHt"/>
+                            <constraint firstItem="SSf-nP-LLJ" firstAttribute="trailing" secondItem="ldz-Xh-Dzk" secondAttribute="trailing" constant="15" id="OWM-gt-Ifj"/>
                             <constraint firstItem="OUi-se-T76" firstAttribute="centerX" secondItem="8gE-TF-B3X" secondAttribute="centerX" id="TFC-16-uwj"/>
-                            <constraint firstItem="SSf-nP-LLJ" firstAttribute="trailing" secondItem="ldz-Xh-Dzk" secondAttribute="trailing" constant="15" id="d9e-A0-ziP"/>
+                            <constraint firstItem="ldz-Xh-Dzk" firstAttribute="top" secondItem="OUi-se-T76" secondAttribute="bottom" constant="25" id="Vbe-Q3-rB2"/>
                             <constraint firstItem="OUi-se-T76" firstAttribute="top" secondItem="oKs-vT-93v" secondAttribute="bottom" constant="11" id="l9q-wG-eib"/>
                             <constraint firstItem="8ss-Gr-cdf" firstAttribute="centerX" secondItem="8gE-TF-B3X" secondAttribute="centerX" id="mHZ-0B-pZg"/>
                             <constraint firstItem="8ss-Gr-cdf" firstAttribute="top" secondItem="SSf-nP-LLJ" secondAttribute="top" constant="34" id="nWS-u7-9v1"/>
-                            <constraint firstItem="SSf-nP-LLJ" firstAttribute="bottom" secondItem="ldz-Xh-Dzk" secondAttribute="bottom" id="o7l-vH-inq"/>
+                            <constraint firstItem="ldz-Xh-Dzk" firstAttribute="bottom" secondItem="8gE-TF-B3X" secondAttribute="bottom" id="spg-wk-W6r"/>
                             <constraint firstItem="oKs-vT-93v" firstAttribute="top" secondItem="R39-su-YIV" secondAttribute="bottom" constant="10" id="xUU-Sf-qOd"/>
                         </constraints>
                     </view>
