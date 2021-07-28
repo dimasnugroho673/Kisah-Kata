@@ -46,9 +46,8 @@ class HomeViewController: UIViewController {
         temaTableView.dataSource = self
         temaTableView.separatorStyle = .none
         
-        haloLabel.font = UIFont(name: "Baloo2-SemiBold", size: 14)
+        haloLabel.font = UIFont(name: "Baloo2-SemiBold", size: 17)
         userLabel.font = UIFont(name: "Baloo2-SemiBold", size: 24)
-        descLabel.font = UIFont(name: "Baloo2-Reguler", size: 14)
         
     }
     
