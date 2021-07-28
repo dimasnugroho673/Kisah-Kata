@@ -10,6 +10,7 @@ import UIKit
 class JudulCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var judulLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var numberTitleLabel: UILabel!
     
     @IBOutlet weak var scoreImage: UIImageView!
     
@@ -21,7 +22,7 @@ class JudulCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 14
         // Initialization code
         
-        judulLabel.font = UIFont(name: "Baloo2-SemiBold", size: 14)
+        judulLabel.font = UIFont(name: "Baloo2-Bold", size: 16)
         
         
         

@@ -34,8 +34,9 @@ class TemaTableViewCell: UITableViewCell {
         
         bgView.layer.cornerRadius = 20
         
-        urutanLabel.font = UIFont(name: "Baloo2-Regular", size: 14)
-        temaLabel.font = UIFont(name: "Baloo2-SemiBold", size: 24)
+        urutanLabel.font = UIFont(name: "Baloo2-Regular", size: 16)
+        temaLabel.font = UIFont(name: "Baloo2-SemiBold", size: 26)
+        temaImage.image = UIImage(named: "M-Eggy-Hello2")
         
         judulCollectionView.delegate = self
         judulCollectionView.dataSource = self
@@ -100,8 +101,10 @@ extension TemaTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "judulCell", for: indexPath)as! JudulCollectionViewCell
         cell.judulLabel.text = self.rowList?[indexPath.item].Judul ?? ""
+        cell.numberTitleLabel.text = "\(indexPath.row + 1)"
         
         let scoreStory: Int = Int(UserDefaults.standard.string(forKey: "ScoreStory\(indexPath.item)") ?? "") ?? 0
+        
         
         
         if selectionID < 1 && indexPath.row < 1 {
